@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+# gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -60,3 +61,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise'
+gem 'dotenv-rails'
+gem 'rubocop', require:false # bundlerによってRailsアプリ側に自動で読み込みされないようになる。
+gem 'rubocop-rails'
+gem 'carrierwave' # 画像アップロード
+gem 'rmagick' # 画像のリサイズ
+gem 'ransack'
+gem 'gimei' # 日本語対応ダミーデータ
+gem 'geocoder'
+
