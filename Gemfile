@@ -65,9 +65,12 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'rubocop', require:false # bundlerによってRailsアプリ側に自動で読み込みされないようになる。
 gem 'rubocop-rails'
+gem 'jquery-rails'
+gem 'bootstrap-sass', '>= 3.4.1'
+gem 'kaminari'
 gem 'carrierwave' # 画像アップロード
 gem 'rmagick' # 画像のリサイズ
 gem 'ransack'
 gem 'gimei' # 日本語対応ダミーデータ
 gem 'geocoder'
-
+gem 'jp_prefecture'

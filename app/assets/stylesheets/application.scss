@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// 全体共通
+
+.container {
+	width: 90%;
+	margin-top: 50px;
+	.page_title {
+		margin-left: 50px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #E1A253;
+	}
+}
+
+// プレイヤー共通
+
+.player_table {
+	margin: 30px auto;
+	th {
+		line-height: 50px;
+	}
+	td {
+	}
+}
