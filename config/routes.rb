@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  namespace :team do
+    get 'posts/new'
+    get 'posts/index'
+    get 'posts/show'
+    get 'posts/edit'
+  end
+  namespace :team do
+    get 'teams/index'
+    get 'teams/show'
+    get 'teams/edit'
+    get 'teams/exit'
+  end
+  get 'home/about'
+  get 'home/top'
   get 'home/about'
   get 'bookmarks/index'
   get 'posts/index'
