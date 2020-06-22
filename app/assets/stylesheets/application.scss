@@ -20,27 +20,39 @@
 // 全体共通
 
 .container {
-	width: 90%;
-	margin-top: 50px;
+	width: 85%;
+	margin-top: 20px;
 	.page_title {
-		margin-left: 50px;
-		padding-bottom: 15px;
-		border-bottom: 1px solid #E1A253;
+		padding-left: 10px;
+		padding-bottom: 10px;
+		border-bottom: 2px solid #E1A253;
 	}
 }
 
 header {
-	height: 50px;
+	height: 100px;
 	background-color: #ccc;
 }
 
-// プレイヤー共通
+// 新規登録＆ログイン画面
 
-.player_table {
+.signup_table, .login_table {
 	margin: 30px auto;
 	th {
 		line-height: 50px;
 	}
 	td {
+	}
+}
+
+.team_signup_table {
+	margin: 20px auto;
+	th {
+		line-height: 37px;
+	}
+}
+
+.col-xs-6 {
+	.introduction_area {
 	}
 }
