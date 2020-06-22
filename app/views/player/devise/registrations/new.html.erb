@@ -8,6 +8,7 @@
             <tr>
                 <th><%= f.label :name, "アカウント名" %></th>
                 <td><%= f.text_field :name, autofocus: true, placeholder: "(例)野球太郎" %></td>
+                <!-- autofocus: trueによりページ表示後に自動でカーソルがnameに合っているようになる -->
             </tr>
             <tr>
                 <th><%= f.label :prefecture_code, "都道府県" %></th>
