@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 	# player
+	root 'player/home#about' # ネストしたコントローラに対してrootを設定する記述法
 	namespace :player do
-		root 'home#about'
 		resources :players, only: [:show, :edit, :update, :destroy] do
 			get :exit, on: :member # idが必要なためmemberを使う
 		end

@@ -10,10 +10,67 @@
     </head>
     <body>
         <header>
-            
+            <div class="container">
+                <div class="header_logo">Base Match</div>
+                <nav>
+                    <ul class="nav_list">
+                        <% if player_signed_in? %>
+                            <li class="nav_list_item">
+                                <%= link_to "当サイトについて", root_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "マイページ", player_player_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "チーム", player_teams_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "投稿", player_posts_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "ブックマーク", player_bookmarks_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "ログアウト", destroy_player_session_path, method: :delete %>
+                            </li>
+                        <% elsif team_signed_in? %>
+                            <li class="nav_list_item">
+                                <%= link_to "当サイトについて", team_home_about_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "マイチーム", team_team_path(current_team) %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "新規投稿", new_team_post_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "チーム一覧", team_teams_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "投稿一覧", team_posts_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "ログアウト", destroy_team_session_path, method: :delete %>
+                            </li>
+                        <% else %>
+                            <li class="nav_list_item">
+                                <%= link_to "当サイトについて", root_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "新規登録", new_player_registration_path %>
+                            </li>
+                            <li class="nav_list_item">
+                                <%= link_to "ログイン", player_session_path %>
+                            </li>
+                        <% end %>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
-            <%= yield %>
+            <div class="container">
+                <%= yield %>
+            </div>
         </main>
     </body>
 </html>

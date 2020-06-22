@@ -19,9 +19,12 @@
 
 // 全体共通
 
+li {
+	list-style: none;
+}
+
 .container {
 	width: 85%;
-	margin-top: 20px;
 	.page_title {
 		padding-left: 10px;
 		padding-bottom: 10px;
@@ -32,6 +35,19 @@
 header {
 	height: 100px;
 	background-color: #ccc;
+	.header_logo {
+		font-size: 50px;
+	}
+	.nav_list {
+		display: flex;
+		.nav_list_item {
+			margin-right: 30px;
+		}
+	}
+}
+
+main {
+	padding-top: 20px;
 }
 
 // 新規登録＆ログイン画面

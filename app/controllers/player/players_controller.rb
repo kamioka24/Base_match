@@ -1,4 +1,4 @@
-class PlayersController < ApplicationController
+class Player::PlayersController < ApplicationController
 	def show
 	end
 

@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class Player::HomeController < ApplicationController
 	def about
 	end
 end

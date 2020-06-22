@@ -1,4 +1,4 @@
-class TeamsController < ApplicationController
+class Player::TeamsController < ApplicationController
 	def index
 	end
 

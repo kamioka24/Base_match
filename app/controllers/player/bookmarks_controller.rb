@@ -1,4 +1,4 @@
-class BookmarksController < ApplicationController
+class Player::BookmarksController < ApplicationController
 	def index
 	end
 

@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Player::PostsController < ApplicationController
 	def index
 	end
 
