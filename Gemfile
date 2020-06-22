@@ -68,8 +68,8 @@ gem 'rubocop-rails'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '>= 3.4.1'
 gem 'kaminari'
-gem 'carrierwave' # 画像アップロード
-gem 'rmagick' # 画像のリサイズ
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
 gem 'ransack'
 gem 'gimei' # 日本語対応ダミーデータ
 gem 'geocoder'

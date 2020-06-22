@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2020_06_21_135152) do
     t.integer "team_id"
     t.string "title"
     t.text "body"
-    t.string "post_image"
+    t.string "post_image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2020_06_21_135152) do
     t.datetime "remember_created_at"
     t.string "name"
     t.integer "member"
-    t.string "team_image"
+    t.string "team_image_id"
     t.text "introduction"
     t.string "prefecture_code"
     t.string "city"

@@ -1,36 +1,26 @@
 Rails.application.routes.draw do
-  namespace :team do
-    get 'posts/new'
-    get 'posts/index'
-    get 'posts/show'
-    get 'posts/edit'
-  end
-  namespace :team do
-    get 'teams/index'
-    get 'teams/show'
-    get 'teams/edit'
-    get 'teams/exit'
-  end
-  get 'home/about'
-  get 'home/top'
-  get 'home/about'
-  get 'bookmarks/index'
-  get 'posts/index'
-  get 'posts/show'
-  get 'teams/index'
-  get 'teams/show'
-  get 'players/show'
-  get 'players/edit'
-  get 'players/exit'
 	devise_for :players
 	devise_for :teams
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 	# player
 	namespace :player do
+		root 'home#about'
+		resources :players, only: [:show, :edit, :update, :destroy]
+		get 'players/exit'
+		resources :teams, only: [:index, :show]
+		resources :posts, only: [:index, :show]
+		resources :bookmarks, only: [:index, :create, :destroy]
+		resources :contacts, only: [:new, :create]
+		get 'players/complete'
 	end
 
 	# team
 	namespace :team do
+		get 'home/about'
+		resources :teams, only: [:index, :show, :edit, :update, :exit, :destroy]
+		resources :posts, only: [:new, :create, :index, :show, :update]
+		get 'posts/exit'
+
     end
 end

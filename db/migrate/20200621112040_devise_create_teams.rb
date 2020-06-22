@@ -34,7 +34,7 @@ class DeviseCreateTeams < ActiveRecord::Migration[5.2]
 
       t.string :name
       t.integer :member
-      t.string :team_image
+      t.string :team_image_id
       t.text :introduction
       t.string :prefecture_code
       t.string :city
