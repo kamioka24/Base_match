@@ -6,4 +6,5 @@ class Team < ApplicationRecord
 
 	has_many :posts, dependent: :destroy
 	has_many :bookmarks, dependent: :destroy
+	attachment :team_image
 end

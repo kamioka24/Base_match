@@ -3,21 +3,27 @@ class ApplicationController < ActionController::Base
 	def after_sign_in_path_for(resource)
         case resource
         when :player
+        	 player_player_path
         when :team
+        	 team_team_path
         end
     end
 
     def after_sign_out_path_for(resource)
         case resource
         when :player
+        	 player_root_path
         when :team
+        	 team_home_about_path
         end
     end
 
     def after_sign_up_path_for(resource)
         case resource
         when :player
+        	 player_player_path
         when :team
+        	 team_team_path
         end
     end
 
