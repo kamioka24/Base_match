@@ -23,6 +23,12 @@ li {
 	list-style: none;
 }
 
+.clearfix ::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 .container {
 	width: 85%;
 	.page_title {
@@ -94,6 +100,7 @@ main {
 
 .section_title {
 	text-align: center;
+	padding-top: 20px;
 	padding-bottom: 10px;
 	border-bottom: 2px solid #1BD2FA;
 }
@@ -101,29 +108,82 @@ main {
 .section_text {
 	font-size: 20px;
 	p {
-		margin-bottom: 10px;
+		margin: 30px 0;
 	}
 }
 
 #about_player {
+	margin: 0 auto;
 	text-align: center;
 	height: 700px;
+	width: 70%;
+	.player_img_boxs {
+		display: flex;
+		.player_box_item {
+			margin: 0 auto;
+			height: 200px;
+			width: 200px;
+			background-color: #73E85E;
+		}
+	}
 }
 
 #about_team {
+	margin: 0 auto;
 	text-align: center;
 	height: 900px;
+	width: 60%;
+	.team_img_boxs {
+		display: flex;
+		flex-wrap: wrap;
+		.team_box_item {
+			margin: 10px auto;
+			height: 200px;
+			width: 300px;
+			background-color: #E1684C;
+		}
+	}
 }
 
 #about_story {
+	margin: 0 auto;
 	text-align: center;
-	height: 800px;
+	height: 900px;
+	width: 70%;
 }
 
 #about_profile {
-	height: 500px;
+	margin: 0 auto;
+	height: 350px;
+	width: 70%;
+	.profile_area {
+		display: flex;
+		.profile_left {
+			width: 50%;
+			.profile_image {
+				height: 200px;
+				width: 200px;
+				background-color: #E3B5ED;
+				border-radius: 50%;
+			}
+		}
+		.profile_right {
+
+		}
+	}
 }
 
 #about_contact {
+	margin: 0 auto;
 	height: 350px;
+	width: 70%;
+	.contact_area {
+		display: flex;
+		.contact_left {
+			width: 50%;
+		}
+		.contact_right {
+			display: flex;
+		}
+	}
 }

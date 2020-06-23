@@ -1,8 +1,11 @@
 <section id="main_visual">
 	<div class="main_text">
-		Base_matchは、チームを探している子どもたち(小学生)と、<br>
-		選手を募集するチームとの出会いの場を設けたサイトです。<br>
-		選手またはチームとしてご登録後にお楽しみください。
+		Base_matchは、<br>
+		チームを探している子どもたち(小学生)と、<br>
+		選手を募集するチームとの<br>
+		出会いの場を設けたサイトです。<br>
+		選手またはチームとして<br>
+		ご登録後にお楽しみください。
 	</div>
 	<div class="subtext">
 		お客様同士のトラブルや、入団後のトラブルに関しましては<br>
@@ -12,30 +15,134 @@
 <section id="about_player">
 	<h1 class="section_title">Player</h1>
 	<div class="section_text">
-		<p>まずはお近くの気になるチームからチェックし、<br>
-		チーム紹介、活動記録などを見てみましょう！</p>
-
-		<p>気に入ったチームはまたいつでも見れるように、<br>
-		ブックマーク登録ができます。</p>
-
-		<p>チームとのコンタクトをご希望の方は<br>
-		各チームへの連絡フォームがございますので<br>
-		そちらをご利用ください。</p>
+		<p>
+			まずはお近くの気になるチームからチェックし、<br>
+			チーム紹介、活動記録などを見てみましょう！
+		</p>
+		<p>
+			気に入ったチームはまたいつでも見れるように、<br>
+			ブックマーク登録ができます。
+		</p>
+		<p>
+			チームとのコンタクトをご希望の方は<br>
+			各チームへの連絡フォームがございますので<br>
+			そちらをご利用ください。
+		</p>
 	</div>
+	<div class="player_img_boxs">
+		<div class="player_box_item"></div>
+		<div class="player_box_item"></div>
+		<div class="player_box_item"></div>
+	</div>
+	<%= link_to "新規選手登録", new_player_registration_path %>
+	<%= link_to "選手ログイン", player_session_path %>
 </section>
 <section id="about_team">
 	<h1 class="section_title">Team</h1>
 	<div class="section_text">
+		<p>
+			試合結果や練習風景の投稿に併せて、<br>
+			活動日程や時間、場所などが記載してあると、<br>
+			選手が、入団や体験の<br>
+			お問い合わせをしやすいです。<br>
+		</p>
+		<p>
+			見てもらう方に<br>
+			チームの良さを余すことなく<br>
+			存分にアピールしましょう！
+		</p>
 	</div>
+	<div class="team_img_boxs">
+		<div class="team_box_item"></div>
+		<div class="team_box_item"></div>
+		<div class="team_box_item"></div>
+		<div class="team_box_item"></div>
+	</div>
+	<%= link_to "新規チーム登録", new_team_registration_path %>
+	<%= link_to "チームログイン", team_session_path %>
 </section>
 <section id="about_story">
 	<h1 class="section_title">Story</h1>
 	<div class="section_text">
+		<p>
+			約10年間、指導者をしているうちに、<br>
+			周りのチームで、選手が<br>
+			移籍をすることが多くなっていることに気づく。
+		</p>
+		<p>
+			小学生にとっては野球以外のどんな経験もスタートであり、<br>
+			とても重要な時期だと思って接してきていたため、<br>
+			この事実が非常に心苦しかった。
+		</p>
+		<p>
+			チーム紹介サイトがあれば、入団前にチームのことを<br>
+			詳しく知ることができ、ミスマッチを<br>
+			防げるかもしれないし、<br>
+			たとえ移籍するとしても、次のチームを探しやすい。
+		</p>
+		<p>
+			夢ができ、挑戦しようとする<br>
+			子どもやそのご家族の方が、<br>
+			余計な心配をせずに、<br>
+			思う存分、新たな夢に向かえるよう<br>
+			チーム選択の環境を整えたい。
+		</p>
+		<p>
+			そういった思いから生まれたのが<br>
+			Base_matchである。
+		</p>
+		<p>
+			私たちは<br>
+			選手とチーム、そして<br>
+			夢を繋ぐサポートを致します。
+		</p>
 	</div>
 </section>
 <section id="about_profile">
 	<h1 class="section_title">Profile</h1>
+	<div class="profile_area">
+		<div class="profile_left">
+			<div class="profile_image"></div>
+		</div>
+		<div class="profile_right">
+			<table width="350">
+				<tr>
+					<th>・生年月日</th>
+					<td>1991年11月24日(28歳)</td>
+				</tr>
+				<tr>
+					<th>・出身地</th>
+					<td>埼玉県深谷市(ネギの町)</td>
+				</tr>
+				<tr>
+					<th>・野球歴</th>
+					<td>10年(小学3年〜高校3年)</td>
+				</tr>
+				<tr>
+					<th>・指導者歴</th>
+					<td>11年目(高校3年秋〜)</td>
+				</tr>
+			</table>
+		</div>
+	</div>
 </section>
 <section id="about_contact">
 	<h1 class="section_title">Contact</h1>
+	<div class="contact_area">
+		<div class="contact_left">
+			<table width="350">
+				<tr>
+					<th>Email</th>
+					<td>xxx@xxx.com</td>
+				</tr>
+				<tr>
+					<th>Tell</th>
+					<td>080-xxxx-xxxx</td>
+				</tr>
+			</table>
+		</div>
+		<div class="contact_right">
+			
+		</div>
+	</div>
 </section>
