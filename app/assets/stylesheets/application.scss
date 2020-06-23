@@ -55,8 +55,33 @@ header {
 }
 
 footer {
-	height: 80px;
+	height: 100px;
 	background-color: #ccc;
+	#about_contact {
+		margin: 0 auto;
+		width: 70%;
+		.footer_section_title {
+			text-align: center;
+			padding-top: 7px;
+			margin: 0;
+			font-size: 25px;
+		}
+		.contact_area {
+			font-size: 18px;
+			display: flex;
+			.contact_left {
+				margin: 0 auto;
+				width: 50%;
+			}
+			.contact_right {
+				margin: 0 auto;
+				display: flex;
+				.fab {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
 }
 
 main {
@@ -150,17 +175,18 @@ main {
 #about_story {
 	margin: 0 auto;
 	text-align: center;
-	height: 900px;
+	height: 880px;
 	width: 70%;
 }
 
 #about_profile {
 	margin: 0 auto;
-	height: 350px;
+	height: 400px;
 	width: 70%;
 	.profile_area {
 		display: flex;
 		.profile_left {
+			margin: 0 auto;
 			width: 50%;
 			.profile_image {
 				height: 200px;
@@ -170,22 +196,7 @@ main {
 			}
 		}
 		.profile_right {
-
-		}
-	}
-}
-
-#about_contact {
-	margin: 0 auto;
-	height: 350px;
-	width: 70%;
-	.contact_area {
-		display: flex;
-		.contact_left {
-			width: 50%;
-		}
-		.contact_right {
-			display: flex;
+			margin: 0 auto;
 		}
 	}
 }
