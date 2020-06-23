@@ -1,2 +1,21 @@
-<h1>Team::Posts#new</h1>
-<p>Find me in app/views/team/posts/new.html.erb</p>
+<div class="container">
+	<div class="row">
+		<h1 class="page_title">新規投稿</h1>
+		<%= form_for(@post, url: team_posts_path) do |f| %>
+			<div class="col-xs-5">
+				<%= f.attachment_field :post_image %>
+			</div>
+			<div class="col-xs-7">
+				<div class="post_title">
+					<%= f.label :title, "タイトル" %>
+					<%= f.text_field :title %>
+				</div>
+				<div class="post_body">
+					<%= f.label :body, "本文" %>
+					<%= f.text_area :body %>
+				</div>
+				<%= f.submit "投稿", class: "btn submit" %>
+			</div>
+		<% end %>
+	</div>
+</div>

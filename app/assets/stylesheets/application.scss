@@ -34,6 +34,7 @@ li {
 .container {
 	width: 85%;
 	.page_title {
+		font-size: 25px;
 		padding-left: 10px;
 		padding-bottom: 10px;
 		border-bottom: 2px solid #E1A253;
@@ -42,8 +43,9 @@ li {
 
 header {
 	height: 100px;
-	background-color: #ccc;
+	background-color: #ddd;
 	.header_logo {
+		text-align: center;
 		font-size: 50px;
 	}
 	.nav_list {
@@ -56,7 +58,7 @@ header {
 
 footer {
 	height: 100px;
-	background-color: #ccc;
+	background-color: #ddd;
 	#about_contact {
 		margin: 0 auto;
 		width: 70%;
@@ -198,5 +200,47 @@ main {
 		.profile_right {
 			margin: 0 auto;
 		}
+	}
+}
+
+// チーム詳細
+
+.team_information {
+	text-align: center;
+	.team_name {
+	}
+	.team_edit_icon {
+	}
+}
+
+.team_introduction {
+	text-align: center;
+}
+
+.team_image {
+	text-align: center;
+}
+
+// チーム編集
+
+.team_edit_table {
+	margin: 10px auto;
+	th {
+		line-height: 40px;
+	}
+	.edit_password {
+		padding-bottom: 20px;
+	}
+}
+// チーム退会
+
+.team_exit {
+	padding: 100px;
+	text-align: center;
+	h1 {
+		font-size: 25px;
+	}
+	h2 {
+		font-size: 20px;
 	}
 }

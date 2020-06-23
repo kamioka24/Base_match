@@ -27,9 +27,9 @@ Rails.application.routes.draw do
 	# team
 	namespace :team do
 		get 'home/about'
-		resources :teams, only: [:index, :show, :edit, :update, :exit, :destroy]
-		resources :posts, only: [:new, :create, :index, :show, :update] do
+		resources :teams, only: [:index, :show, :edit, :update, :destroy] do
 			get :exit, on: :member # idが必要なためmemberを使う
 		end
+		resources :posts, only: [:new, :create, :index, :show, :update]
     end
 end

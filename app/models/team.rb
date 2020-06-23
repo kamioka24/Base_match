@@ -7,4 +7,8 @@ class Team < ApplicationRecord
 	has_many :posts, dependent: :destroy
 	has_many :bookmarks, dependent: :destroy
 	attachment :team_image
+
+	def address
+		prefecture_code + city + street
+	end
 end

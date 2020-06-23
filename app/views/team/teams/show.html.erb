@@ -1,4 +1,26 @@
 <div class="container">
-	<h1>マイチーム</h1>
-	<%= @team.name
+	<h1 class="page_title">マイチーム</h1>
+	<div class="team_information">
+		<h2 class="team_name"><%= @team.name %></h2>
+		<h3 class="team_member"><%= @team.member %>人</h3>
+		<% if @team == current_team %>
+			<div class="team_edit_icon">
+				<%= link_to "編集", edit_team_team_path(@team) %>
+			</div>
+		<% end %>
+	</div>
+	<div class="team_image">
+		<%= attachment_image_tag @team, :team_image, size: "800x500" %>
+	</div>
+	<p class="team_introduction"><%= @team.introduction %></p>
+	<table width="300">
+		<tr>
+			<th>・連絡先</th>
+			<td><%= @team.phone_number %></td>
+		</tr>
+		<tr>
+			<th>・住所</th>
+			<td><%= @team.address %></td>
+		</tr>
+	</table>
 </div>
