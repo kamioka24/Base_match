@@ -2,17 +2,17 @@ class ApplicationController < ActionController::Base
 	before_action :configure_permitted_parameters, if: :devise_controller?
 	def after_sign_in_path_for(resource)
         case resource
-        when :player
-        	 player_player_path
-        when :team
-        	 team_team_path
+        when Player
+        	 player_player_path(current_player)
+        when Team
+        	 team_team_path(current_team)
         end
     end
 
     def after_sign_out_path_for(resource)
         case resource
         when :player
-        	 player_root_path
+        	 root_path
         when :team
         	 team_home_about_path
         end
@@ -20,10 +20,10 @@ class ApplicationController < ActionController::Base
 
     def after_sign_up_path_for(resource)
         case resource
-        when :player
-        	 player_player_path
-        when :team
-        	 team_team_path
+        when Player
+        	 player_player_path(current_player)
+        when Team
+        	 team_team_path(current_team)
         end
     end
 

@@ -1,5 +1,6 @@
 class Player::PlayersController < ApplicationController
 	def show
+		@player = Player.find(params[:id])
 	end
 
 	def edit
