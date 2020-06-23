@@ -46,8 +46,12 @@ header {
 	}
 }
 
+footer {
+	height: 80px;
+	background-color: #ccc;
+}
+
 main {
-	padding-top: 20px;
 }
 
 // 新規登録＆ログイン画面
@@ -71,4 +75,55 @@ main {
 .col-xs-6 {
 	.introduction_area {
 	}
+}
+
+// アバウト＆トップ画面
+
+#main_visual {
+	text-align: center;
+	height: 500px;
+	background-color: #EBE8A6;
+	.main_text {
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+	.subtext {
+		font-size: 15px;
+	}
+}
+
+.section_title {
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #1BD2FA;
+}
+
+.section_text {
+	font-size: 20px;
+	p {
+		margin-bottom: 10px;
+	}
+}
+
+#about_player {
+	text-align: center;
+	height: 700px;
+}
+
+#about_team {
+	text-align: center;
+	height: 900px;
+}
+
+#about_story {
+	text-align: center;
+	height: 800px;
+}
+
+#about_profile {
+	height: 500px;
+}
+
+#about_contact {
+	height: 350px;
 }

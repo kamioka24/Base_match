@@ -19,7 +19,7 @@
                                 <%= link_to "当サイトについて", root_path %>
                             </li>
                             <li class="nav_list_item">
-                                <%= link_to "マイページ", player_player_path %>
+                                <%= link_to "マイページ", player_player_path(current_player) %>
                             </li>
                             <li class="nav_list_item">
                                 <%= link_to "チーム", player_teams_path %>
@@ -68,9 +68,9 @@
             </div>
         </header>
         <main>
-            <div class="container">
-                <%= yield %>
-            </div>
+            <%= yield %>
         </main>
+        <footer>
+        </footer>
     </body>
 </html>
