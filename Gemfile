@@ -74,3 +74,4 @@ gem 'ransack'
 gem 'gimei' # 日本語対応ダミーデータ
 gem 'geocoder'
 gem 'jp_prefecture'
+gem 'font-awesome-sass'
