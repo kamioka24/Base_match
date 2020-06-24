@@ -13,17 +13,16 @@
 			<tbody>
 				<tr>
 					<td><%= team.city %></td>
-					<td><%= link_to team.name, team_team_path(team) %></td>
+					<td><%= link_to team.name, player_team_path(team) %></td>
 					<td><%= team.member %></td>
-					<% if player_signed_in? %>
-						<% if team.bookmarked_by?(current_player) %>
-							<%= link_to player_bookmark_path(team), method: :delete do %>
-								<td><i class="fas fa-star" style="color: yellow;"></i></td>
-							<% end %>
-						<% else %>
-							<%= link_to player_bookmarks_path(team), method: :post do %>
-								<td><i class="far fa-star"></i></td>
-							<% end %>
+					<% if team.bookmarked_by?(current_player) %>
+						<%= link_to player_bookmark_path(team), method: :delete, remote: true do %>
+							<!-- remote: trueでコントローラにJSのリクエストを送る -->
+							<td><i class="fas fa-star" style="color: yellow;"></i></td>
+						<% end %>
+					<% else %>
+						<%= link_to player_bookmarks_path(team), method: :post, remote: true do %>
+							<td><i class="far fa-star"></i></td>
 						<% end %>
 					<% end %>
 				</tr>

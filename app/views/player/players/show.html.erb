@@ -22,12 +22,14 @@
 			<h2>お近くのチーム(<%= @player.prefecture_code %>)</h2>
 			<div class="near_team">
 				<% @teams.each do |team| %>
-					<div class="team_box">
-						<%= link_to player_team_path(team) do %>
-							<%= attachment_image_tag team, :team_image, :fill, 200, 130 %><br>
-							<%= team.name %>
-						<% end %>
-					</div>
+					<% if team.prefecture_code == @player.prefecture_code %>
+						<div class="team_box">
+							<%= link_to player_team_path(team) do %>
+								<%= attachment_image_tag team, :team_image, :fill, 200, 130 %><br>
+								<%= team.name %>
+							<% end %>
+						</div>
+					<% end %>
 				<% end %>
 			</div>
 		</div>
