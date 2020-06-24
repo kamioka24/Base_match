@@ -30,6 +30,6 @@ Rails.application.routes.draw do
 		resources :teams, only: [:index, :show, :edit, :update, :destroy] do
 			get :exit, on: :member # idが必要なためmemberを使う
 		end
-		resources :posts, only: [:new, :create, :index, :show, :update]
+		resources :posts
     end
 end

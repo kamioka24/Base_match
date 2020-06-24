@@ -2,18 +2,14 @@
 	<div class="row">
 		<h1 class="page_title">新規投稿</h1>
 		<%= form_for(@post, url: team_posts_path) do |f| %>
-			<div class="col-xs-5">
+			<div class="col-xs-6">
 				<%= f.attachment_field :post_image %>
 			</div>
-			<div class="col-xs-7">
-				<div class="post_title">
-					<%= f.label :title, "タイトル" %>
-					<%= f.text_field :title %>
-				</div>
-				<div class="post_body">
-					<%= f.label :body, "本文" %>
-					<%= f.text_area :body %>
-				</div>
+			<div class="col-xs-6">
+				<%= f.label :title, "タイトル" %><br>
+				<%= f.text_field :title, class: "post_title_form" %><br>
+				<%= f.label :body, "本文" %><br>
+				<%= f.text_area :body, class: "post_body_form" %><br>
 				<%= f.submit "投稿", class: "btn submit" %>
 			</div>
 		<% end %>

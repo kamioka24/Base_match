@@ -10,7 +10,7 @@
 		<% end %>
 	</div>
 	<div class="team_image">
-		<%= attachment_image_tag @team, :team_image, size: "800x500" %>
+		<%= attachment_image_tag @team, :team_image, :fill, 800, 500 %>
 	</div>
 	<p class="team_introduction"><%= @team.introduction %></p>
 	<table width="300">

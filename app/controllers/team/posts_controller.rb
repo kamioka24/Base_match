@@ -13,7 +13,7 @@ class Team::PostsController < ApplicationController
 	end
 
 	def index
-		@posts = Post.all.order(created_at: "DESC") #降順
+		@posts = Post.page(params[:page]).per(10).order(created_at: "DESC") #降順
 	end
 
 	def show
@@ -31,6 +31,12 @@ class Team::PostsController < ApplicationController
 		else
 		   render "edit"
 		end
+	end
+
+	def destroy
+		@post = Post.find(params[:id])
+		@post.destroy
+		redirect_to team_posts_path
 	end
 
 	private
