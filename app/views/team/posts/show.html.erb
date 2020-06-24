@@ -1,5 +1,5 @@
 <div class="container">
-	<h1 class="page_title">投稿詳細</h1>
+	<%= link_to @post.team.name, team_team_path %>
 	<% if @post == current_team %>
 		<%= link_to "編集する", edit_team_post_path %>
 	<% end %>

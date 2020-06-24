@@ -1,2 +1,11 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="container">
+	<%= link_to @post.team.name, player_team_path %>
+	<%= link_to "入団または体験を希望する", root_path %><!-- コンタクトを作成するまでとりあえず -->
+	<div class="post_show">
+		<%= @post.title %>
+		<%= @post.created_at.strftime("%Y/%m/%d") %>
+		<%= @post.body %>
+		<%= attachment_image_tag @post, :post_image, :fill, 800, 500 %>
+	</div>
+	<%= link_to "一覧へ戻る", team_posts_path %>
+</div>

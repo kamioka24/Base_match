@@ -14,6 +14,7 @@
 		<h3 class="team_category"><%= @team.category %></h3>
 		<h2 class="team_name"><%= @team.name %></h2>
 		<h3 class="team_member"><%= @team.member %>人</h3>
+		<%= link_to @team.name, player_posts_path %>
 	</div>
 	<div class="team_image">
 		<%= attachment_image_tag @team, :team_image, :fill, 800, 500 %>

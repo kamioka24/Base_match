@@ -21,6 +21,10 @@
 
 // 全体共通
 
+* {
+	box-sizing: border-box;
+}
+
 li {
 	list-style: none;
 }
@@ -31,6 +35,65 @@ li {
 	clear: both;
 }
 
+html, body {
+	margin: 0;
+    padding: 0;
+	height: 100%; // フッターを最下位で固定するための設定
+	.wrapper {
+		position: relative;
+	    min-height: 100%; // 最低の高さ設定
+	    header {
+			height: 100px;
+			background-color: #ddd;
+			.header_logo {
+				text-align: center;
+				font-size: 50px;
+			}
+			.nav_list {
+				display: flex;
+				.nav_list_item {
+					margin-right: 30px;
+				}
+			}
+		}
+		main {
+			 padding-bottom: 100px;
+		}
+		footer {
+			width: 100%;
+			height: 100px;
+			background-color: #ddd;
+			position: absolute;
+			bottom: 0;
+			#about_contact {
+				margin: 0 auto;
+				width: 70%;
+				.footer_section_title {
+					text-align: center;
+					padding-top: 7px;
+					margin: 0;
+					font-size: 25px;
+				}
+				.contact_area {
+					font-size: 18px;
+					display: flex;
+					.contact_left {
+						margin: 0 auto;
+						width: 50%;
+					}
+					.contact_right {
+						margin: 0 auto;
+						display: flex;
+						.fab {
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 .container {
 	width: 85%;
 	.page_title {
@@ -39,54 +102,6 @@ li {
 		padding-bottom: 10px;
 		border-bottom: 2px solid #E1A253;
 	}
-}
-
-header {
-	height: 100px;
-	background-color: #ddd;
-	.header_logo {
-		text-align: center;
-		font-size: 50px;
-	}
-	.nav_list {
-		display: flex;
-		.nav_list_item {
-			margin-right: 30px;
-		}
-	}
-}
-
-footer {
-	height: 100px;
-	background-color: #ddd;
-	#about_contact {
-		margin: 0 auto;
-		width: 70%;
-		.footer_section_title {
-			text-align: center;
-			padding-top: 7px;
-			margin: 0;
-			font-size: 25px;
-		}
-		.contact_area {
-			font-size: 18px;
-			display: flex;
-			.contact_left {
-				margin: 0 auto;
-				width: 50%;
-			}
-			.contact_right {
-				margin: 0 auto;
-				display: flex;
-				.fab {
-					margin-right: 10px;
-				}
-			}
-		}
-	}
-}
-
-main {
 }
 
 // 新規登録＆ログイン画面
