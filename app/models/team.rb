@@ -13,4 +13,8 @@ class Team < ApplicationRecord
 	def address
 		prefecture_code + city + street
 	end
+
+	def bookmarked_by?(player) # チームに自分(current_player)のブックマークが既にあるか判断する
+            bookmarks.where(player_id: player.id).exists? # exists = 存在
+    end
 end

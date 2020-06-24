@@ -1,2 +1,33 @@
-<h1>Teams#index</h1>
-<p>Find me in app/views/teams/index.html.erb</p>
+<div class="container">
+	<h1 class="page_title">チーム一覧</h1>
+	<table width="600" class="team_table">
+		<thead>
+			<tr>
+				<th>市区町村</th>
+				<th>チーム名</th>
+				<th>人数</th>
+				<th></th>
+			</tr>
+		</thead>
+		<% @teams.each do |team| %>
+			<tbody>
+				<tr>
+					<td><%= team.city %></td>
+					<td><%= link_to team.name, team_team_path(team) %></td>
+					<td><%= team.member %></td>
+					<% if player_signed_in? %>
+						<% if team.bookmarked_by?(current_player) %>
+							<%= link_to player_bookmark_path(team), method: :delete do %>
+								<td><i class="fas fa-star" style="color: yellow;"></i></td>
+							<% end %>
+						<% else %>
+							<%= link_to player_bookmarks_path(team), method: :post do %>
+								<td><i class="far fa-star"></i></td>
+							<% end %>
+						<% end %>
+					<% end %>
+				</tr>
+			</tbody>
+		<% end %>
+	</table>
+</div>

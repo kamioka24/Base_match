@@ -203,6 +203,19 @@ main {
 	}
 }
 
+// プレイヤー詳細(マイページ)
+
+.mypage_table {
+}
+
+.near_team {
+	display: flex;
+	.team_box {
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+}
+
 // チーム詳細(マイチーム)
 
 .team_information {

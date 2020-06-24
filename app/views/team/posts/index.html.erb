@@ -6,7 +6,9 @@
 				<th>投稿日</th>
 				<th>タイトル</th>
 				<th>チーム名</th>
-				<th></th>
+				<% if team_signed_in? %>
+					<th></th>
+				<% end %>
 			</tr>
 		</thead>
 		<% @posts.each do |post| %>
