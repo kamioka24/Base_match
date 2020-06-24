@@ -1,2 +1,10 @@
-<h1>Players#exit</h1>
-<p>Find me in app/views/players/exit.html.erb</p>
+<div class="exit_page">
+	<h1><strong>本当に退会しますか？</strong></h1>
+	<h2>
+		退会すると、会員登録情報を削除し、<br>
+		チームや投稿の閲覧ができなくなります。<br>
+		退会する場合は、「退会する」をクリックしてください。
+	</h2>
+	<%= link_to "退会しない", player_player_path %>
+	<%= link_to "退会する", player_player_path, method: :delete, "data-confirm" => "退会してよろしいですか？" %>
+</div>

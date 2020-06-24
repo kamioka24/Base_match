@@ -104,6 +104,19 @@ html, body {
 	}
 }
 
+// 退会ページ(共通)
+
+.exit_page {
+	padding: 100px;
+	text-align: center;
+	h1 {
+		font-size: 25px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+}
+
 // 新規登録＆ログイン画面
 
 .signup_table, .login_table {
@@ -268,18 +281,6 @@ html, body {
 	}
 	.edit_password {
 		padding-bottom: 20px;
-	}
-}
-// チーム退会
-
-.team_exit {
-	padding: 100px;
-	text-align: center;
-	h1 {
-		font-size: 25px;
-	}
-	h2 {
-		font-size: 20px;
 	}
 }
 
