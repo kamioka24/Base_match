@@ -203,7 +203,7 @@ main {
 	}
 }
 
-// チーム詳細
+// チーム詳細(マイチーム)
 
 .team_information {
 	text-align: center;
@@ -219,6 +219,16 @@ main {
 
 .team_image {
 	text-align: center;
+}
+
+// チーム一覧
+
+.team_table {
+	margin: 0 auto;
+	font-size: 18px;
+	th {
+		line-height: 40px;
+	}
 }
 
 // チーム編集
@@ -261,4 +271,8 @@ main {
 
 .post_table {
 	margin: 0 auto;
+	font-size: 18px;
+	th {
+		line-height: 40px;
+	}
 }

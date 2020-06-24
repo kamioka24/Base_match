@@ -8,6 +8,8 @@ class Team < ApplicationRecord
 	has_many :bookmarks, dependent: :destroy
 	attachment :team_image
 
+	enum category: {硬式: 0, 軟式: 1}
+
 	def address
 		prefecture_code + city + street
 	end

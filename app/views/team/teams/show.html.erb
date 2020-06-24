@@ -1,6 +1,10 @@
 <div class="container">
-	<h1 class="page_title">マイチーム</h1>
+	<% if @team == current_team %>
+		<h1 class="page_title">マイチーム</h1>
+	<% end %>
+	<p class="flash_message"><%= flash[:notice] %></p>
 	<div class="team_information">
+		<h3 class="team_category"><%= @team.category %></h3>
 		<h2 class="team_name"><%= @team.name %></h2>
 		<h3 class="team_member"><%= @team.member %>人</h3>
 		<% if @team == current_team %>

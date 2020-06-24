@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
         when :player
         	 root_path
         when :team
-        	 team_home_about_path
+        	 root_path
         end
     end
 
