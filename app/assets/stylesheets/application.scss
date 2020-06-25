@@ -234,6 +234,13 @@ html, body {
 // プレイヤー詳細(マイページ)
 
 .mypage_table {
+	tr {
+		line-height: 30px;
+		th {
+			text-align: center;
+			font-size: 15px;
+		}
+	}
 }
 
 .near_team {
@@ -307,6 +314,10 @@ html, body {
 }
 
 // 投稿詳細(共通)
+
+.post_show_team_name {
+	font-size: 25px;
+}
 
 .post_show_box {
 	width: 800px;

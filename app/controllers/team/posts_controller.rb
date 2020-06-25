@@ -7,7 +7,7 @@ class Team::PostsController < ApplicationController
 		@post = Post.new(post_params)
 		@post.team_id = current_team.id # この投稿は誰がしたものなのか(今回で言うとチームid)を定義していないと反映されず投稿できない。
 		if @post.save
-		   redirect_to team_posts_path, notice: "投稿が完了しました。"
+		   redirect_to team_post_path(@post), notice: "投稿が完了しました。"
 		else
 		   render "new"
 		end
@@ -27,7 +27,7 @@ class Team::PostsController < ApplicationController
 
 	def update
 		@post = Post.find(params[:id])
-		if @post.update
+		if @post.update(post_params)
 		   redirect_to team_post_path, notice: "投稿を編集しました。"
 		else
 		   render "edit"
@@ -37,7 +37,7 @@ class Team::PostsController < ApplicationController
 	def destroy
 		@post = Post.find(params[:id])
 		@post.destroy
-		redirect_to team_posts_path
+		redirect_to team_posts_path, notice: "投稿を削除しました。"
 	end
 
 	private

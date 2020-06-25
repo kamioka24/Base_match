@@ -1,14 +1,13 @@
 <div class="container">
 	<h1 class="page_title">投稿一覧</h1>
+	<p class="flash_message"><%= flash[:notice] %></p>
 	<table width="600" class="post_table">
 		<thead>
 			<tr>
 				<th>投稿日</th>
 				<th>タイトル</th>
 				<th>チーム名</th>
-				<% if team_signed_in? %>
-					<th></th>
-				<% end %>
+				<th></th>
 			</tr>
 		</thead>
 		<% @posts.each do |post| %>

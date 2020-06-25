@@ -1,5 +1,4 @@
 <div class="container">
-	<p class="flash_message"><%= flash[:notice] %></p>
 	<div class="team_information">
 		<% if @team.bookmarked_by?(current_player) %>
 			<%= link_to player_bookmark_path(@team), method: :delete, remote: true do %>
@@ -19,7 +18,8 @@
 	<div class="team_image">
 		<%= attachment_image_tag @team, :team_image, :fill, 800, 500 %>
 	</div>
-	<p class="team_introduction"><%= @team.introduction %></p>
+	<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
+	<!-- safe_joinによって改行が反映される -->
 	<table width="300">
 		<tr>
 			<th>・連絡先</th>

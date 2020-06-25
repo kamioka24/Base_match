@@ -1,24 +1,27 @@
 <div class="container">
 	<div class="row">
 		<h1 class="page_title">マイページ</h1>
-		<div class="col-xs-3">
-			<table width="300" class="mypage_table">
+		<div class="col-xs-4">
+			<table width="350" class="mypage_table">
 				<thead>
 					<tr>
-						<th>新着情報</th>
+						<th colspan="3">新着情報</th>
 					</tr>
 				</thead>
 				<% @posts.each do |post| %>
-					<tbody>
-						<tr>
-							<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-							<td><%= post.title %><br><%= post.team.name %></td>
-						</tr>
-					</tbody>
+					<% if post.team.prefecture_code == @player.prefecture_code %>
+						<tbody>
+							<tr>
+								<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
+								<td><%= link_to post.title, player_post_path(post) %></td>
+								<td><%= post.team.name %></td>
+							</tr>
+						</tbody>
+					<% end %>
 				<% end %>
 			</table>
 		</div>
-		<div class="col-xs-9">
+		<div class="col-xs-8">
 			<h2>お近くのチーム(<%= @player.prefecture_code %>)</h2>
 			<div class="near_team">
 				<% @teams.each do |team| %>

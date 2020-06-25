@@ -1,6 +1,6 @@
 <div class="container">
 	<h1 class="page_title">投稿編集</h1>
-	<%= form_for(@post, url: team_posts_path) do |f| %>
+	<%= form_for(@post, url: team_post_path, method: :patch) do |f| %>
 		<div class="col-xs-6">
 			<%= attachment_image_tag @post, :post_image, :fill, 500, 300 %>
 			<%= f.attachment_field :post_image %>
