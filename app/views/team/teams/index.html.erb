@@ -9,13 +9,15 @@
 			</tr>
 		</thead>
 		<% @teams.each do |team| %>
-			<tbody>
-				<tr>
-					<td><%= team.city %></td>
-					<td><%= link_to team.name, team_team_path(team) %></td>
-					<td><%= team.member %></td>
-				</tr>
-			</tbody>
+			<% if team != current_team %>
+				<tbody>
+					<tr>
+						<td><%= team.city %></td>
+						<td><%= link_to team.name, team_team_path(team) %></td>
+						<td><%= team.member %></td>
+					</tr>
+				</tbody>
+			 <% end %>
 		<% end %>
 	</table>
 </div>

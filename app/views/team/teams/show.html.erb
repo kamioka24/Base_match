@@ -27,4 +27,7 @@
 			<td><%= @team.address %></td>
 		</tr>
 	</table>
+	<% if @team != current_team %>
+		<%= link_to "一覧へ戻る", :back %> <!-- 前の状態の画面に戻る -->
+	<% end %>
 </div>

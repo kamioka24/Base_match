@@ -16,11 +16,11 @@
 				<tr>
 					<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
 					<td><%= link_to post.title, team_post_path(post) %></td>
-					<td><%= link_to post.team.name, team_team_path(post.team) %></td>
-					<% if post == current_team %>
+					<td><%= post.team.name %></td>
+					<% if post.team_id == current_team.id %>
 						<td>
-							<%= link_to "編集", edit_team_post_path %>
-							<%= link_to "削除", team_post_path, method: :delete, "data-confirm" => "投稿を削除してよろしいですか？" %>
+							<%= link_to "編集", edit_team_post_path(post) %>
+							<%= link_to "削除", team_post_path(post), method: :delete, "data-confirm" => "投稿を削除してよろしいですか？" %>
 						</td>
 					<% end %>
 				</tr>

@@ -5,6 +5,7 @@ class Team::PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
+		@post.team_id = current_team.id # この投稿は誰がしたものなのか(今回で言うとチームid)を定義していないと反映されず投稿できない。
 		if @post.save
 		   redirect_to team_posts_path, notice: "投稿が完了しました。"
 		else

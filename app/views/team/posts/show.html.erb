@@ -1,7 +1,7 @@
 <div class="container">
-	<%= link_to @post.team.name, team_team_path %>
+	<%= link_to @post.team.name, team_team_path(@post.team) %>
 	<% if @post == current_team %>
-		<%= link_to "編集する", edit_team_post_path %>
+		<%= link_to "編集する", edit_team_post_path(@post.team) %>
 	<% end %>
 	<div class="post_show">
 		<%= @post.title %>

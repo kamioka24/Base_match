@@ -2,7 +2,7 @@ class Player::PlayersController < ApplicationController
 	def show
 		@player = Player.find(params[:id])
 		@teams = Team.page(params[:page]).per(8)
-		@posts = Post.page(params[:page]).per(5)
+		@posts = Post.page(params[:page]).per(5).order(created_at: "DESC") #降順
 	end
 
 	def edit

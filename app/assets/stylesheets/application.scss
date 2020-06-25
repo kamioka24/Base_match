@@ -140,7 +140,7 @@ html, body {
 	}
 }
 
-// アバウト＆トップ画面
+// アバウト＆トップ画面(共通)
 
 #main_visual {
 	text-align: center;
@@ -296,12 +296,31 @@ html, body {
 	height: 300px;
 }
 
-// 投稿一覧
+// 投稿一覧(共通)
 
 .post_table {
 	margin: 0 auto;
 	font-size: 18px;
 	th {
 		line-height: 40px;
+	}
+}
+
+// 投稿詳細(共通)
+
+.post_show_box {
+	width: 800px;
+	margin: 0 auto;
+	.post_title {
+		font-size: 25px;
+		text-align: center;
+	}
+	.post_date {
+		float: right;
+	}
+	.post_body {
+	}
+	.post_img {
+		text-align: center;
 	}
 }
