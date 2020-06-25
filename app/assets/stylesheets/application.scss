@@ -43,11 +43,12 @@ html, body {
 		position: relative;
 	    min-height: 100%; // 最低の高さ設定
 	    header {
-			height: 100px;
+	    	width: 100%;
+			height: 90px;
 			background-color: #ddd;
 			.header_logo {
 				text-align: center;
-				font-size: 50px;
+				font-size: 45px;
 			}
 			.nav_list {
 				display: flex;
@@ -61,7 +62,7 @@ html, body {
 		}
 		footer {
 			width: 100%;
-			height: 100px;
+			height: 90px;
 			background-color: #ddd;
 			position: absolute;
 			bottom: 0;
@@ -72,10 +73,10 @@ html, body {
 					text-align: center;
 					padding-top: 7px;
 					margin: 0;
-					font-size: 25px;
+					font-size: 23px;
 				}
 				.contact_area {
-					font-size: 18px;
+					font-size: 17px;
 					display: flex;
 					.contact_left {
 						margin: 0 auto;
@@ -85,7 +86,8 @@ html, body {
 						margin: 0 auto;
 						display: flex;
 						.fab {
-							margin-right: 10px;
+							font-size: 25px;
+							margin-right: 20px;
 						}
 					}
 				}
@@ -254,19 +256,23 @@ html, body {
 // チーム詳細(マイチーム)
 
 .team_information {
-	text-align: center;
-	.team_name {
+	width: 900px;
+	margin: 0 auto;
+	.information_top {
+		text-align: center;
+		.team_edit_icon {
+			float: right;
+			font-size: 17px;
+			border: 1px solid #666;
+			padding: 5px 8px;
+			border-radius: 50%;
+			margin-bottom: 10px;
+		}
 	}
-	.team_edit_icon {
+	.team_introduction {
+		font-size: 15px;
+		margin: 10px 0 20px;
 	}
-}
-
-.team_introduction {
-	text-align: center;
-}
-
-.team_image {
-	text-align: center;
 }
 
 // チーム一覧
@@ -280,6 +286,23 @@ html, body {
 }
 
 // チーム編集
+
+.team_image_edit_area {
+	width: 500px;
+	.img_attachment {
+		margin-top: 5px;
+		font-size: 10px;
+		float: right;
+	}
+	.team_info {
+		margin: 20px 0 10px;
+	}
+	.introduction_area {
+		height: 200px;
+		width: 100%;
+	}
+}
+
 
 .team_edit_table {
 	margin: 10px auto;
@@ -310,6 +333,9 @@ html, body {
 	font-size: 18px;
 	th {
 		line-height: 40px;
+	}
+	.glyphicon-pencil {
+		margin-right: 10px;
 	}
 }
 

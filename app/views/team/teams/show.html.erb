@@ -4,31 +4,33 @@
 	<% end %>
 	<p class="flash_message"><%= flash[:notice] %></p>
 	<div class="team_information">
-		<h3 class="team_category"><%= @team.category %></h3>
-		<h2 class="team_name"><%= @team.name %></h2>
-		<h3 class="team_member"><%= @team.member %>人</h3>
-		<% if @team == current_team %>
-			<div class="team_edit_icon">
-				<%= link_to "編集", edit_team_team_path(@team) %>
-			</div>
+		<div class="information_top">
+			<h3><%= @team.category %></h3>
+			<h2><%= @team.name %></h2>
+			<h3><%= @team.member %>人</h3>
+			<% if @team == current_team %>
+				<%= link_to edit_team_team_path(@team), class: "team_edit_icon" do %>
+					<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+				<% end %>
+			<% end %>
+		</div>
+		<div class="team_image">
+			<%= attachment_image_tag @team, :team_image, :fill, 900, 500 %>
+		</div>
+		<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
+		<!-- safe_joinによって改行が反映される -->
+		<table width="300">
+			<tr>
+				<th><i class="fas fa-baseball-ball"></i> 連絡先</th>
+				<td><%= @team.phone_number %></td>
+			</tr>
+			<tr>
+				<th><i class="fas fa-baseball-ball"></i> 住所</th>
+				<td><%= @team.address %></td>
+			</tr>
+		</table>
+		<% if @team != current_team %>
+			<%= link_to "一覧へ戻る", :back %> <!-- 前の状態の画面に戻る -->
 		<% end %>
 	</div>
-	<div class="team_image">
-		<%= attachment_image_tag @team, :team_image, :fill, 800, 500 %>
-	</div>
-	<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
-	<!-- safe_joinによって改行が反映される -->
-	<table width="300">
-		<tr>
-			<th>・連絡先</th>
-			<td><%= @team.phone_number %></td>
-		</tr>
-		<tr>
-			<th>・住所</th>
-			<td><%= @team.address %></td>
-		</tr>
-	</table>
-	<% if @team != current_team %>
-		<%= link_to "一覧へ戻る", :back %> <!-- 前の状態の画面に戻る -->
-	<% end %>
 </div>
