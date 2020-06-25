@@ -11,7 +11,7 @@ class Player::PlayersController < ApplicationController
 
 	def update
 		@player = Player.find(params[:id])
-		if @player.update
+		if @player.update(player_params)
 		   redirect_to player_player_path(@player), notice: "登録情報を変更しました。"
 		else
 		   render "edit"
@@ -29,7 +29,7 @@ class Player::PlayersController < ApplicationController
 
 	private
 
-	def player_paramas
+	def player_params
 		params.require(:player).permit(:name, :prefecture_code, :email)
 	end
 end

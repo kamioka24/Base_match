@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<h1 class="page_title">チーム情報編集画面</h1>
-		<%= form_for(@team, url: team_team_path(@team)) do |f| %>
+		<%= form_for(@team, url: team_team_path) do |f| %>
             <div class="col-xs-6">
                 <div class="team_image_edit">
                     <%= attachment_image_tag @team, :team_image, :fill, 450, 250 %>
@@ -55,7 +55,7 @@
                         <td><%= f.email_field :email, autocomplete: "email" %></td>
                     </tr>
                     <tr>
-                        <th><%= f.submit "変更内容を保存する", class: "btn submit" %></th>
+                        <td><%= f.submit "変更内容を保存する", class: "btn submit" %></td>
                         <td><%= link_to "退会をご希望の方はこちら", exit_team_team_path %></td>
                     </tr>
                 </table>
