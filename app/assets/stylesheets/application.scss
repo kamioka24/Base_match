@@ -45,12 +45,17 @@ html, body {
 	    header {
 	    	width: 100%;
 			height: 90px;
-			background-color: #ddd;
+			position: fixed;
+			top: 0;
+			background: rgba(0, 0, 0, 0.8);
 			.header_logo {
 				text-align: center;
 				font-size: 45px;
+				color: #fff;
 			}
 			.nav_list {
+				width: 60%;
+				margin: 0 auto;
 				display: flex;
 				.nav_list_item {
 					margin-right: 30px;
@@ -58,7 +63,7 @@ html, body {
 			}
 		}
 		main {
-			 padding-bottom: 100px;
+			padding: 90px 0 100px; // padding-topにヘッダー分の高さを入れることでヘッダー固定時のズレを解消。
 		}
 		footer {
 			width: 100%;
@@ -145,9 +150,12 @@ html, body {
 // アバウト＆トップ画面(共通)
 
 #main_visual {
+	margin-top: -90px; // 上３行はヘッダー分の高さを + - し、ヘッダー固定時のズレを解消。
+	padding-top: 90px;
+	height: 590px;
 	text-align: center;
-	height: 500px;
-	background-color: #EBE8A6;
+	background-image: url(メインビジュアル.jpg);
+	background-size: cover;
 	.main_text {
 		font-size: 25px;
 		margin-bottom: 20px;
