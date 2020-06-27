@@ -1,35 +1,37 @@
 <div class="container">
 	<div class="team_information">
-		<% if @team.bookmarked_by?(current_player) %>
-			<%= link_to player_bookmark_path(@team), method: :delete, remote: true do %>
-				<!-- remote: trueでコントローラにJSのリクエストを送る -->
-				<td><i class="fas fa-star" style="color: yellow;"></i></td>
+		<div class="information_top">
+			<% if @team.bookmarked_by?(current_player) %>
+				<%= link_to player_bookmark_path(@team), method: :delete, remote: true do %>
+					<!-- remote: trueでコントローラにJSのリクエストを送る -->
+					<td><i class="fas fa-star" style="color: yellow;"></i></td>
+				<% end %>
+			<% else %>
+				<%= link_to player_bookmarks_path(@team), method: :post, remote: true do %>
+					<td><i class="far fa-star"></i></td>
+				<% end %>
 			<% end %>
-		<% else %>
-			<%= link_to player_bookmarks_path(@team), method: :post, remote: true do %>
-				<td><i class="far fa-star"></i></td>
-			<% end %>
-		<% end %>
-		<h3 class="team_category"><%= @team.category %></h3>
-		<h2 class="team_name"><%= @team.name %></h2>
-		<h3 class="team_member"><%= @team.member %>人</h3>
-		<%= link_to @team.name, player_posts_path %>
+			<h3><%= @team.category %></h3>
+			<h2><%= @team.name %></h2>
+			<h3><%= @team.member %>人</h3>
+			<%= link_to @team.name, player_posts_path %>
+		</div>
+		<div class="team_image">
+			<%= attachment_image_tag @team, :team_image, :fill, 900, 500 %>
+		</div>
+		<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
+		<!-- safe_joinによって改行が反映される -->
+		<table width="300">
+			<tr>
+				<th><i class="fas fa-baseball-ball"></i> 連絡先</th>
+				<td><%= @team.phone_number %></td>
+			</tr>
+			<tr>
+				<th><i class="fas fa-baseball-ball"></i> 住所</th>
+				<td><%= @team.address %></td>
+			</tr>
+		</table>
+		<%= link_to "一覧へ戻る", :back %> <!-- 前の状態の画面に戻る -->
+		<%= link_to "入団または体験を希望する", root_path %><!-- コンタクトを作成するまでとりあえず -->
 	</div>
-	<div class="team_image">
-		<%= attachment_image_tag @team, :team_image, :fill, 800, 500 %>
-	</div>
-	<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
-	<!-- safe_joinによって改行が反映される -->
-	<table width="300">
-		<tr>
-			<th><i class="fas fa-baseball-ball"></i> 連絡先</th>
-			<td><%= @team.phone_number %></td>
-		</tr>
-		<tr>
-			<th><i class="fas fa-baseball-ball"></i> 住所</th>
-			<td><%= @team.address %></td>
-		</tr>
-	</table>
-	<%= link_to "一覧へ戻る", :back %> <!-- 前の状態の画面に戻る -->
-	<%= link_to "入団または体験を希望する", root_path %><!-- コンタクトを作成するまでとりあえず -->
 </div>
