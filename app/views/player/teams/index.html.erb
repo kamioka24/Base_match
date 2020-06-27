@@ -9,33 +9,27 @@
 		<%= f.radio_button :category_eq, 0 %>硬式
 		<%= f.radio_button :category_eq, 1 %>軟式
 	<% end %>
-	<table width="600" class="team_table">
-		<thead>
-			<tr>
-				<th>市区町村</th>
-				<th>チーム名</th>
-				<th>人数</th>
-				<th></th>
-			</tr>
-		</thead>
+	<div class="team_boxes">
 		<% @teams.each do |team| %>
-			<tbody>
-				<tr>
-					<td><%= team.city %></td>
-					<td><%= link_to team.name, player_team_path(team) %></td>
-					<td><%= team.member %></td>
-					<% if team.bookmarked_by?(current_player) %>
-						<%= link_to player_bookmark_path(team), method: :delete, remote: true do %>
-							<!-- remote: trueでコントローラにJSのリクエストを送る -->
-							<td><i class="fas fa-star" style="color: yellow;"></i></td>
-						<% end %>
-					<% else %>
-						<%= link_to player_bookmarks_path(team), method: :post, remote: true do %>
-							<td><i class="far fa-star"></i></td>
-						<% end %>
+			<div class="team_box">
+				<% if team.bookmarked_by?(current_player) %>
+					<%= link_to player_bookmark_path(team), method: :delete, remote: true do %>
+						<!-- remote: trueでコントローラにJSのリクエストを送る -->
+						<td><i class="fas fa-star" style="color: yellow;"></i></td>
 					<% end %>
-				</tr>
-			</tbody>
+				<% else %>
+					<%= link_to player_bookmarks_path(team), method: :post, remote: true do %>
+						<td><i class="far fa-star"></i></td>
+					<% end %>
+				<% end %><br>
+				<%= link_to player_team_path(team) do %>
+					<%= attachment_image_tag team, :team_image, :fill, 200, 130 %><br>
+					<%= team.name %>
+				<% end %><br>
+				・<%= team.prefecture_code %><%= team.city %><br>
+				・<%= team.category %><br>
+				・<%= team.member %>人
+			</div>
 		<% end %>
-	</table>
+	</div>
 </div>

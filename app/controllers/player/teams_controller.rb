@@ -1,6 +1,6 @@
 class Player::TeamsController < ApplicationController
 	def index
-		@teams = Team.page(params[:page]).per(10)
+		@teams = Team.page(params[:page]).per(20)
 		@q = Team.ransack(params[:q])
 		@team = @q.result(distinct: true)
 	end

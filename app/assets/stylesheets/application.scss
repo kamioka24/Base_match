@@ -58,7 +58,7 @@ html, body {
 				color: #fff;
 			}
 			.nav_list {
-				width: 60%;
+				justify-content: center; //中央表示
 				margin: 0 auto;
 				display: flex;
 				.nav_list_item {
@@ -314,6 +314,18 @@ html, body {
 	}
 }
 
+// プレイヤー側チーム一覧
+
+.team_boxes {
+	justify-content: space-between; //team_boxのスペースを均等に空ける
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 70px;
+	.team_box {
+		margin-bottom: 30px;
+	}
+}
+
 // プレイヤー側チーム詳細
 
 .player_teams_information_top {
@@ -353,12 +365,13 @@ html, body {
 	}
 }
 
-// チーム一覧
+// チーム側チーム一覧
 
 .seach {
 	float: right;
 	.seach_form {
 		width: 160px;
+		margin-bottom: 3px;
 	}
 }
 
