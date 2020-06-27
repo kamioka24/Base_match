@@ -35,6 +35,10 @@ li {
 	clear: both;
 }
 
+.back_btn {
+	float: right;
+}
+
 html, body {
 	margin: 0;
     padding: 0;
@@ -310,6 +314,23 @@ html, body {
 	}
 }
 
+// プレイヤー側チーム詳細
+
+.player_teams_information_top {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	.category, .member {
+		font-size: 18px;
+		margin: 10px auto;
+		line-height: 50px;
+	}
+	.name {
+		font-size: 30px;
+		margin: 10px auto;
+	}
+}
+
 // チーム詳細(マイチーム)
 
 .team_information {
@@ -411,10 +432,14 @@ html, body {
 	}
 	.post_date {
 		float: right;
-	}
-	.post_body {
+		font-size: 15px;
+		margin-bottom: 15px;
 	}
 	.post_img {
 		text-align: center;
+	}
+	.post_body {
+		margin: 30px 0;
+		font-size: 18px;
 	}
 }

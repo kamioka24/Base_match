@@ -12,11 +12,9 @@
 			<h3><%= @team.category %></h3>
 			<h2><%= @team.name %></h2>
 			<h3><%= @team.member %>人</h3>
-			<% if @team == current_team %>
-			<% end %>
 		</div>
 		<div class="team_image">
-			<%= attachment_image_tag @team, :team_image, :fill, 900, 500 %>
+			<%= attachment_image_tag @team, :team_image, :fill, 900, 600 %>
 		</div>
 		<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
 		<!-- safe_joinによって改行が反映される -->
@@ -31,7 +29,7 @@
 			</tr>
 		</table>
 		<% if @team != current_team %>
-			<%= link_to "一覧へ戻る", :back %> <!-- 前の状態の画面に戻る -->
+			<%= link_to "一覧へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
 		<% end %>
 	</div>
 </div>

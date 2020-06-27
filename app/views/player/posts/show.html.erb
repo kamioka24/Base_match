@@ -1,19 +1,19 @@
 <div class="container">
-	<%= link_to @post.team.name, player_team_path(@post.team), class: "post_show_team_name" %>
-	<%= link_to "入団または体験を希望する", root_path %> <!-- コンタクトを作成するまでとりあえず -->
 	<div class="post_show_box">
+		<%= link_to @post.team.name, player_team_path(@post.team), class: "post_show_team_name" %>
+		<%= link_to "入団または体験を希望する", root_path %> <!-- コンタクトを作成するまでとりあえず -->
 		<div class="post_title">
 			<%= @post.title %>
 		</div>
 		<div class="post_date">
 			<%= @post.created_at.strftime("%Y/%m/%d") %>
 		</div>
-		<div class="post_body">
-			<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
-		</div>
 		<div class="post_img">
 			<%= attachment_image_tag @post, :post_image, :fill, 800, 500 %>
 		</div>
+		<div class="post_body">
+			<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
+		</div>
+		<%= link_to "一覧へ戻る", :back, class: "back_btn" %>
 	</div>
-	<%= link_to "一覧へ戻る", player_posts_path %>
 </div>

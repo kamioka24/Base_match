@@ -1,6 +1,6 @@
 class Player::BookmarksController < ApplicationController
 	def index
-		@teams = current_player.bookmark_teams.find(params[:team_id])
+		@teams = current_player.bookmark.find(params[:team_id])
 	end
 
 	def create

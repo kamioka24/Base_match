@@ -1,22 +1,24 @@
 <div class="container">
 	<p class="flash_message"><%= flash[:notice] %></p>
-	<%= link_to @post.team.name, team_team_path(@post.team), class: "post_show_team_name" %>
-	<% if @post.team == current_team %>
-		<%= link_to "編集する", edit_team_post_path(@post) %>
-	<% end %>
 	<div class="post_show_box">
+		<%= link_to @post.team.name, team_team_path(@post.team), class: "post_show_team_name" %>
+		<% if @post.team == current_team %>
+			<%= link_to edit_team_post_path(@post) do %>
+				<i class="fa fa-cog"></i>
+			<% end %>
+		<% end %>
 		<div class="post_title">
 			<%= @post.title %>
 		</div>
 		<div class="post_date">
 			<%= @post.created_at.strftime("%Y/%m/%d") %>
 		</div>
-		<div class="post_body">
-			<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
-		</div>
 		<div class="post_img">
 			<%= attachment_image_tag @post, :post_image, :fill, 800, 500 %>
 		</div>
+		<div class="post_body">
+			<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
+		</div>
+		<%= link_to "一覧へ戻る", :back, class: "back_btn" %>
 	</div>
-	<%= link_to "一覧へ戻る", team_posts_path %>
 </div>
