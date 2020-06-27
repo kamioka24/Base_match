@@ -158,7 +158,7 @@ html, body {
 	background-size: cover;
 	.main_text {
 		font-size: 25px;
-		margin-bottom: 20px;
+		margin: 70px 0;
 	}
 	.subtext {
 		font-size: 15px;
@@ -186,11 +186,26 @@ html, body {
 	width: 70%;
 	.player_img_boxs {
 		display: flex;
-		.player_box_item {
+		.player_box_item1 {
 			margin: 0 auto;
-			height: 200px;
-			width: 200px;
-			background-color: #73E85E;
+			height: 250px;
+			width: 250px;
+			background-image: url(player1.jpg);
+			background-size: cover;
+		}
+		.player_box_item2 {
+			margin: 0 auto;
+			height: 250px;
+			width: 250px;
+			background-image: url(player2.jpg);
+			background-size: cover;
+		}
+		.player_box_item3 {
+			margin: 0 auto;
+			height: 250px;
+			width: 250px;
+			background-image: url(player3.jpg);
+			background-size: cover;
 		}
 	}
 }
@@ -199,15 +214,43 @@ html, body {
 	margin: 0 auto;
 	text-align: center;
 	height: 900px;
-	width: 60%;
+	width: 70%;
 	.team_img_boxs {
+		margin: 0 auto;
+		width: 880px;
 		display: flex;
 		flex-wrap: wrap;
-		.team_box_item {
+		.team_box_item1 {
 			margin: 10px auto;
 			height: 200px;
-			width: 300px;
-			background-color: #E1684C;
+			width: 400px;
+			background-image: url(team1.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+		.team_box_item2 {
+			margin: 10px auto;
+			height: 200px;
+			width: 400px;
+			background-image: url(team2.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+		.team_box_item3 {
+			margin: 10px auto;
+			height: 200px;
+			width: 400px;
+			background-image: url(team3.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+		.team_box_item4 {
+			margin: 10px auto;
+			height: 200px;
+			width: 400px;
+			background-image: url(team4.jpg);
+			background-size: cover;
+			background-position: center;
 		}
 	}
 }
