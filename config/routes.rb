@@ -16,14 +16,9 @@ Rails.application.routes.draw do
 		resources :players, only: [:show, :edit, :update, :destroy] do
 			get :exit, on: :member # idが必要なためmemberを使う
 		end
-		# resources :teams, only: [:index, :show] do
-		# 	post 'bookmark/:id' => 'bookmarks#create', :as => :bookmark
-		# 	delete 'bookmark/:id' => 'bookmarks#destroy', :as => :bookmark_delete
-		# 	# resources :bookmarks, only: [:index, :create, :destroy]
-		# end
 		resources :teams, only: [:index, :show] do
-			resource :bookmarks, only: [:create, :destroy]
-			resources :bookmarks, only: [:index]
+			resource :bookmarks, only: [:create, :destroy] # この２つはid不要。
+			resources :bookmarks, only: [:index] # 上に混ぜるとpathが消えるので分けた。
 		end
 		resources :posts, only: [:index, :show]
 		resources :contacts, only: [:new, :create] do
@@ -32,11 +27,11 @@ Rails.application.routes.draw do
 	end
 
 	# team
-	# namespace :team do
-	# 	get 'home/about'
-	# 	resources :teams, only: [:index, :show, :edit, :update, :destroy] do
-	# 		get :exit, on: :member # idが必要なためmemberを使う
-	# 	end
-	# 	resources :posts
- #    end
+	namespace :team do
+		get 'home/about'
+		resources :teams, only: [:index, :show, :edit, :update, :destroy] do
+			get :exit, on: :member # idが必要なためmemberを使う
+		end
+		resources :posts
+    end
 end
