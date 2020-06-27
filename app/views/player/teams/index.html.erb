@@ -1,5 +1,14 @@
 <div class="container">
 	<h1 class="page_title">チーム一覧</h1>
+	<%= search_form_for @q, url: player_teams_path, class: "seach" do |f| %>
+		<%= f.search_field :name_or_prefecture_code_or_city_cont, class: "seach_form", placeholder: "検索" %>
+		<%= button_tag type: "submit" do %>
+            <i class="fas fa-search"></i>
+        <% end %><br>
+		<%= f.radio_button :category_eq, '', {:checked => true} %>指定なし
+		<%= f.radio_button :category_eq, 0 %>硬式
+		<%= f.radio_button :category_eq, 1 %>軟式
+	<% end %>
 	<table width="600" class="team_table">
 		<thead>
 			<tr>
