@@ -9,19 +9,19 @@
 				<th></th>
 			</tr>
 		</thead>
-		<% @teams.each do |team| %>
+		<% @bookmarks.each do |bookmark| %>
 			<tbody>
 				<tr>
-					<td><%= team.city %></td>
-					<td><%= link_to team.name, player_team_path(team) %></td>
-					<td><%= team.member %></td>
-					<% if team.bookmarked_by?(current_player) %>
-						<%= link_to player_bookmark_path(team), method: :delete, remote: true do %>
+					<td><%= bookmark.city %></td>
+					<td><%= link_to bookmark.name, player_team_path(bookmark) %></td>
+					<td><%= bookmark.member %></td>
+					<% if bookmark.bookmarked_by?(current_player) %>
+						<%= link_to player_bookmark_path(bookmark), method: :delete, remote: true do %>
 							<!-- remote: trueでコントローラにJSのリクエストを送る -->
 							<td><i class="fas fa-star" style="color: yellow;"></i></td>
 						<% end %>
 					<% else %>
-						<%= link_to player_bookmarks_path(team), method: :post, remote: true do %>
+						<%= link_to player_bookmarks_path(bookmark), method: :post, remote: true do %>
 							<td><i class="far fa-star"></i></td>
 						<% end %>
 					<% end %>
