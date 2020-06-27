@@ -1,7 +1,7 @@
 class Player::BookmarksController < ApplicationController
 	def index
 		@player = current_player
-    	@bookmarks = Bookmark.where(player_id: @player.id).all
+    	@bookmarks = Bookmark.where(player_id: @player.id)
 	end
 
 	def create

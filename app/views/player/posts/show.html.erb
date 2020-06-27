@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="post_show_box">
-		<%= link_to @post.team.name, player_team_path(@post.team), class: "post_show_team_name" %>
-		<%= link_to "入団または体験を希望する", root_path %> <!-- コンタクトを作成するまでとりあえず -->
+		<%= link_to @post.team.name, player_team_path(@post.team), class: "post_team_name" %>
+		<%= link_to "入団または体験を希望する", root_path, class: "contact_link" %> <!-- コンタクトを作成するまでとりあえず -->
 		<div class="post_title">
 			<%= @post.title %>
 		</div>

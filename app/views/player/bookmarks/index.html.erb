@@ -13,14 +13,14 @@
 		<% @bookmarks.each do |bookmark| %>
 			<tbody>
 				<tr>
-					<td><%= bookmark.city %></td>
-					<td><%= bookmark.category %></td>
-					<td><%= link_to bookmark.name, player_team_path(bookmark) %></td>
-					<td><%= bookmark.member %></td>
+					<td><%= bookmark.team.city %></td>
+					<td><%= bookmark.team.category %></td>
+					<td><%= link_to bookmark.team.name, player_team_path(bookmark) %></td>
+					<td><%= bookmark.team.member %></td>
 					<% if bookmark.bookmarked_by?(current_player) %>
-						<%= link_to player_bookmark_path(bookmark), method: :delete, remote: true do %>
+						<%= link_to player_bookmarks_path(bookmark), method: :delete, remote: true do %>
 							<!-- remote: trueでコントローラにJSのリクエストを送る -->
-							<td><i class="fas fa-star" style="color: yellow;"></i></td>
+							<td><i class="fas fa-star" style="color: skyblue;"></i></td>
 						<% end %>
 					<% else %>
 						<%= link_to player_bookmarks_path(bookmark), method: :post, remote: true do %>
