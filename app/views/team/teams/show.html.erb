@@ -1,35 +1,58 @@
 <div class="container">
-	<% if @team == current_team %>
-		<h1 class="page_title">マイチーム
-			<%= link_to edit_team_team_path(@team) do %>
-				<i class="fa fa-cog"></i>
-			<% end %>
-		</h1>
-	<% end %>
-	<p class="flash_message"><%= flash[:notice] %></p>
-	<div class="team_information">
-		<div class="information_top">
-			<h3><%= @team.category %></h3>
-			<h2><%= @team.name %></h2>
-			<h3><%= @team.member %>人</h3>
-		</div>
-		<div class="team_image">
-			<%= attachment_image_tag @team, :team_image, :fill, 900, 600 %>
-		</div>
-		<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
-		<!-- safe_joinによって改行が反映される -->
-		<table width="300">
-			<tr>
-				<th><i class="fas fa-baseball-ball"></i> 連絡先</th>
-				<td><%= @team.phone_number %></td>
-			</tr>
-			<tr>
-				<th><i class="fas fa-baseball-ball"></i> 住所</th>
-				<td><%= @team.address %></td>
-			</tr>
-		</table>
-		<% if @team != current_team %>
-			<%= link_to "一覧へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
+	<div class="row">
+		<% if @team == current_team %>
+			<h1 class="page_title">マイチーム
+				<%= link_to edit_team_team_path(@team) do %>
+					<i class="fa fa-cog"></i>
+				<% end %>
+			</h1>
 		<% end %>
+		<p class="flash_message"><%= flash[:notice] %></p>
+		<div class="col-xs-3">
+			<table width="350" class="side_table">
+				<thead>
+					<tr>
+						<th colspan="2"><%= @team.name %>　新着情報</th> <!-- 2つ分のスペースを結合 -->
+					</tr>
+				</thead>
+				<% @posts.each do |post| %>
+					<% if @team == post.team %>
+						<tbody>
+							<tr>
+								<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
+								<td><%= link_to post.title, player_post_path(post) %></td>
+							</tr>
+						</tbody>
+					<% end %>
+				<% end %>
+			</table>
+		</div>
+		<div class="col-xs-9">
+			<div class="team_information">
+				<div class="information_top">
+					<h3><%= @team.category %></h3>
+					<h2><%= @team.name %></h2>
+					<h3><%= @team.member %>人</h3>
+				</div>
+				<div class="team_image">
+					<%= attachment_image_tag @team, :team_image, :fill, 900, 600 %>
+				</div>
+				<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
+				<!-- safe_joinによって改行が反映される -->
+				<table width="300">
+					<tr>
+						<th><i class="fas fa-baseball-ball"></i> 連絡先</th>
+						<td><%= @team.phone_number %></td>
+					</tr>
+					<tr>
+						<th><i class="fas fa-baseball-ball"></i> 住所</th>
+						<td><%= @team.address %></td>
+					</tr>
+				</table>
+				<% if @team != current_team %>
+					<%= link_to "一覧へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
+				<% end %>
+			</div>
+		</div>
 	</div>
 </div>
