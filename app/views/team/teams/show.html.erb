@@ -1,6 +1,10 @@
 <div class="container">
 	<% if @team == current_team %>
-		<h1 class="page_title">マイチーム</h1>
+		<h1 class="page_title">マイチーム
+			<%= link_to edit_team_team_path(@team) do %>
+				<i class="fa fa-cog"></i>
+			<% end %>
+		</h1>
 	<% end %>
 	<p class="flash_message"><%= flash[:notice] %></p>
 	<div class="team_information">
@@ -9,9 +13,6 @@
 			<h2><%= @team.name %></h2>
 			<h3><%= @team.member %>人</h3>
 			<% if @team == current_team %>
-				<%= link_to edit_team_team_path(@team), class: "team_edit_icon" do %>
-					<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-				<% end %>
 			<% end %>
 		</div>
 		<div class="team_image">

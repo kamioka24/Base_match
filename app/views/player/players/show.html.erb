@@ -1,11 +1,14 @@
 <div class="container">
 	<div class="row">
-		<% if @player == current_player %>
-			<%= link_to edit_player_player_path do %>
-				<i class="fas fa-wrench"></i>
-			<% end %>
-		<% end %>
-		<h1 class="page_title">マイページ</h1>
+		<div class="page_top">
+			<h1 class="page_title">マイページ
+				<% if @player == current_player %>
+					<%= link_to edit_player_player_path do %>
+						<i class="fa fa-cog"></i>
+					<% end %>
+				<% end %>
+			</h1>
+		</div>
 		<div class="col-xs-4">
 			<table width="350" class="mypage_table">
 				<thead>
