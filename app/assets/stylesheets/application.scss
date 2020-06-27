@@ -273,15 +273,15 @@ html, body {
 	width: 900px;
 	margin: 0 auto;
 	.information_top {
-		text-align: center;
-		.team_edit_icon {
-			float: right;
-			font-size: 17px;
-			border: 1px solid #666;
-			padding: 5px 8px;
-			border-radius: 50%;
-			margin-bottom: 10px;
+		display: flex;
+		width: 350px;
+		margin: 0 auto;
+		h2 {
+			margin: 10px 30px;
 		}
+	}
+	.team_image {
+		margin-top: 5px;
 	}
 	.team_introduction {
 		font-size: 18px;
