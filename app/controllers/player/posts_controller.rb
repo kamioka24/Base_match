@@ -6,7 +6,7 @@ class Player::PostsController < ApplicationController
         	@posts = Post.where(team_id: params[:team_id]).page(params[:page]).per(10)
         end
 		@q = Team.ransack(params[:q]) # チームを検索するため
-		@team = @q.result(distinct: true)
+		@post = @q.result(distinct: true)
 	end
 
 	def show

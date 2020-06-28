@@ -18,7 +18,7 @@
 			</tr>
 		</thead>
 		<% @teams.each do |team| %>
-			<% if team != current_team %>
+			<% if team != current_team %> <!-- 自チーム以外を表示 -->
 				<tbody>
 					<tr>
 						<td><%= team.city %></td>

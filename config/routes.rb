@@ -18,8 +18,8 @@ Rails.application.routes.draw do
 		end
 		resources :teams, only: [:index, :show] do
 			resource :bookmarks, only: [:create, :destroy] # この２つはid不要。
-			resources :bookmarks, only: [:index] # 上に混ぜるとpathが消えるので分けた。
 		end
+		resources :bookmarks, only: [:index] # 上に混ぜるとpathが消えるので分けた。
 		resources :posts, only: [:index, :show]
 		resources :contacts, only: [:new, :create] do
 			get :complete, on: :collection # idがないからcollectionを使う

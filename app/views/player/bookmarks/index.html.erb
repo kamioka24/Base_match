@@ -1,6 +1,6 @@
 <div class="container">
 	<h1 class="page_title">お気に入りチーム</h1>
-	<table width="600" class="team_table">
+	<table width="650" class="team_table">
 		<thead>
 			<tr>
 				<th>市区町村</th>
@@ -15,9 +15,9 @@
 				<tr>
 					<td><%= bookmark.team.city %></td>
 					<td><%= bookmark.team.category %></td>
-					<td><%= link_to bookmark.team.name, player_team_path(bookmark) %></td>
+					<td><%= link_to bookmark.team.name, player_team_path(bookmark.team) %></td>
 					<td><%= bookmark.team.member %></td>
-					<% if bookmark.bookmarked_by?(current_player) %>
+					<% if bookmark.team.bookmarked_by?(current_player) %>
 						<%= link_to player_bookmarks_path(bookmark), method: :delete, remote: true do %>
 							<!-- remote: trueでコントローラにJSのリクエストを送る -->
 							<td><i class="fas fa-star" style="color: skyblue;"></i></td>

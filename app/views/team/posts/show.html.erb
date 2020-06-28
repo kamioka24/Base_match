@@ -1,7 +1,7 @@
 <div class="container">
 	<p class="flash_message"><%= flash[:notice] %></p>
 	<div class="post_show_box">
-		<%= link_to @post.team.name, team_team_path(@post.team), class: "post_show_team_name" %>
+		<%= link_to @post.team.name, team_team_path(@post.team), class: "post_team_name" %>
 		<% if @post.team == current_team %>
 			<%= link_to edit_team_post_path(@post) do %>
 				<i class="fa fa-cog"></i>
@@ -19,6 +19,6 @@
 		<div class="post_body">
 			<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
 		</div>
-		<%= link_to "一覧へ戻る", :back, class: "back_btn" %>
+		<%= link_to "前の画面へ戻る", :back, class: "back_btn" %>
 	</div>
 </div>

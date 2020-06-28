@@ -16,7 +16,7 @@ class Team::PostsController < ApplicationController
 	def index
 		@posts = Post.page(params[:page]).per(10).order(created_at: "DESC") #降順
 		@q = Team.ransack(params[:q]) # チームを検索するため
-		@team = @q.result(distinct: true)
+		@post = @q.result(distinct: true)
 	end
 
 	def show
