@@ -37,11 +37,13 @@
 						<div class="team_box">
 							<%= link_to player_team_path(team) do %>
 								<%= attachment_image_tag team, :team_image, :fill, 200, 130 %><br>
-								<%= team.name %>
-							<% end %><br>
-							・<%= team.city %><br>
-							・<%= team.category %><br>
-							・<%= team.member %>人
+								<p class="team_box_name"><%= team.name %></p>
+							<% end %>
+							<div class="team_box_bottom">
+								・<%= team.city %><br>
+								・<%= team.category %><br>
+								・<%= team.member %>人
+							</div>
 						</div>
 					<% end %>
 				<% end %>

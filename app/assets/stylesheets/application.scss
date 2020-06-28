@@ -307,21 +307,46 @@ html, body {
 
 .near_team {
 	display: flex;
+	flex-wrap: wrap;
 	.team_box {
+		border: 1px solid #108040;
+		border-radius: 10px;
+		padding: 15px 10px;
 		margin-right: 20px;
 		margin-bottom: 20px;
+		.team_box_name {
+			margin-top: 5px;
+			font-size: 18px;
+			text-align: center;
+		}
+		.team_box_bottom {
+			line-height: 22px;
+			font-size: 15px;
+		}
 	}
 }
 
 // プレイヤー側チーム一覧
 
 .team_boxes {
-	justify-content: space-between; //team_boxのスペースを均等に空ける
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 70px;
 	.team_box {
+		border: 1px solid #108040;
+		border-radius: 10px;
+		padding: 10px;
+		margin-right: 31px;
 		margin-bottom: 30px;
+		.team_box_name {
+			margin-top: 5px;
+			font-size: 18px;
+			text-align: center;
+		}
+		.team_box_bottom {
+			line-height: 22px;
+			font-size: 15px;
+		}
 	}
 }
 
@@ -442,8 +467,8 @@ html, body {
 	th {
 		line-height: 40px;
 	}
-	.glyphicon-pencil {
-		margin-right: 10px;
+	.fa-edit {
+		margin-right: 15px;
 	}
 }
 
