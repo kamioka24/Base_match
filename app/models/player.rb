@@ -6,4 +6,6 @@ class Player < ApplicationRecord
 
 	has_many :bookmarks, dependent: :destroy
 	has_many :contacts, dependent: :destroy
+
+	validates :name, presence: true, length: {maximum: 20}
 end

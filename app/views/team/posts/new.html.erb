@@ -6,6 +6,14 @@
 				<%= f.attachment_field :post_image %>
 			</div>
 			<div class="col-xs-6">
+				<% if @post.errors.any? %>
+					<%= @post.errors.count %>error prohibited this post from being saved:<br>
+						<ul>
+						<% @post.errors.full_messages.each do |message| %>
+							<li><%= message %></li>
+						<% end %>
+						</ul>
+				<% end %>
 				<%= f.label :title, "タイトル" %><br>
 				<%= f.text_field :title, class: "post_title_form" %><br>
 				<%= f.label :body, "本文" %><br>
