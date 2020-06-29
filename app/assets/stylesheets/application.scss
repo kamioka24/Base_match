@@ -156,7 +156,7 @@ html, body {
 	padding-top: 90px;
 	height: 590px;
 	text-align: center;
-	background-image: url(メインビジュアル.jpg);
+	background-image: image-url("main_visual.jpg");
 	background-size: cover;
 	.main_text {
 		font-size: 25px;
@@ -192,21 +192,21 @@ html, body {
 			margin: 0 auto;
 			height: 250px;
 			width: 250px;
-			background-image: url(player1.jpg);
+			background-image: image-url("player1.jpg");
 			background-size: cover;
 		}
 		.player_box_item2 {
 			margin: 0 auto;
 			height: 250px;
 			width: 250px;
-			background-image: url(player2.jpg);
+			background-image: image-url("player2.jpg");
 			background-size: cover;
 		}
 		.player_box_item3 {
 			margin: 0 auto;
 			height: 250px;
 			width: 250px;
-			background-image: url(player3.jpg);
+			background-image: image-url("player3.jpg");
 			background-size: cover;
 		}
 	}
@@ -226,7 +226,7 @@ html, body {
 			margin: 10px auto;
 			height: 200px;
 			width: 400px;
-			background-image: url(team1.jpg);
+			background-image: image-url("team1.jpg");
 			background-size: cover;
 			background-position: center;
 		}
@@ -234,7 +234,7 @@ html, body {
 			margin: 10px auto;
 			height: 200px;
 			width: 400px;
-			background-image: url(team2.jpg);
+			background-image: image-url("team2.jpg");
 			background-size: cover;
 			background-position: center;
 		}
@@ -242,7 +242,7 @@ html, body {
 			margin: 10px auto;
 			height: 200px;
 			width: 400px;
-			background-image: url(team3.jpg);
+			background-image: image-url("team3.jpg");
 			background-size: cover;
 			background-position: center;
 		}
@@ -250,7 +250,7 @@ html, body {
 			margin: 10px auto;
 			height: 200px;
 			width: 400px;
-			background-image: url(team4.jpg);
+			background-image: image-url("team4.jpg");
 			background-size: cover;
 			background-position: center;
 		}
