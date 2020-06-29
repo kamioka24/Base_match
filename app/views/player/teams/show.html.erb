@@ -36,7 +36,7 @@
 					<li class="category"><%= @team.category %></li>
 					<li class="name"><%= @team.name %></li>
 					<li class="member"><%= @team.member %>人</li>
-					<li class="link"><%= link_to @team.name, player_posts_path %></li>
+					<li class="link"><%= link_to @team.name, player_posts_path(@team.posts) %></li>
 				</ul>
 				<div class="team_image">
 					<%= attachment_image_tag @team, :team_image, :fill, 900, 500 %>

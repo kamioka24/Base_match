@@ -2,7 +2,7 @@ class Player::TeamsController < ApplicationController
 	def index
 		# @teams = Team.page(params[:page]).per(20)
 		@q = Team.ransack(params[:q])
-		@teams = @q.result(distinct: true)
+		@teams = @q.result(distinct: true).order(:prefecture_code).order(:city)
 	end
 
 	def show

@@ -9,11 +9,13 @@
 		<%= f.radio_button :category_eq, 0 %>硬式
 		<%= f.radio_button :category_eq, 1 %>軟式
 	<% end %>
-	<table width="600" class="team_table">
+	<table width="700" class="team_table">
 		<thead>
 			<tr>
+				<th>都道府県</th>
 				<th>市区町村</th>
 				<th>チーム名</th>
+				<th>カテゴリー</th>
 				<th>人数</th>
 			</tr>
 		</thead>
@@ -21,8 +23,10 @@
 			<% if team != current_team %> <!-- 自チーム以外を表示 -->
 				<tbody>
 					<tr>
+						<td><%= team.prefecture_code %></td>
 						<td><%= team.city %></td>
 						<td><%= link_to team.name, team_team_path(team) %></td>
+						<td><%= team.category %></td>
 						<td><%= team.member %></td>
 					</tr>
 				</tbody>
