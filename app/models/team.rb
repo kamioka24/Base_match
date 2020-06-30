@@ -11,18 +11,29 @@ class Team < ApplicationRecord
 	validates :name, presence: true, length: {maximum: 20}
 	validates :member, presence: true, length: {maximum: 3} # 3桁まで
 	validates :category, presence: true
-	validates :introduction, presence: true, length: {in: 20..300}
+	# validates :introduction, presence: true, length: {in: 20..300}
 	validates :city, presence: true, length: {in: 2..8}
 	validates :street, presence: true, length: {in: 2..20}
 	validates :phone_number, presence: true, length: {in: 2..20}
 
 	enum category: {硬式: 0, 軟式: 1}
 
-	def address
-		prefecture_code + city + street
-	end
-
 	def bookmarked_by?(player) # チームに自分(current_player)のブックマークが既にあるか判断する
             bookmarks.where(player_id: player.id).exists? # exists = 存在
     end
+
+    geocoded_by :street # 番地を登録した際に緯度、経度のカラムに自動で値を入れてくれる。
+    after_validation :geocode, if: :street_changed? # 番地を変更した際に、自動でgeocodingされる。
+
+    # prefecture_codeからprefecture_nameに変換する
+    include JpPrefecture
+  	jp_prefecture :prefecture_code
+
+  	def prefecture_name
+  		JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
+	end
+
+	def prefecture_name=(prefecture_name)
+    	self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
+	end
 end

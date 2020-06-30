@@ -66,9 +66,11 @@ ActiveRecord::Schema.define(version: 2020_06_21_135152) do
     t.integer "member"
     t.string "team_image_id"
     t.text "introduction"
-    t.string "prefecture_code"
+    t.integer "prefecture_code" # 数字でセレクトしないと、並び替えが綺麗にできないため
     t.string "city"
     t.string "street"
+    t.float "latitude" # 緯度 浮動小数点数型
+    t.float "longitude" # 緯度 浮動小数点数型
     t.string "phone_number"
     t.integer "category"
     t.datetime "created_at", null: false

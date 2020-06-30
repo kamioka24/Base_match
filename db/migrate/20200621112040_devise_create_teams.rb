@@ -36,9 +36,11 @@ class DeviseCreateTeams < ActiveRecord::Migration[5.2]
       t.integer :member
       t.string :team_image_id
       t.text :introduction
-      t.string :prefecture_code
+      t.integer :prefecture_code
       t.string :city
       t.string :street
+      t.float :latitude
+      t.float :longitude
       t.string :phone_number
       t.integer :category
       t.timestamps null: false

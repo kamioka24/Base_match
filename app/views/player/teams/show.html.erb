@@ -1,3 +1,36 @@
+<script type="text/javascript">
+  function initMap() {
+// latitude,longitudeから位置を特定
+    var test ={lat: <%= @team.latitude %>, lng: <%= @team.longitude %>};
+    var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: test
+              });
+    var transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
+
+    var contentString = '住所：<%= @team.prefecture_code %><%= @team.city %><%= @team.street %>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+ // Map上の指定した位置にピンを挿して表示する
+    var marker = new google.maps.Marker({
+                  position:test,
+                  map: map,
+                  title: contentString
+                 });
+
+     marker.addListener('click', function() {
+       infowindow.open(map, marker);
+     });
+  }
+</script>
+
+<script async defer
+              src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+</script>
+
 <div class="container">
 	<div class="row">
 		<div class="col-xs-3">
@@ -56,9 +89,10 @@
 					</tr>
 					<tr>
 						<th><i class="fas fa-baseball-ball"></i> 住所</th>
-						<td><%= @team.address %></td>
+						<td><%= @team.prefecture_code %><%= @team.city %><%= @team.street %></td>
 					</tr>
 				</table>
+				<div class="map"></div>
 				<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
 			</div>
 		</div>

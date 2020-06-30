@@ -39,15 +39,15 @@
                     </tr>
                     <tr>
                         <th><%= f.label :prefecture_code, "都道府県" %></th>
-                        <td><%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name %></td>
+                        <td><%= f.input :prefecture_code, collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県' %></td>
                     </tr>
                     <tr>
                         <th><%= f.label :city, "市区町村" %></th>
-                        <td><%= f.text_field :city, placeholder: "(例)深谷市" %></td>
+                        <td><%= f.text_field :city, placeholder: "(例)○○市" %></td>
                     </tr>
                     <tr>
                         <th><%= f.label :street, "番号・番地" %></th>
-                        <td><%= f.text_field :street, placeholder: "(例)高畑1-1" %></td>
+                        <td><%= f.text_field :street, placeholder: "(例)○○1-1" %></td>
                     </tr>
                     <tr>
                         <th><%= f.label :phone_number, "電話番号(ハイフンなし)" %></th>

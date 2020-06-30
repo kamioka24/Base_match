@@ -64,7 +64,7 @@
 					</tr>
 					<tr>
 						<th><i class="fas fa-baseball-ball"></i> 住所</th>
-						<td><%= @team.address %></td>
+						<td><%= @team.prefecture_code %><%= @team.city %><%= @team.street %></td>
 					</tr>
 				</table>
 				<% if @team != current_team %>
