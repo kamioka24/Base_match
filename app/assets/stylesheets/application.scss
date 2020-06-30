@@ -35,6 +35,14 @@ li {
 	clear: both;
 }
 
+.sign_up_btn {
+	background-color: #21FF80;
+}
+
+.login_btn {
+	background-color: #66CCFF;
+}
+
 .back_btn {
 	float: right;
 }
@@ -302,6 +310,9 @@ html, body {
 			text-align: center;
 			font-size: 15px;
 		}
+		.post_title {
+			text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
+		}
 	}
 }
 
@@ -352,13 +363,16 @@ html, body {
 
 // プレイヤー側チーム詳細
 
-.side_table {
+.side_table { // チーム側と共通
 	margin-top: 50px;
 	tr {
 		line-height: 35px;
 		th {
 			text-align: center;
 			font-size: 15px;
+		}
+		.post_title {
+			text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
 		}
 	}
 }
@@ -467,6 +481,9 @@ html, body {
 	th {
 		line-height: 40px;
 	}
+	.post_title {
+		text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
+	}
 	.fa-edit {
 		margin-right: 15px;
 	}
@@ -480,7 +497,7 @@ html, body {
 	.post_team_name {
 		font-size: 25px;
 	}
-	.contact_link {
+	.fa-paper-plane {
 		float: right;
 	}
 	.post_title {

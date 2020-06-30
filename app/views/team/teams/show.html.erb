@@ -17,7 +17,7 @@
 						</tr>
 					<% else %>
 						<tr>
-							<th colspan="3"><%= @team.name %>　新着情報</th>
+							<th colspan="2"><%= @team.name %>　新着情報</th>
 						</tr>
 					<% end %>
 				</thead>
@@ -27,7 +27,7 @@
 							<tbody>
 								<tr>
 									<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-									<td><%= link_to post.title, player_post_path(post) %></td>
+									<td><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
 									<td><%= post.team.name %></td>
 								</tr>
 							</tbody>
@@ -37,7 +37,7 @@
 							<tbody>
 								<tr>
 									<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-									<td><%= link_to post.title, player_post_path(post) %></td>
+									<td><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
 								</tr>
 							</tbody>
 						<% end %>

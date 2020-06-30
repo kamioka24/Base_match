@@ -27,7 +27,7 @@
 			<tbody>
 				<tr>
 					<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-					<td><%= link_to post.title, team_post_path(post) %></td>
+					<td><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
 					<td><%= post.team.name %></td>
 					<% if post.team_id == current_team.id %>
 						<td>
