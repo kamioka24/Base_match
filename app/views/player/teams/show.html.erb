@@ -8,8 +8,8 @@
               });
     var transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
-
-    var contentString = '住所：<%= @team.prefecture_code %><%= @team.city %><%= @team.street %>';
+    var contentString = '住所：<%= @team.prefecture_name %><%= @team.city %><%= @team.street %>';
+    // prefecture_codeをprefecture_nameに変換しているため
     var infowindow = new google.maps.InfoWindow({
       content: contentString
     });
@@ -89,7 +89,8 @@
 					</tr>
 					<tr>
 						<th><i class="fas fa-baseball-ball"></i> 住所</th>
-						<td><%= @team.prefecture_code %><%= @team.city %><%= @team.street %></td>
+						<td><%= @team.prefecture_name %><%= @team.city %><%= @team.street %></td>
+						<!-- prefecture_codeをprefecture_nameに変換しているため -->
 					</tr>
 				</table>
 				<div class="map"></div>

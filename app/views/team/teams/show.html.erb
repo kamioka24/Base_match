@@ -1,3 +1,36 @@
+<script type="text/javascript">
+  function initMap() {
+// latitude,longitudeから位置を特定
+    var test ={lat: <%= @team.latitude %>, lng: <%= @team.longitude %>};
+    var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: test
+              });
+    var transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
+    var contentString = '住所：<%= @team.prefecture_name %><%= @team.city %><%= @team.street %>';
+    // prefecture_codeをprefecture_nameに変換しているため
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+ // Map上の指定した位置にピンを挿して表示する
+    var marker = new google.maps.Marker({
+                  position:test,
+                  map: map,
+                  title: contentString
+                 });
+
+     marker.addListener('click', function() {
+       infowindow.open(map, marker);
+     });
+  }
+</script>
+
+<script async defer
+              src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+</script>
+
 <div class="container">
 	<div class="row">
 		<% if @team == current_team %>
@@ -23,11 +56,12 @@
 				</thead>
 				<% @posts.each do |post| %>
 					<% if @team == current_team %>
-						<% if @team.prefecture_code == post.team.prefecture_code %>
+						<% if @team.prefecture_name == post.team.prefecture_name %>
+						<!-- prefecture_codeをprefecture_nameに変換しているため -->
 							<tbody>
 								<tr>
 									<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-									<td><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
+									<td ><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
 									<td><%= post.team.name %></td>
 								</tr>
 							</tbody>
@@ -64,9 +98,11 @@
 					</tr>
 					<tr>
 						<th><i class="fas fa-baseball-ball"></i> 住所</th>
-						<td><%= @team.prefecture_code %><%= @team.city %><%= @team.street %></td>
+						<td><%= @team.prefecture_name %><%= @team.city %><%= @team.street %></td>
+						<!-- prefecture_codeをprefecture_nameに変換しているため -->
 					</tr>
 				</table>
+				<div class="map"></div>
 				<% if @team != current_team %>
 					<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
 				<% end %>

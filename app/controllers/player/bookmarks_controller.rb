@@ -1,7 +1,7 @@
 class Player::BookmarksController < ApplicationController
 	def index
 		@player = current_player
-    	@bookmarks = Bookmark.where(player_id: @player.id)
+    	@bookmarks = Bookmark.where(player_id: @player.id).order(:prefecture_code).order(:city).order(member: "DESC")
 	end
 
 	def create

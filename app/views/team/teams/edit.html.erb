@@ -36,7 +36,7 @@
                     </tr>
                     <tr>
                         <th><%= f.label :prefecture_code, "都道府県" %></th>
-                        <td><%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name %></td>
+                        <td><%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %></td>
                     </tr>
                     <tr>
                         <th><%= f.label :city, "市区町村" %></th>

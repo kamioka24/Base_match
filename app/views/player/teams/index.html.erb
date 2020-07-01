@@ -2,6 +2,7 @@
 	<h1 class="page_title">チーム一覧</h1>
 	<%= search_form_for @q, url: player_teams_path, class: "seach" do |f| %>
 		<%= f.search_field :name_or_prefecture_code_or_city_cont, class: "seach_form", placeholder: "検索" %>
+		<!-- 検索は元のカラムにて実行 -->
 		<%= button_tag type: "submit" do %>
             <i class="fas fa-search"></i>
         <% end %><br>
@@ -27,7 +28,8 @@
 					<p class="team_box_name"><%= team.name %></p>
 				<% end %>
 				<div class="team_box_bottom">
-					・<%= team.prefecture_code %><%= team.city %><br>
+					・<%= team.prefecture_name %><%= team.city %><br>
+					<!-- prefecture_codeをprefecture_nameに変換しているため -->
 					・<%= team.category %><br>
 					・<%= team.member %>人
 				</div>
