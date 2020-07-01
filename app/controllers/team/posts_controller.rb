@@ -14,7 +14,7 @@ class Team::PostsController < ApplicationController
 	end
 
 	def index
-		@posts = Post.page(params[:page]).per(10).order(created_at: "DESC") #降順
+		@posts = Post.page(params[:page]).per(10).order(created_at: "DESC")
 		@q = Team.ransack(params[:q])
 		@post = @q.result(distinct: true)
 	end
