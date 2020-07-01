@@ -24,8 +24,8 @@
                 <td><%= f.email_field :email, autocomplete: "email", placeholder: "(例)base_match@gmail.com" %></td>
             </tr>
             <tr>
-                <td><%= f.submit "変更内容を保存する" %></td>
-                <td><%= link_to "退会をご希望の方はこちら", exit_player_player_path %></td>
+                <td><%= link_to "退会する", exit_player_player_path, class: "btn exit_btn" %></td>
+                <td><%= f.submit "変更内容を保存する", class: "btn update_btn" %></td>
             </tr>
         </table>
     <% end %>

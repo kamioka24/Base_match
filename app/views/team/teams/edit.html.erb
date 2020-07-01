@@ -55,8 +55,8 @@
                         <td><%= f.email_field :email, autocomplete: "email" %></td>
                     </tr>
                     <tr>
-                        <td><%= f.submit "変更内容を保存する", class: "btn submit" %></td>
-                        <td><%= link_to "退会をご希望の方はこちら", exit_team_team_path %></td>
+                        <td><%= link_to "退会する", exit_team_team_path, class: "btn exit_btn" %></td>
+                        <td><%= f.submit "変更内容を保存する", class: "btn update_btn" %></td>
                     </tr>
                 </table>
             </div>

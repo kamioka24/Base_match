@@ -16,7 +16,7 @@
 				<% if team.bookmarked_by?(current_player) %>
 					<%= link_to player_team_bookmarks_path(team), method: :delete, remote: true do %>
 						<!-- remote: trueでコントローラにJSのリクエストを送る -->
-						<td><i class="fas fa-star" style="color: skyblue;"></i></td>
+						<td><i class="fas fa-star" style="color: #0F80FF;"></i></td>
 					<% end %>
 				<% else %>
 					<%= link_to player_team_bookmarks_path(team), method: :post, remote: true do %>

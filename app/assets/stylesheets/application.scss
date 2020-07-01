@@ -67,6 +67,34 @@ li {
 	background-color: rgba(0, 190, 255, 1.0);
 }
 
+.btn {
+	margin-top: 10px;
+}
+
+.create_btn {
+	padding: 8px 35px;
+	background-color: rgba(30, 255, 0, 0.7);
+	border-radius: 5px;
+	transition: all 1s;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px #6d95ce inset;
+}
+
+.create_btn:hover {
+	background-color: rgba(30, 255, 0, 1.0);
+}
+
+.update_btn {
+	padding: 8px 35px;
+	background-color: rgba(0, 190, 255, 0.7);
+	border-radius: 5px;
+	transition: all 1s;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px #6d95ce inset;
+}
+
+.update_btn:hover {
+	background-color: rgba(0, 190, 255, 1.0);
+}
+
 .back_btn {
 	float: right;
 }
@@ -132,8 +160,8 @@ html, body {
 						margin: 0 auto;
 						display: flex;
 						.fab {
-							font-size: 25px;
-							margin-right: 20px;
+							font-size: 30px;
+							margin-right: 30px;
 						}
 					}
 				}
@@ -171,6 +199,22 @@ html, body {
 	margin: 30px auto;
 	th {
 		line-height: 50px;
+	}
+}
+
+.team_signup_image_area {
+	width: 500px;
+	.img_attachment {
+		margin-top: 5px;
+		font-size: 10px;
+		float: right;
+	}
+	.team_info {
+		margin: 20px 0 10px;
+	}
+	.introduction_area {
+		height: 200px;
+		width: 100%;
 	}
 }
 
