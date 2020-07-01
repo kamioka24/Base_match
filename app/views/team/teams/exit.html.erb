@@ -5,6 +5,6 @@
 		投稿や閲覧ができなくなります。<br>
 		退会する場合は、「退会する」をクリックしてください。
 	</h2>
-	<%= link_to "退会しない", team_team_path %>
-	<%= link_to "退会する", team_team_path, method: :delete, "data-confirm" => "退会してよろしいですか？" %>
+	<%= link_to "退会しない", team_team_path, class: "btn no_exit_btn" %>
+	<%= link_to "退会する", team_team_path, class: "btn exit_btn", method: :delete, "data-confirm" => "退会してよろしいですか？" %>
 </div>
