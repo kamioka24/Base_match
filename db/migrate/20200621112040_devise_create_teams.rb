@@ -36,7 +36,8 @@ class DeviseCreateTeams < ActiveRecord::Migration[5.2]
       t.integer :member
       t.string :team_image_id
       t.text :introduction
-      t.integer :prefecture_code
+      t.integer :prefecture_code # 都道府県順に並び替えるため、integerに。
+      # integerだと都道府県名で検索できないので後にstring型でprefecture_nameを追加。(ransackでなければできそう？)
       t.string :city
       t.string :street
       t.float :latitude

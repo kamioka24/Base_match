@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_21_135152) do
+ActiveRecord::Schema.define(version: 2020_07_01_124808) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer "player_id"
@@ -66,15 +66,16 @@ ActiveRecord::Schema.define(version: 2020_06_21_135152) do
     t.integer "member"
     t.string "team_image_id"
     t.text "introduction"
-    t.integer "prefecture_code" # 数字でセレクトしないと、並び替えが綺麗にできないため
+    t.integer "prefecture_code"
     t.string "city"
     t.string "street"
-    t.float "latitude" # 緯度 浮動小数点数型
-    t.float "longitude" # 緯度 浮動小数点数型
+    t.float "latitude"
+    t.float "longitude"
     t.string "phone_number"
     t.integer "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "prefecture_name"
     t.index ["email"], name: "index_teams_on_email", unique: true
     t.index ["reset_password_token"], name: "index_teams_on_reset_password_token", unique: true
   end

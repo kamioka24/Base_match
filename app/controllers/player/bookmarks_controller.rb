@@ -1,7 +1,8 @@
 class Player::BookmarksController < ApplicationController
 	def index
 		@player = current_player
-    	@bookmarks = Bookmark.where(player_id: @player.id).order(:prefecture_code).order(:city).order(member: "DESC")
+    	@bookmarks = Bookmark.joins(:team).where(player_id: @player.id).order(:prefecture_code).order(:city).order(member: "DESC")
+    	# .joins(:team)により、bookmark/indexでも、teamカラムの条件(cityなど)が使えるようになる。
 	end
 
 	def create

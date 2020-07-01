@@ -14,9 +14,8 @@ class Team::PostsController < ApplicationController
 	end
 
 	def index
-		@posts = Post.page(params[:page]).per(10).order(created_at: "DESC")
-		@q = Team.ransack(params[:q])
-		@post = @q.result(distinct: true)
+		@q = Post.ransack(params[:q])
+		@posts = @q.result(distinct: true).page(params[:page]).per(10).order(created_at: "DESC")
 	end
 
 	def show

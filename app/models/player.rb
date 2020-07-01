@@ -1,4 +1,5 @@
 class Player < ApplicationRecord
+	attr_accessor :prefecture_name
 	# Include default devise modules. Others available are:
 	# :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 	devise :database_authenticatable, :registerable,
@@ -14,7 +15,7 @@ class Player < ApplicationRecord
   	jp_prefecture :prefecture_code
 
   	def prefecture_name
-  		JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
+  		self.prefecture_name = JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
 	end
 
 	def prefecture_name=(prefecture_name)
