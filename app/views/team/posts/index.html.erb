@@ -1,8 +1,8 @@
 <div class="container">
-	<% if params[:team_id].nil? %> <!-- 投稿一覧出力時にチームidが含まれているかの分岐 -->
+	<% if params[:team].nil? %> <!-- 投稿一覧出力時にチームidが含まれているかの分岐 -->
 		<h1 class="page_title">投稿一覧</h1>
 	<% else %>
-		<h1 class="page_title"><%= Post.find(params[:team_id]).name %>　投稿一覧</h1>
+		<h1 class="page_title"><%= Team.find(params[:team]).name %>　投稿一覧</h1>
 	<% end %>
 	<p class="flash_message"><%= flash[:notice] %></p>
 	<%= search_form_for @q, url: team_posts_path, class: "seach" do |f| %>
@@ -16,7 +16,9 @@
 			<tr>
 				<th>投稿日</th>
 				<th>タイトル</th>
-				<th>チーム名</th>
+				<% if params[:team].nil? %>
+					<th>チーム名</th>
+				<% end %>
 				<th></th>
 			</tr>
 		</thead>
@@ -25,7 +27,9 @@
 				<tr>
 					<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
 					<td><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
-					<td><%= post.team.name %> (<%= post.team.prefecture_name %>)</td>
+					<% if params[:team].nil? %>
+						<td><%= post.team.name %> (<%= post.team.prefecture_name %>)</td>
+					<% end %>
 					<% if post.team_id == current_team.id %>
 						<td>
 							<%= link_to edit_team_post_path(post) do %>

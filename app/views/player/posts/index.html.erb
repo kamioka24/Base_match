@@ -1,8 +1,8 @@
 <div class="container">
-	<% if params[:team_id].nil? %>
+	<% if params[:team].nil? %>
 		<h1 class="page_title">投稿一覧</h1>
 	<% else %>
-		<h1 class="page_title"><%= Post.find(params[:team_id]).name %>　投稿一覧</h1>
+		<h1 class="page_title"><%= Team.find(params[:team]).name %>　投稿一覧</h1>
 	<% end %>
 	<%= search_form_for @q, url: player_posts_path, class: "seach" do |f| %>
 		<%= f.search_field :title_cont, class: "seach_form", placeholder: "検索" %>
@@ -10,12 +10,14 @@
             <i class="fas fa-search"></i>
         <% end %>
 	<% end %>
-	<table width="700" class="post_table">
+	<table width="600" class="post_table">
 		<thead>
 			<tr>
 				<th>投稿日</th>
 				<th>タイトル</th>
-				<th>チーム名</th>
+				<% if params[:team].nil? %>
+					<th>チーム名</th>
+				<% end %>
 			</tr>
 		</thead>
 		<% @posts.each do |post| %>
@@ -23,7 +25,9 @@
 				<tr>
 					<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
 					<td><%= link_to post.title, player_post_path(post), class: "post_title" %></td>
-					<td><%= post.team.name %> (<%= post.team.prefecture_name %>)</td>
+					<% if params[:team].nil? %>
+						<td><%= post.team.name %> (<%= post.team.prefecture_name %>)</td>
+					<% end %>
 				</tr>
 			</tbody>
 		<% end %>

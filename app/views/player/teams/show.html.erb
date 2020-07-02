@@ -49,11 +49,11 @@
 							</tr>
 						<% end %>
 					<% end %>
-					<tr>
-						<td colspan="2"><%= link_to "#{@team.name}の投稿一覧へ", player_posts_path(@team.posts) %></td>
-					</tr>
 				</tbody>
 			</table>
+			<div class="post_index_path">
+				<%= link_to "#{@team.name}の投稿一覧へ", player_posts_path(team: @team.id) %> <!-- teamのidを含む -->
+			</div>
 		</div>
 		<div class="col-xs-9">
 			<div class="team_information">
@@ -82,9 +82,9 @@
 				</div>
 				<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
 				<!-- safe_joinによって改行が反映される -->
-				<table width="300">
+				<table width="350" class="address_table">
 					<tr>
-						<th><i class="fas fa-baseball-ball"></i> 連絡先</th>
+						<th><i class="fas fa-mobile-alt"></i> 連絡先</th>
 						<td><%= @team.phone_number %></td>
 					</tr>
 					<tr>

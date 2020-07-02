@@ -481,12 +481,25 @@ html, body {
 	}
 }
 
-.map {
+.address_table { // チーム側と共通
+		margin: 20px 0;
+		font-size: 15px;
+		tr {
+			line-height: 25px;
+		}
+	}
+
+.map { // チーム側と共通
 	width: 900px;
 	height: 500px;
 }
 
 // チーム詳細(マイチーム)
+
+.post_index_path {
+	margin-top: 30px;
+	float: right;
+}
 
 .team_information {
 	width: 900px;

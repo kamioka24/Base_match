@@ -7,7 +7,7 @@
 				<i class="fa fa-edit"> 編集する</i>
 			<% end %>
 		<% else %>
-			<%= link_to "#{@post.team.name}投稿一覧へ", edit_team_post_path(@post), class: "team_post_index" %>
+			<%= link_to "#{@post.team.name}投稿一覧へ", team_posts_path(team: @post.team.id), class: "team_post_index" %> <!-- postページなので、@post.team.idとしないとpost.idとteam.idが混同して遷移がうまくいかない。)teamページではteam.id) -->
 		<% end %>
 		<div class="post_title">
 			<%= @post.title %>
