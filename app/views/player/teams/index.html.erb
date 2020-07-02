@@ -13,16 +13,9 @@
 	<div class="team_boxes">
 		<% @teams.each do |team| %>
 			<div class="team_box">
-				<% if team.bookmarked_by?(current_player) %>
-					<%= link_to player_team_bookmarks_path(team), method: :delete, remote: true do %>
-						<!-- remote: trueでコントローラにJSのリクエストを送る -->
-						<td><i class="fas fa-star" style="color: #0F80FF;"></i></td>
-					<% end %>
-				<% else %>
-					<%= link_to player_team_bookmarks_path(team), method: :post, remote: true do %>
-						<td><i class="far fa-star"></i></td>
-					<% end %>
-				<% end %><br>
+				<div id="bookmarks_buttons_<%= team.id %>">
+		             <%= render partial: 'player/bookmarks/bookmark', locals: { team: team } %>
+		        </div>
 				<%= link_to player_team_path(team) do %>
 					<%= attachment_image_tag team, :team_image, :fill, 200, 130 %><br>
 					<p class="team_box_name"><%= team.name %></p>

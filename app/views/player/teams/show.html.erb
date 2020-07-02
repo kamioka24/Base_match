@@ -28,7 +28,7 @@
 </script>
 
 <script async defer
-              src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+              src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer>
 </script>
 
 <div class="container">
@@ -58,17 +58,9 @@
 		<div class="col-xs-9">
 			<div class="team_information">
 				<ul class="player_teams_information_top">
-					<% if @team.bookmarked_by?(current_player) %>
-						<li class="star"><%= link_to player_team_bookmarks_path(@team), method: :delete, remote: true do %>
-								<!-- remote: trueでコントローラにJSのリクエストを送る -->
-								<i class="fas fa-star" style="color: #0F80FF;"></i>
-							<% end %>
-						</li>
-					<% else %>
-						<%= link_to player_team_bookmarks_path(@team), method: :post, remote: true do %>
-							<td><i class="far fa-star"></i></td>
-						<% end %>
-					<% end %>
+					<li id="bookmarks_buttons_<%= @team.id %>">
+			            <%= render partial: 'player/bookmarks/bookmark', locals: { team: @team } %>
+			        </li>
 					<li class="category"><%= @team.category %></li>
 					<li class="name"><%= @team.name %></li>
 					<li class="member"><%= @team.member %>人</li>
@@ -93,7 +85,7 @@
 						<!-- prefecture_codeをprefecture_nameに変換しているため -->
 					</tr>
 				</table>
-				<div class="map"></div>
+				<div id="map" data-tap-disabled="true"></div>
 				<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
 			</div>
 		</div>

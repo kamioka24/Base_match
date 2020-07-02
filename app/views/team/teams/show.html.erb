@@ -28,7 +28,7 @@
 </script>
 
 <script async defer
-              src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+              src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['API_KEY'] %>&callback=initMap">
 </script>
 
 <div class="container">
@@ -105,7 +105,7 @@
 						<!-- prefecture_codeをprefecture_nameに変換しているため -->
 					</tr>
 				</table>
-				<div class="map"></div>
+				<div id="map" data-tap-disabled="true"></div>
 				<% if @team != current_team %>
 					<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
 				<% end %>
