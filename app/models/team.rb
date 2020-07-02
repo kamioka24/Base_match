@@ -1,5 +1,4 @@
 class Team < ApplicationRecord
-	attr_accessor :prefecture_name
 	# Include default devise modules. Others available are:
 	# :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 	devise :database_authenticatable, :registerable,
@@ -24,18 +23,23 @@ class Team < ApplicationRecord
             bookmarks.where(player_id: player.id).exists? # exists = 存在
     end
 
-    geocoded_by :street # 番地を登録した際に緯度、経度のカラムに自動で値を入れてくれる。
-    after_validation :geocode, if: :street_changed? # 番地を変更した際に、自動でgeocodingされる。
+    def address
+    	prefecture_name + city + street
+    end
+
+    geocoded_by :address # アドレスを登録した際に緯度、経度のカラムに自動で値を入れてくれる。
+    after_validation :geocode #, if: :address_changed? この記述を書くとエラーが起きる。 # アドレスを変更した際に、自動でgeocodingされる。
 
     # prefecture_codeからprefecture_nameに変換する
     include JpPrefecture
   	jp_prefecture :prefecture_code
+  	before_validation :set_prefecture_name # 更新前にメソッド(set_prefecture_name)を呼んでset_prefecture_name34行目を実行。
 
-  	def prefecture_name
+  	def set_prefecture_name
   		self.prefecture_name = JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
 	end
 
-	def prefecture_name=(prefecture_name)
-    	self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
-	end
+	# def prefecture_name=(prefecture_name)
+ #    	self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
+	# end
 end

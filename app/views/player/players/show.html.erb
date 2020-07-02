@@ -17,7 +17,7 @@
 					</tr>
 				</thead>
 				<% @posts.each do |post| %>
-					<% if post.team.prefecture_name == @player.prefecture_name %>
+					<% if post.team.prefecture_name == current_player.prefecture_name %>
 					<!-- prefecture_codeをprefecture_nameに変換しているため -->
 						<tbody>
 							<tr>
@@ -31,7 +31,7 @@
 			</table>
 		</div>
 		<div class="col-xs-9">
-			<h2>お近くのチーム(<%= @player.prefecture_name %>)</h2>
+			<h2>お近くのチーム(<%= current_player.prefecture_name %>)</h2>
 			<!-- prefecture_codeをprefecture_nameに変換しているため -->
 			<div class="near_team">
 				<% @teams.each do |team| %>

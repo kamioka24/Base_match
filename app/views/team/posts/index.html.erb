@@ -33,10 +33,10 @@
 					<% if post.team_id == current_team.id %>
 						<td>
 							<%= link_to edit_team_post_path(post) do %>
-								<i class="fa fa-edit"></i>
+								<i class="fa fa-edit"> 編集</i>
 							<% end %>
 							<%= link_to team_post_path(post), method: :delete, "data-confirm" => "投稿を削除してよろしいですか？" do %>
-								<i class="fa fa-trash"></i>
+								<i class="fa fa-trash"> 削除</i>
 							<% end %>
 						</td>
 					<% end %>

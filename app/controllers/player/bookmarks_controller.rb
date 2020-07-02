@@ -9,11 +9,13 @@ class Player::BookmarksController < ApplicationController
 		@team = Team.find(params[:team_id])
 		@bookmark = current_player.bookmarks.new(team_id: @team.id)
 		@bookmark.save
+		# 非同期通信採用のため、redirect不要。
 	end
 
 	def destroy
 		@team = Team.find(params[:team_id])
 		@bookmark = current_player.bookmarks.find_by(team_id: @team.id)
 		@bookmark.destroy
+		# 非同期通信採用のため、redirect不要。
 	end
 end
