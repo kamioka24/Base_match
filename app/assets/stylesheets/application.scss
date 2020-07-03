@@ -343,14 +343,14 @@ input[type="email"] { // email_formの幅指定
 .section_text {
 	font-size: 20px;
 	p {
-		margin: 30px 0;
+		margin: 50px 0;
 	}
 }
 
 #about_player {
 	margin: 0 auto;
 	text-align: center;
-	height: 780px;
+	height: 880px;
 	width: 70%;
 	.player_img_boxs {
 		display: flex;
@@ -384,7 +384,7 @@ input[type="email"] { // email_formの幅指定
 #about_team {
 	margin: 0 auto;
 	text-align: center;
-	height: 930px;
+	height: 950px;
 	width: 70%;
 	.team_img_boxs {
 		margin: 0 auto;
@@ -439,12 +439,10 @@ input[type="email"] { // email_formの幅指定
 
 #about_profile {
 	margin: 0 auto;
-	height: 600px;
+	height: 380px;
 	width: 70%;
-	.profile_top {
+	.profile_area {
 		margin: 30px auto;
-	}
-	.profile_bottom {
 		display: flex;
 		.profile_left {
 			margin: 0px 120px;
@@ -491,7 +489,8 @@ input[type="email"] { // email_formの幅指定
 	display: flex;
 	flex-wrap: wrap;
 	.team_box {
-		border: 1px solid #108040;
+		background: #fff;
+		box-shadow: 0 0px 10px rgba(0,0,0,0.2);
 		border-radius: 10px;
 		padding: 15px 10px;
 		margin-right: 13px;
@@ -515,7 +514,8 @@ input[type="email"] { // email_formの幅指定
 	flex-wrap: wrap;
 	margin-top: 70px;
 	.team_box {
-		border: 1px solid #108040;
+		background: #fff;
+		box-shadow: 0 0px 20px rgba(0,0,0,0.2);
 		border-radius: 10px;
 		padding: 10px;
 		margin-right: 31px;
