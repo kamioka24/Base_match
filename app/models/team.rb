@@ -20,7 +20,7 @@ class Team < ApplicationRecord
 	enum category: {硬式: 0, 軟式: 1}
 
 	def bookmarked_by?(player) # チームに自分(current_player)のブックマークが既にあるか判断する
-            bookmarks.where(player_id: player.id).exists? # exists = 存在
+        bookmarks.where(player_id: player.id).exists? # exists = 存在
     end
 
     def address
@@ -28,7 +28,7 @@ class Team < ApplicationRecord
     end
 
     geocoded_by :address # アドレスを登録した際に緯度、経度のカラムに自動で値を入れてくれる。
-    after_validation :geocode #, if: :address_changed? この記述を書くとエラーが起きる。 # アドレスを変更した際に、自動でgeocodingされる。
+    after_validation :geocode #, if: :address_changed? これを書くとエラーが起きる。 # アドレスを変更した際に、自動でgeocodingされる。
 
     # prefecture_codeからprefecture_nameに変換する
     include JpPrefecture
@@ -39,6 +39,7 @@ class Team < ApplicationRecord
   		self.prefecture_name = JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
 	end
 
+	# 今回に限っては必要なかった。
 	# def prefecture_name=(prefecture_name)
  #    	self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
 	# end

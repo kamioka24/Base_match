@@ -17,12 +17,12 @@
                 <table class="team_signup_table" width="500">
                     <tr>
                         <th><%= f.label :name, "チーム名" %></th>
-                        <td><%= f.text_field :name, autofocus: true, placeholder: "(例)◯◯ボーイズ" %></td>
+                        <td><%= f.text_field :name, autofocus: true, placeholder: "◯◯ボーイズ" %></td>
                         <!-- autofocus: trueによりページ表示後に自動でカーソルがnameに合っているようになる -->
                     </tr>
                     <tr>
                         <th><%= f.label :member, "人数(数字のみ)" %></th>
-                        <td><%= f.text_field :member, placeholder: "(例)25" %>人</td>
+                        <td><%= f.text_field :member, placeholder: "25" %>人</td>
                     </tr>
                     <tr>
                         <th><%= f.label :category, "カテゴリー" %></th>
@@ -37,19 +37,19 @@
                     </tr>
                     <tr>
                         <th><%= f.label :city, "市区町村" %></th>
-                        <td><%= f.text_field :city, placeholder: "(例)○○市" %></td>
+                        <td><%= f.text_field :city, placeholder: "○○市" %></td>
                     </tr>
                     <tr>
                         <th><%= f.label :street, "番号・番地" %></th>
-                        <td><%= f.text_field :street, placeholder: "(例)○○1-1" %></td>
+                        <td><%= f.text_field :street, placeholder: "○○1-1" %></td>
                     </tr>
                     <tr>
                         <th><%= f.label :phone_number, "電話番号(ハイフンなし)" %></th>
-                        <td><%= f.text_field :phone_number, placeholder: "(例)08012345678" %></td>
+                        <td><%= f.text_field :phone_number, placeholder: "08012345678" %></td>
                     </tr>
                     <tr>
                         <th><%= f.label :email, "メールアドレス" %></th>
-                        <td><%= f.email_field :email, autocomplete: "email", placeholder: "(例)base_match@gmail.com" %></td>
+                        <td><%= f.email_field :email, autocomplete: "email", placeholder: "base_match@gmail.com" %></td>
                     </tr>
                     <tr>
                         <th><%= f.label :password, "パスワード(6文字以上)" %></th>

@@ -7,7 +7,7 @@
         <table class="signup_table" width="500">
             <tr>
                 <th><%= f.label :name, "アカウント名" %></th>
-                <td><%= f.text_field :name, autofocus: true, placeholder: "(例)野球太郎" %></td>
+                <td><%= f.text_field :name, autofocus: true, placeholder: "野球太郎" %></td>
                 <!-- autofocus: trueによりページ表示後に自動でカーソルがnameに合っているようになる -->
             </tr>
             <tr>
@@ -16,7 +16,7 @@
             </tr>
             <tr>
                 <th><%= f.label :email, "メールアドレス" %></th>
-                <td><%= f.email_field :email, autocomplete: "email", placeholder: "(例)base_match@gmail.com" %></td>
+                <td><%= f.email_field :email, autocomplete: "email", placeholder: "base_match@gmail.com" %></td>
             </tr>
             <tr>
                 <th><%= f.label :password, "パスワード(6文字以上)" %></th>
