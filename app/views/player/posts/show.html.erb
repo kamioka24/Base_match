@@ -1,21 +1,47 @@
 <div class="container">
-	<div class="post_show_box">
-		<%= link_to @post.team.name, player_team_path(@post.team), class: "post_team_name" %>
-		<%= link_to root_path do %> <!-- コンタクトを作成するまでとりあえず -->
-			<i class="fas fa-paper-plane"> お問い合わせ</i>
-		<% end %>
-		<div class="post_title">
-			<%= @post.title %>
+	<div class="row">
+		<div class="col-xs-3">
+			<table width="350" class="side_table">
+				<thead>
+					<tr>
+						<th colspan="2"><%= @post.team.name %>　新着情報</th> <!-- 2つ分のスペースを結合 -->
+					</tr>
+				</thead>
+				<tbody>
+					<% @posts.each do |post| %>
+						<% if @team == post.team %>
+							<tr>
+								<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
+								<td><%= link_to post.title, player_post_path(post), class: "post_title" %></td>
+							</tr>
+						<% end %>
+					<% end %>
+				</tbody>
+			</table>
+			<%= link_to "#{@post.team.name}の投稿一覧へ", player_posts_path(team: @post.team.id), class: "post_index_path" %> <!-- teamのidを含む -->
 		</div>
-		<div class="post_date">
-			<%= @post.created_at.strftime("%Y/%m/%d") %>
+		<div class="col-xs-9">
+			<div class="post_show_box">
+				<%= link_to @post.team.name, player_team_path(@post.team), class: "post_team_name" %>
+				<%= link_to root_path do %> <!-- コンタクトを作成するまでとりあえず -->
+					<i class="fas fa-paper-plane"> お問い合わせ</i>
+				<% end %>
+				<div class="post_title_area">
+					<div class="post_title">
+						<%= @post.title %>
+					</div>
+					<div class="post_date">
+						<%= @post.created_at.strftime("%Y/%m/%d") %>
+					</div>
+				</div>
+				<div class="post_img">
+					<%= attachment_image_tag @post, :post_image, :fill, 900, 500 %>
+				</div>
+				<div class="post_body">
+					<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
+				</div>
+			</div>
+			<%= link_to "前の画面へ戻る", :back, class: "back_btn" %>
 		</div>
-		<div class="post_img">
-			<%= attachment_image_tag @post, :post_image, :fill, 800, 500 %>
-		</div>
-		<div class="post_body">
-			<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
-		</div>
-		<%= link_to "前の画面へ戻る", :back, class: "back_btn" %>
 	</div>
 </div>

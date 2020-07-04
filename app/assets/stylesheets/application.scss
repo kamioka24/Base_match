@@ -116,7 +116,17 @@ li {
 }
 
 .back_btn {
+	margin: 30px 0;
 	float: right;
+	text-decoration: none !important;
+	transition: .3s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.back_btn:hover { // 文字を強調する
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .fa-star {
@@ -440,7 +450,7 @@ input[type="email"] { // email_formの幅指定
 
 #about_profile {
 	margin: 0 auto;
-	height: 380px;
+	height: 350px;
 	width: 70%;
 	.profile_area {
 		margin: 30px auto;
@@ -535,7 +545,41 @@ input[type="email"] { // email_formの幅指定
 
 // プレイヤー側チーム詳細
 
-.side_table { // チーム側と共通
+.team_information {
+	background: #fff;
+	box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+	border-radius: 10px;
+	padding: 20px;
+	.player_teams_information_top {
+		display: flex;
+		width: 100%;
+		height: 50px;
+		.category, .member {
+			font-size: 18px;
+			margin: 10px auto;
+			line-height: 50px;
+		}
+		.name {
+			font-size: 30px;
+			margin: 10px auto;
+		}
+	}
+}
+
+.fa-paper-plane { // post_showと共有したいからネストなし
+	float: right;
+	text-decoration: none !important;
+	transition: .3s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.fa-paper-plane:hover { // 文字を強調する
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+// ここからチーム側と共通
+.side_table {
 	margin-top: 50px;
 	tr {
 		line-height: 35px;
@@ -544,27 +588,34 @@ input[type="email"] { // email_formの幅指定
 			font-size: 15px;
 		}
 		.post_title {
+			text-decoration: none !important;
+			transition: .3s;
+			-webkit-transform: scale(1);
+			transform: scale(1);
 			text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
+		}
+		.post_title:hover { // 文字を強調させる
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);
 		}
 	}
 }
 
-.player_teams_information_top {
-	display: flex;
-	width: 100%;
-	height: 50px;
-	.category, .member {
-		font-size: 18px;
-		margin: 10px auto;
-		line-height: 50px;
-	}
-	.name {
-		font-size: 30px;
-		margin: 10px auto;
-	}
+.post_index_path {
+	margin-top: 30px;
+	float: right;
+	text-decoration: none !important;
+	transition: .3s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }
 
-.address_table { // チーム側と共通
+.post_index_path:hover { // 文字を強調させる
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.address_table {
 		margin: 20px 0;
 		font-size: 15px;
 		tr {
@@ -572,21 +623,20 @@ input[type="email"] { // email_formの幅指定
 		}
 	}
 
-#map { // チーム側と共通
+#map {
 	width: 900px;
 	height: 500px;
 }
+// ここまでチーム側と共通
 
 // チーム詳細(マイチーム)
 
-.post_index_path {
-	margin-top: 30px;
-	float: right;
-}
-
 .team_information {
-	width: 900px;
 	margin: 20px auto;
+	background: #fff;
+	box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+	border-radius: 10px;
+	padding: 20px;
 	.information_top {
 		display: flex;
 		width: 350px;
@@ -625,13 +675,12 @@ input[type="email"] { // email_formの幅指定
 // チーム編集
 
 .change_pass_btn { // プレイヤー側と共通
-	transition: all 1s;
+	// transition: all 1s;
 	text-decoration: none !important;
 }
 
-.change_pass_btn:hover {
-	border-bottom: 5px solid rgba(0, 190, 255, 0.8);
-}
+// .change_pass_btn:hover {
+// }
 
 .team_image_edit_area {
 	width: 500px;
@@ -694,22 +743,39 @@ input[type="email"] { // email_formの幅指定
 // 投稿詳細(共通)
 
 .post_show_box {
-	width: 800px;
+	background: #fff;
+	box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+	border-radius: 10px;
+	width: 940px;
+	padding: 20px;
 	margin: 30px auto;
 	.post_team_name {
 		font-size: 25px;
 	}
-	.fa-paper-plane, .fa-edit, .team_post_index {
+	.fa-edit, .team_post_index {
 		float: right;
+		text-decoration: none !important;
+		transition: .3s;
 	}
-	.post_title {
-		font-size: 25px;
-		text-align: center;
+	.fa-edit:hover { // 文字を強調させる
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
 	}
-	.post_date {
-		float: right;
-		font-size: 15px;
-		margin-bottom: 15px;
+	.team_post_index:hover { // 文字を強調させる
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	.post_title_area {
+		width: 900px;
+		.post_title {
+			font-size: 25px;
+			text-align: center;
+		}
+		.post_date {
+			float: right;
+			font-size: 15px;
+			margin-bottom: 15px;
+		}
 	}
 	.post_img {
 		text-align: center;

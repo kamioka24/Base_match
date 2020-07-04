@@ -1,0 +1,9 @@
+<%= @player.name %> 様
+
+Base_matchへの選手会員登録が完了しました。
+
+アカウント名：　<%= @player.name %>
+パスワード：　　<%= @player.encrypted_password %>
+
+マイページはこちら
+<%= player_player_url(@player) %>

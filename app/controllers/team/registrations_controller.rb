@@ -11,7 +11,12 @@ class Team::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    super
+    # super
+    @team = Team.new(sign_up_params)
+    if @team.save
+       # NotificationMailer.send_confirm_to_team(@team).deliver
+       redirect_to team_team_path(@team)
+    end
   end
 
   # GET /resource/edit
@@ -42,6 +47,9 @@ class Team::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:password])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
   end
 

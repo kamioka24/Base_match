@@ -45,9 +45,7 @@
 					<% end %>
 				<% end %>
 			</table>
-			<div class="post_index_path">
-				<%= link_to "#{@team.name}の投稿一覧へ", team_posts_path(team: @team.id) %> <!-- teamのidを含む -->
-			</div>
+			<%= link_to "#{@team.name}の投稿一覧へ", team_posts_path(team: @team.id), class: "post_index_path" %> <!-- teamのidを含む -->
 		</div>
 		<div class="col-xs-9">
 			<div class="team_information">
@@ -73,10 +71,10 @@
 					</tr>
 				</table>
 				<div id="map" class="<%= @team.prefecture_name + @team.city + @team.street %>"></div>
-				<% if @team != current_team %>
-					<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
-				<% end %>
 			</div>
+			<% if @team != current_team %>
+				<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
+			<% end %>
 		</div>
 	</div>
 </div>

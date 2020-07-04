@@ -1,5 +1,6 @@
 class Player::PlayersController < ApplicationController
 	before_action :authenticate_player!
+	before_action :protect, only:[:edit, :update, :destroy]
 	def show
 		@player = current_player
 		@teams = Team.where(prefecture_code: @player.prefecture_code).page(params[:page]).per(8).order(:city).order(member: "DESC")
@@ -11,11 +12,9 @@ class Player::PlayersController < ApplicationController
 	end
 
 	def edit
-		@player = Player.find(params[:id])
 	end
 
 	def update
-		@player = Player.find(params[:id])
 		if @player.update(player_params)
 		   redirect_to player_player_path(@player), notice: "登録情報を変更しました。"
 		else
@@ -27,12 +26,18 @@ class Player::PlayersController < ApplicationController
 	end
 
 	def destroy
-		@player = Player.find(params[:id])
 		@player.destroy
 		redirect_to root_path, notice: "ご利用、ありがとうございました。"
 	end
 
 	private
+
+	def protect
+		@player = Player.find(params[:id])
+		if current_player != @player
+	       redirect_to player_player_path(current_player)
+	    end
+	end
 
 	def player_params
 		params.require(:player).permit(:name, :prefecture_code, :email)

@@ -1,0 +1,9 @@
+<%= @team.name %> 様
+
+Base_matchへのチーム会員登録が完了しました。
+
+チーム名：　　<%= @team.name %>
+パスワード：　<%= @team.encrypted_password %>
+
+マイページはこちら
+<%= team_team_url(@team) %>
