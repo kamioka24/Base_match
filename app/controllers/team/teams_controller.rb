@@ -1,4 +1,5 @@
 class Team::TeamsController < ApplicationController
+	before_action :authenticate_team!
 	def index
 		@q = Team.ransack(params[:q])
 		@teams = @q.result(distinct: true).page(params[:page]).per(10).order(:prefecture_code).order(:city).order(member: "DESC")

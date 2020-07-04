@@ -1,4 +1,5 @@
 class Player::PostsController < ApplicationController
+	before_action :authenticate_player!
 	def index
 		@q = Post.ransack(params[:q])
 		if params[:team].nil? # 投稿一覧出力時に、チームidが含まれているかどうか。

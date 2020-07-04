@@ -1,4 +1,5 @@
 class Team::PostsController < ApplicationController
+	before_action :authenticate_team!
 	def new
 		@post = Post.new
 	end

@@ -1,4 +1,5 @@
 class Player::PlayersController < ApplicationController
+	before_action :authenticate_player!
 	def show
 		@player = current_player
 		@teams = Team.where(prefecture_code: @player.prefecture_code).page(params[:page]).per(8).order(:city).order(member: "DESC")

@@ -41,7 +41,7 @@ li {
 	display: inline-block;
 	margin-top: 50px;
 	margin-right: 10px;
-	padding: 10px 20px;
+	padding: 15px 20px;
 	background: rgba(30, 255, 0, 0.7);
 	border-radius: 7px;
 	transition: all 1s;
@@ -64,7 +64,7 @@ li {
 	display: inline-block;
 	margin-top: 50px;
 	margin-left: 10px;
-	padding: 10px 20px;
+	padding: 15px 20px;
 	background: rgba(0, 200, 255, 0.8);
 	border-radius: 7px;
 	transition: all 1s;
@@ -82,6 +82,7 @@ li {
 }
 
 .btn {
+	display: inline-block;
 	margin-top: 10px;
 	border-radius: 5px;
 }
@@ -146,7 +147,7 @@ html, body {
 				margin: 0 auto;
 				display: flex;
 				.nav_list_item {
-					margin-right: 30px;
+					margin-right: 50px;
 				}
 			}
 		}

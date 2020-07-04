@@ -1,4 +1,5 @@
 class Player::BookmarksController < ApplicationController
+	before_action :authenticate_player!
 	def index
 		@player = current_player
     	@bookmarks = Bookmark.joins(:team).where(player_id: @player.id).order(:prefecture_code).order(:city).order(member: "DESC")
