@@ -11,12 +11,8 @@ class Player::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    # super
-    @player = Player.new(sign_up_params)
-    if @player.save
-       NotificationMailer.send_confirm_to_player(@player).deliver
-       redirect_to player_player_path(@player)
-    end
+    super
+    NotificationMailer.send_confirm_to_player(@player).deliver
   end
 
   # GET /resource/edit
@@ -47,9 +43,6 @@ class Player::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:email])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:password])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
   end
 
