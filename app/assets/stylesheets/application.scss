@@ -335,6 +335,22 @@ input[type="email"] { // email_formの幅指定
 	text-align: center;
 	background-image: image-url("main_visual.jpg");
 	background-size: cover;
+	position: relative;
+	.main_btn {
+		border-radius: 50%;
+		background: #F1D9F5;
+		padding: 30px;
+	}
+	.player_sign_up_btn {
+		position: absolute;
+		top: 100px;
+		right: 250px;
+	}
+	.team_sign_up_btn {
+		position: absolute;
+		top: 100px;
+		right: 50px;
+	}
 	.main_text {
 		font-size: 25px;
 		margin: 70px 0;

@@ -1,4 +1,6 @@
 <section id="main_visual">
+    <%= link_to "選手登録はこちら", new_player_registration_path, class: "main_btn player_sign_up_btn" %>
+    <%= link_to "チーム登録はこちら", new_team_registration_path, class: "main_btn team_sign_up_btn" %>
 	<div class="main_text">
 		あああああああああああああああああ<br>
 		あああああああああああああああああ<br>
@@ -8,6 +10,38 @@
 	</div>
 	<div class="subtext">
 		選手もしくはチームとして登録後にご利用ください。
+	</div>
+</section>
+<section id="about_story">
+	<h1 class="section_title">Story</h1>
+	<div class="section_text">
+		<p>
+			約10年間、指導者をしているうちに、<br>
+			周りのチームで移籍をする選手が多くなっている<br>
+			ことに気づき、選手とチームとの間で<br>
+			ミスマッチが起きている現状を知る。
+		</p>
+		<p>
+			小学生にとっては野球以外のどんな経験もスタートであり、<br>
+			とても重要な時期だと思って接してきていたため、<br>
+			私にとってこの事実は非常に心苦しかった。
+		</p>
+		<p>
+			そこで事前に選手はチームのことを知ることができ、<br>
+			チームは選手にアピールできる場を設け、<br>
+			入団後のミスマッチを防いで、選手やチーム双方にとって<br>
+			メリットのある
+		</p>
+		<p>
+			夢ができ、挑戦しようとする<br>
+			子どもやそのご家族の方が、<br>
+			余計な心配をせずに、<br>
+			思う存分、新たな夢に向かえるよう<br>
+			チーム選択の環境を整えたい。
+		</p>
+		<p>
+			そういった思いから生まれたのがBase_matchである。
+		</p>
 	</div>
 </section>
 <section id="about_player">
@@ -56,38 +90,6 @@
 	</div>
 	<%= link_to "新規チーム登録", new_team_registration_path, class: "sign_up_btn" %>
 	<%= link_to "チームログイン", team_session_path, class: "login_btn" %>
-</section>
-<section id="about_story">
-	<h1 class="section_title">Story</h1>
-	<div class="section_text">
-		<p>
-			約10年間、指導者をしているうちに、<br>
-			周りのチームで移籍をする選手が多くなっている<br>
-			ことに気づき、選手とチームとの間で<br>
-			ミスマッチが起きている現状を知る。
-		</p>
-		<p>
-			小学生にとっては野球以外のどんな経験もスタートであり、<br>
-			とても重要な時期だと思って接してきていたため、<br>
-			私にとってこの事実は非常に心苦しかった。
-		</p>
-		<p>
-			そこで事前に選手はチームのことを知ることができ、<br>
-			チームは選手にアピールできる場を設け、<br>
-			入団後のミスマッチを防いで、選手やチーム双方にとって<br>
-			メリットのある
-		</p>
-		<p>
-			夢ができ、挑戦しようとする<br>
-			子どもやそのご家族の方が、<br>
-			余計な心配をせずに、<br>
-			思う存分、新たな夢に向かえるよう<br>
-			チーム選択の環境を整えたい。
-		</p>
-		<p>
-			そういった思いから生まれたのがBase_matchである。
-		</p>
-	</div>
 </section>
 <section id="about_profile">
 	<h1 class="section_title">Profile</h1>
