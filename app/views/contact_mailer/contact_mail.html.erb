@@ -1,5 +1,17 @@
-<h1>Contact#contact_mail</h1>
+選手からお問い合わせが届きましたので、
+内容をご確認の上、選手へのご連絡をお願い致します。
 
-<p>
-  <%= @greeting %>, find me in app/views/contact_mailer/contact_mail.html.erb
-</p>
+
+--<<お問い合わせ内容>>----------------------------
+
+名前：　<%= @contact.name %>
+学校：　<%= @contact.school %>
+学年：　<%= @contact.year %>
+住所：　<%= @contact.address %>
+電話番号：　<%= @contact.phone_number %>
+メールアドレス：　<%= @contact.player.email %>
+希望：　<%= @contact.choice %>
+希望日程：　<%= @contact.day %>
+その他・質問：　<%= @contact.question %>
+
+-----------------------------------------------
