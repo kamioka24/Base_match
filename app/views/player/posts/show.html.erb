@@ -23,7 +23,7 @@
 		<div class="col-xs-9">
 			<div class="post_show_box">
 				<%= link_to @post.team.name, player_team_path(@post.team), class: "post_team_name" %>
-				<%= link_to root_path do %> <!-- コンタクトを作成するまでとりあえず -->
+				<%= link_to new_player_contact_path do %>
 					<i class="fas fa-paper-plane"> お問い合わせ</i>
 				<% end %>
 				<div class="post_title_area">

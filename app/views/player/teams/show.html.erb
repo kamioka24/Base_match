@@ -29,7 +29,7 @@
 					<li class="category"><%= @team.category %></li>
 					<li class="name"><%= @team.name %></li>
 					<li class="member"><%= @team.member %>人</li>
-					<li><%= link_to root_path do %> <!-- コンタクトを作成するまでとりあえず -->
+					<li><%= link_to new_player_contact_path do %>
 							<i class="fas fa-paper-plane"> お問い合わせ</i>
 						<% end %>
 					</li>

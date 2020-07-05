@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
 	devise_for :players, :controllers => {
 		:sessions => 'player/sessions',
 		:registrations => 'player/registrations'
