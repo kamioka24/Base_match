@@ -157,6 +157,7 @@ html, body {
 				margin: 0 auto;
 				display: flex;
 				.nav_list_item {
+					text-decoration: none !important;
 					margin-right: 50px;
 				}
 			}
@@ -337,6 +338,7 @@ input[type="email"] { // email_formの幅指定
 	background-size: cover;
 	position: relative;
 	.main_btn {
+		text-decoration: none !important;
 		border-radius: 50%;
 		background: #F1D9F5;
 		padding: 30px;
