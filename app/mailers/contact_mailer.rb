@@ -3,6 +3,7 @@ class ContactMailer < ApplicationMailer
 
 	def contact_mail(contact)
 	    @contact = contact
+	    @team = contact.team
 	    mail to: @team.email, subject: "選手からのお問い合わせが届きました。"
 	end
 

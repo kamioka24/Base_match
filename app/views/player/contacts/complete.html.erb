@@ -4,7 +4,8 @@
 			メール送信が完了しました！
 		</h1>
 		<h2 class="complete_sub_message">
-			<%= link_to @team.name, team_team_path(@team) %>さんからのご連絡をお待ちください。
+			<%= link_to @team.name, player_team_path(@team) %>さんからのご連絡をお待ちください。
 		</h2>
+		<%= link_to "もっとチームを探す", player_teams_path, class: "btn complete_back_btn" %>
 	</div>
 </div>

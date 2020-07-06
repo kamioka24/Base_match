@@ -6,6 +6,7 @@ class Team < ApplicationRecord
 
 	has_many :posts, dependent: :destroy
 	has_many :bookmarks, dependent: :destroy
+	has_many :contacts, dependent: :destroy
 	attachment :team_image
 
 	validates :team_image, presence: true

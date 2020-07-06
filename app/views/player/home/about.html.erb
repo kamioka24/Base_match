@@ -47,24 +47,34 @@
 <section id="about_player">
 	<h1 class="section_title">Player</h1>
 	<div class="section_text">
-		<p>
-			お近くのチームからチェックし、<br>
-			チーム紹介、活動記録などを見てみましょう！
-		</p>
-		<p>
-			気になるチームにはブックマーク登録をし、<br>
-			またいつでも見れるようにしましょう！
-		</p>
-		<p>
-			チームとのコンタクトをご希望の方は<br>
-			各チームへの連絡フォームがございますので<br>
-			そちらをご利用ください。
-		</p>
+		<p>理想のチームに会ってみませんか？</p>
 	</div>
-	<div class="player_img_boxs">
-		<div class="player_box_item1"></div>
-		<div class="player_box_item2"></div>
-		<div class="player_box_item3"></div>
+	<div class="player_boxs">
+		<div class="player_box">
+			<div class="player_box_item1">自分に合ったチームを探せる</div>
+			<div class="player_box_text">
+				都道府県や、市区町村、チーム名などのワード検索に加えて、
+				人数や硬式・軟式といった条件を絞り込んでの検索により、
+				お客様の希望するチームに出会いやすくなりました。
+			</div>
+		</div>
+		<div class="player_box">
+			<div class="player_box_item2">気になるチームをキープ</div>
+			<div class="player_box_text">
+				お気に入り登録機能で、いつでもそのチームを
+				確認できます。あとから解除もできますので、
+				気になるチームはどんどん追加登録しましょう！
+			</div>
+		</div>
+		<div class="player_box">
+			<div class="player_box_item3">練習に参加できる</div>
+			<div class="player_box_text">
+				実際に練習に参加してみたい、雰囲気を見てみたい、
+				というチームが見つかりましたら、そのチームに
+				連絡をしてみましょう。お問い合わせフォームより
+				簡単にチームとのコンタクトをとれます。
+			</div>
+		</div>
 	</div>
 	<%= link_to "新規選手登録", new_player_registration_path, class: "sign_up_btn" %>
 	<%= link_to "選手ログイン", player_session_path, class: "login_btn" %>

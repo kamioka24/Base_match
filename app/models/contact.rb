@@ -1,5 +1,6 @@
 class Contact < ApplicationRecord
 	belongs_to :player
+	belongs_to :team
 
 	validates :name, presence: true
 	validates :year, presence: true

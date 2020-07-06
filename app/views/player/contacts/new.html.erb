@@ -1,6 +1,6 @@
 <div class="container">
 
-	<%= form_for(@contact, url: player_contacts_path) do |f| %>
+	<%= form_for(@contact, url: player_team_contacts_path) do |f| %>
 		<table width="500" class="contact_table">
 			<tr>
 				<th><%= f.label :name, "お名前(フルネーム)" %></th>
@@ -46,6 +46,10 @@
 				<th><%= f.label :question, "その他・質問など" %></th>
 				<td class="center_td">(任意)</td>
 				<td><%= f.text_area :question, class: "puestion_area" %></td>
+			</tr>
+			<tr>
+				<th><%= @team.name %></th>
+				<td><%= f.hidden_field :team_id, :value => @team.id %></td>
 			</tr>
 			<tr>
                 <th></th>
