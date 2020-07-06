@@ -597,27 +597,33 @@ input[type="email"] { // email_formの幅指定
 }
 
 // ここからチーム側と共通
-.side_table {
-	margin-top: 50px;
-	tr {
-		line-height: 35px;
-		th {
-			text-align: center;
-			font-size: 15px;
-		}
-		.post_title {
-			text-decoration: none !important;
-			transition: .3s;
-			-webkit-transform: scale(1);
-			transform: scale(1);
-			text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
-		}
-		.post_title:hover { // 文字を強調させる
-			-webkit-transform: scale(1.1);
-			transform: scale(1.1);
+.side_posts {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 70px;
+	.side_table {
+		margin-top: 50px;
+		tr {
+			line-height: 35px;
+			th {
+				text-align: center;
+				font-size: 15px;
+			}
+			.post_title {
+				text-decoration: none !important;
+				transition: .3s;
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
+			}
+			.post_title:hover { // 文字を強調させる
+				-webkit-transform: scale(1.1);
+				transform: scale(1.1);
+			}
 		}
 	}
 }
+
 
 .post_index_path {
 	margin-top: 30px;
