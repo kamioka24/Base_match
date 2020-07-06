@@ -5,6 +5,8 @@
 			<thead>
 				<tr>
 					<td colspan="3" class="contact_table_head"><strong><%= @team.name %></strong>へお問い合わせ</td>
+					<%= f.hidden_field :team_id, :value => @team.id %>
+					<!-- hidden_fieldによってteam_idを取ってきている。外すとrollback transactionが起こる -->
 				</tr>
 			</thead>
 			<tbody>

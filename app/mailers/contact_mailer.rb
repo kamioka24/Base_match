@@ -4,7 +4,7 @@ class ContactMailer < ApplicationMailer
 	def contact_mail(contact)
 	    @contact = contact
 	    @team = contact.team
-	    mail to: @team.email, subject: "選手からのお問い合わせが届きました。"
+	    mail to: @team.email, subject: "選手からお問い合わせがありました。"
 	end
 
 	# # Subject can be set in your I18n file at config/locales/en.yml
