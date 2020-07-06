@@ -6,6 +6,7 @@ class Player::ContactsController < ApplicationController
 
 	def create
 		@contact = Contact.new(contact_params)
+		binding.pry
 		if @contact.save
 		   ContactMailer.contact_mail(@contact).deliver
 		   redirect_to complete_player_contacts_path

@@ -5,4 +5,6 @@ class Contact < ApplicationRecord
 	validates :year, presence: true
 	validates :choice, presence: true
 	validates :question, length: {maximum: 100}
+
+	enum choice: {入団希望: 0, 体験希望: 1}
 end

@@ -8,7 +8,7 @@ class CreateContacts < ActiveRecord::Migration[5.2]
       t.string :address
       t.string :phone_number
       t.integer :choice
-      t.integer :day
+      t.date :day
       t.text :question
 
       t.timestamps

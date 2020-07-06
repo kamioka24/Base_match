@@ -1,6 +1,6 @@
 <div class="container">
 
-	<%= form_for(@contact, url: complete_player_contacts_path) do |f| %>
+	<%= form_for(@contact, url: player_contacts_path) do |f| %>
 		<table width="500" class="contact_table">
 			<tr>
 				<th><%= f.label :name, "お名前(フルネーム)" %></th>
@@ -16,7 +16,7 @@
 			<tr>
 				<th><%= f.label :year, "学年" %></th>
 				<td class="center_td"></td>
-				<td><%= f.select :year, ['小学生以下', '1年', '2年', '3年', '4年', '5年', '6年'], include_blank: true %></td>
+				<td><%= f.select :year, ['小学生以下', '1年', '2年', '3年', '4年', '5年', '6年'], prompt: "選択してください" %></td>
 			</tr>
 			<tr>
 				<th><%= f.label :address, "住所" %></th>
@@ -39,7 +39,7 @@
 			<tr>
 				<th>ご希望日程</th>
 				<td></td>
-				<td><%= f.date_select :day, include_blank: true, discard_year: true, use_month_numbers: true, selected: Date.today %>
+				<td><%= f.date_field :day %>
 				</td>
 			</tr>
 			<tr>
