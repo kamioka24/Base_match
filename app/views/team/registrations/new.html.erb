@@ -60,7 +60,7 @@
                         <td><%= f.password_field :password_confirmation, placeholder: "パスワード確認用" %></td>
                     </tr>
                     <tr>
-                        <th></th>
+                        <td><%= link_to "チームログインはこちら", team_session_path %></td>
                         <td><%= f.submit "新規登録", class: "btn create_btn" %></td>
                     </tr>
                 </table>

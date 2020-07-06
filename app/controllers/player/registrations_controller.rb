@@ -12,7 +12,9 @@ class Player::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    NotificationMailer.send_confirm_to_player(@player).deliver
+    if @player.save # if文を書くことでvalidationもしっかり反映される。ないとエラーが出る。
+       NotificationMailer.send_confirm_to_player(@player).deliver
+    end
   end
 
   # GET /resource/edit

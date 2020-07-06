@@ -12,7 +12,9 @@ class Team::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    NotificationMailer.send_confirm_to_team(@team).deliver
+    if @team.save # if文を書くことでvalidationもしっかり反映される。ないとエラーが出る。
+       NotificationMailer.send_confirm_to_team(@team).deliver
+    end
   end
 
   # GET /resource/edit
