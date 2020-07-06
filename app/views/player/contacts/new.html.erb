@@ -2,60 +2,63 @@
 
 	<%= form_for(@contact, url: player_team_contacts_path) do |f| %>
 		<table width="500" class="contact_table">
-			<tr>
-				<th><%= f.label :name, "お名前(フルネーム)" %></th>
-				<td class="center_td"></td>
-				<td><%= f.text_field :name, autofocus: true, placeholder: "お名前" %></td>
-				<!-- autofocus: trueによりページ表示後に自動でカーソルがnameに合っているようになる -->
-			</tr>
-			<tr>
-				<th><%= f.label :school, "学校名" %></th>
-				<td class="center_td">(任意)</td>
-				<td><%= f.text_field :school, placeholder: "小学校名" %></td>
-			</tr>
-			<tr>
-				<th><%= f.label :year, "学年" %></th>
-				<td class="center_td"></td>
-				<td><%= f.select :year, ['小学生以下', '1年', '2年', '3年', '4年', '5年', '6年'], prompt: "選択してください" %></td>
-			</tr>
-			<tr>
-				<th><%= f.label :address, "住所" %></th>
-				<td class="center_td">(任意)</td>
-				<td><%= f.text_field :address, placeholder: "住所", class: "address_area" %></td>
-			</tr>
-			<tr>
-				<th><%= f.label :phone_number, "電話番号(ハイフンなし)" %></th>
-				<td class="center_td">(任意)</td>
-				<td><%= f.text_field :phone_number, placeholder: "電話番号" %></td>
-			</tr>
-			<tr>
-				<th><%= f.label :choice, "どちらか選択してください" %></th>
-				<td class="center_td"></td>
-				<td>
-					<%= f.radio_button :choice, :入団希望 %><%= f.label :choice, :入団希望 %>
-					<%= f.radio_button :choice, :体験希望 %><%= f.label :choice, :体験希望 %>
-				</td>
-			</tr>
-			<tr>
-				<th>ご希望日程</th>
-				<td></td>
-				<td><%= f.date_field :day %>
-				</td>
-			</tr>
-			<tr>
-				<th><%= f.label :question, "その他・質問など" %></th>
-				<td class="center_td">(任意)</td>
-				<td><%= f.text_area :question, class: "puestion_area" %></td>
-			</tr>
-			<tr>
-				<th><%= @team.name %></th>
-				<td><%= f.hidden_field :team_id, :value => @team.id %></td>
-			</tr>
-			<tr>
-                <th></th>
-                <td></td>
-                <td><%= f.submit "チームへ連絡をする", class: "btn update_btn" %></td>
-            </tr>
+			<thead>
+				<tr>
+					<td colspan="3" class="contact_table_head"><strong><%= @team.name %></strong>へお問い合わせ</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th><%= f.label :name, "お名前(フルネーム)" %></th>
+					<td class="center_td"></td>
+					<td><%= f.text_field :name, autofocus: true, placeholder: "お名前" %></td>
+					<!-- autofocus: trueによりページ表示後に自動でカーソルがnameに合っているようになる -->
+				</tr>
+				<tr>
+					<th><%= f.label :school, "学校名" %></th>
+					<td class="center_td">(任意)</td>
+					<td><%= f.text_field :school, placeholder: "小学校名" %></td>
+				</tr>
+				<tr>
+					<th><%= f.label :year, "学年" %></th>
+					<td class="center_td"></td>
+					<td><%= f.select :year, ['小学生以下', '1年', '2年', '3年', '4年', '5年', '6年'], prompt: "選択してください" %></td>
+				</tr>
+				<tr>
+					<th><%= f.label :address, "住所" %></th>
+					<td class="center_td">(任意)</td>
+					<td><%= f.text_field :address, placeholder: "住所", class: "address_area" %></td>
+				</tr>
+				<tr>
+					<th><%= f.label :phone_number, "電話番号(ハイフンなし)" %></th>
+					<td class="center_td">(任意)</td>
+					<td><%= f.text_field :phone_number, placeholder: "電話番号" %></td>
+				</tr>
+				<tr>
+					<th><%= f.label :choice, "どちらか選択してください" %></th>
+					<td class="center_td"></td>
+					<td>
+						<%= f.radio_button :choice, :入団希望 %><%= f.label :choice, :入団希望 %>
+						<%= f.radio_button :choice, :体験希望 %><%= f.label :choice, :体験希望 %>
+					</td>
+				</tr>
+				<tr>
+					<th>ご希望日程</th>
+					<td></td>
+					<td><%= f.date_field :day %>
+					</td>
+				</tr>
+				<tr>
+					<th><%= f.label :question, "その他・質問など" %></th>
+					<td class="center_td">(任意)</td>
+					<td><%= f.text_area :question, class: "puestion_area" %></td>
+				</tr>
+				<tr>
+	                <th></th>
+	                <td></td>
+	                <td><%= f.submit "チームへ連絡をする", class: "btn update_btn" %></td>
+	            </tr>
+	        </tbody>
 		</table>
 	<% end %>
 </div>

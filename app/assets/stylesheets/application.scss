@@ -845,6 +845,12 @@ input[type="email"] { // email_formの幅指定
 
 // コンタクトcomplete
 
+.contact_table_head {
+	font-size: 18px;
+	text-align: center;
+	border-bottom: 3px solid #E1A253;
+}
+
 .message_area {
 	margin-top: 120px;
 	text-align: center;
