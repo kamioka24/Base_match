@@ -1,16 +1,22 @@
 <div class="container">
-	<% if params[:team].nil? %> <!-- 投稿一覧出力時にチームidが含まれているかの分岐 -->
-		<h1 class="page_title">投稿一覧</h1>
-	<% else %>
-		<h1 class="page_title"><%= Team.find(params[:team]).name %>　投稿一覧</h1>
-	<% end %>
-	<p class="flash_message"><%= flash[:notice] %></p>
-	<%= search_form_for @q, url: team_posts_path, class: "seach" do |f| %>
-		<%= f.search_field :title_cont, class: "seach_form", placeholder: "検索" %>
-		<%= button_tag type: "submit" do %>
-            <i class="fas fa-search"></i>
-        <% end %>
-	<% end %>
+	<div class="row">
+		<div class="col-xs-9">
+			<% if params[:team].nil? %> <!-- 投稿一覧出力時にチームidが含まれているかの分岐 -->
+				<h1 class="page_title">投稿一覧</h1>
+			<% else %>
+				<h1 class="page_title"><%= Team.find(params[:team]).name %>　投稿一覧</h1>
+			<% end %>
+			<p class="flash_message"><%= flash[:notice] %></p>
+		</div>
+		<div class="col-xs-3">
+			<%= search_form_for @q, url: team_posts_path, class: "seach" do |f| %>
+				<%= f.search_field :title_cont, class: "seach_form", placeholder: "検索" %>
+				<%= button_tag type: "submit" do %>
+		            <i class="fas fa-search"></i>
+		        <% end %>
+			<% end %>
+		</div>
+	</div>
 	<table width="700" class="post_table">
 		<thead>
 			<tr>

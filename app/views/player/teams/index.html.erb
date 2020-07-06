@@ -1,15 +1,22 @@
 <div class="container">
-	<h1 class="page_title">チーム一覧</h1>
-	<%= search_form_for @q, url: player_teams_path, class: "seach" do |f| %>
-		<%= f.search_field :name_or_prefecture_name_or_city_cont, class: "seach_form", placeholder: "検索" %>
-		<!-- 検索は元のカラムにて実行 -->
-		<%= button_tag type: "submit" do %>
-            <i class="fas fa-search"></i>
-        <% end %><br>
-		<%= f.radio_button :category_eq, '', {:checked => true} %>指定なし
-		<%= f.radio_button :category_eq, 0 %>硬式
-		<%= f.radio_button :category_eq, 1 %>軟式
-	<% end %>
+	<div class="row">
+		<div class="col-xs-9">
+			<h1 class="page_title">チーム一覧</h1>
+		</div>
+		<div class="col-xs-3">
+			<%= search_form_for @q, url: player_teams_path, class: "seach" do |f| %>
+				<%= f.search_field :name_or_prefecture_name_or_city_cont, class: "seach_form", placeholder: "検索" %><br>
+				<%= f.number_field :member_gteq, class: "seach_member_form" %>人以上
+				<%= f.number_field :member_lt, class: "seach_member_form" %>人未満<br>
+				<%= f.radio_button :category_eq, '', {:checked => true} %>指定なし
+				<%= f.radio_button :category_eq, 0 %>硬式
+				<%= f.radio_button :category_eq, 1 %>軟式
+				<%= button_tag type: "submit" do %>
+		            <i class="fas fa-search"></i>
+		        <% end %>
+			<% end %>
+		</div>
+	</div>
 	<div class="team_boxes">
 		<% @teams.each do |team| %>
 			<div class="team_box">
@@ -22,7 +29,6 @@
 				<% end %>
 				<div class="team_box_bottom">
 					・<%= team.prefecture_name %><%= team.city %><br>
-					<!-- prefecture_codeをprefecture_nameに変換しているため -->
 					・<%= team.category %><br>
 					・<%= team.member %>人
 				</div>
