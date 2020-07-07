@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
 	devise_for :players, :controllers => {
 		:sessions => 'player/sessions',
 		:registrations => 'player/registrations'
@@ -34,5 +33,7 @@ Rails.application.routes.draw do
 			get :exit, on: :member # idが必要なためmemberを使う
 		end
 		resources :posts
+		resources :messages, only: [:create]
+		resources :rooms, only: [:index, :show, :create]
     end
 end
