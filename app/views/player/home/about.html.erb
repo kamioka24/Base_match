@@ -47,33 +47,58 @@
 <section id="about_player">
 	<h1 class="section_title">Player</h1>
 	<div class="section_text">
-		<p>理想のチームに会ってみませんか？</p>
+		<p>〜選手会員様のBaseMatchの使い方・流れ〜</p>
 	</div>
-	<div class="player_boxs">
-		<div class="player_box">
-			<div class="player_box_item1">自分に合ったチームを探せる</div>
+	<div class="player_box">
+		<div class="box_img_area">
+			<p>Step1　<strong>自分に合ったチームを探す</strong></p>
+			<div class="player_box_img1"></div>
+		</div>
+		<div class="box_text_area">
 			<div class="player_box_text">
 				都道府県や、市区町村、チーム名などのワード検索に加えて、
 				人数や硬式・軟式といった条件を絞り込んでの検索により、
-				お客様の希望するチームに出会いやすくなりました。
+				お客様の希望するチームがさらに探しやすくなりました。
 			</div>
 		</div>
-		<div class="player_box">
-			<div class="player_box_item2">気になるチームをキープ</div>
+	</div>
+	<div class="player_box">
+		<div class="box_text_area">
+			<div class="player_box_text">
+				各チームの練習の様子や試合結果などを、チーム投稿からチェックし、
+				実際の雰囲気やレベルなどを事前にチェックしましょう。
+			</div>
+		</div>
+		<div class="box_img_area">
+			<p>Step2　<strong>チームの動向をチェック</strong></p>
+			<div class="player_box_img2"></div>
+		</div>
+	</div>
+	<div class="player_box">
+		<div class="box_img_area">
+			<p>Step3　<strong>気になるチームをキープ</strong></p>
+			<div class="player_box_img3"></div>
+		</div>
+		<div class="box_text_area">
 			<div class="player_box_text">
 				お気に入り登録機能で、いつでもそのチームを
 				確認できます。あとから解除もできますので、
 				気になるチームはどんどん追加登録しましょう！
 			</div>
 		</div>
-		<div class="player_box">
-			<div class="player_box_item3">練習に参加できる</div>
+	</div>
+	<div class="player_box">
+		<div class="box_text_area">
 			<div class="player_box_text">
 				実際に練習に参加してみたい、雰囲気を見てみたい、
 				というチームが見つかりましたら、そのチームに
 				連絡をしてみましょう。お問い合わせフォームより
 				簡単にチームとのコンタクトをとれます。
 			</div>
+		</div>
+		<div class="box_img_area">
+			<p>Step4　<strong>練習に参加できる</strong></p>
+			<div class="player_box_img4"></div>
 		</div>
 	</div>
 	<%= link_to "新規選手登録", new_player_registration_path, class: "sign_up_btn" %>
@@ -83,20 +108,47 @@
 	<h1 class="section_title">Team</h1>
 	<div class="section_text">
 		<p>
-			チーム紹介文に活動日程や時間などを記載し、<br>
-			試合結果や練習風景は投稿機能を使い、<br>
-			選手に見てもらいましょう！<br>
-		</p>
-		<p>
 			チームの良さを余すことなく<br>
-			存分にアピールしてください！
+			存分にアピールしましょう！
 		</p>
 	</div>
-	<div class="team_img_boxs">
-		<div class="team_box_item1"></div>
-		<div class="team_box_item2"></div>
-		<div class="team_box_item3"></div>
-		<div class="team_box_item4"></div>
+	<div class="team_boxes">
+		<div class="team_box_area">
+			<div class="team_box_top1">紹介文でチームをアピール</div>
+			<div class="team_box_text">
+				チーム紹介文はあとから編集もできますが、
+				絶好のアピールの場となりますので、
+				それを見ればおおよそのチームカラーが
+				わかるようにしっかり記入しましょう。
+				チームのアピールポイントに加え、
+				毎週の練習時間やチームの決まり事などが
+				書いてあると、選手にその先を見てもらえる
+				可能性が高まります。
+			</div>
+		</div>
+		<div class="team_box_area">
+			<div class="team_box_top2">毎週欠かさず投稿</div>
+			<div class="team_box_text">
+				チームの活動記録として、練習内容や
+				試合結果を投稿し、選手に伝えましょう。
+				写真投稿もできますので、チームの雰囲気が
+				1番伝えられる機能です。コンスタントに
+				欠かさず投稿することで、選手の目に
+				留まりやすくなり、見てもらえる回数が
+				増えます。まずは見てもらえるよう、
+				継続して投稿していきましょう。
+			</div>
+		</div>
+		<div class="team_box_area">
+			<div class="team_box_top3">選手からの連絡に返信</div>
+			<div class="team_box_text">
+				チームの魅力が伝わり、選手がチームとの
+				コンタクトを希望された場合、登録アドレスに
+				メールが届きます。体験の希望や入団の希望など、
+				複数項目がありますので、内容を確認し
+				選手に連絡を返してください。
+			</div>
+		</div>
 	</div>
 	<%= link_to "新規チーム登録", new_team_registration_path, class: "sign_up_btn" %>
 	<%= link_to "チームログイン", team_session_path, class: "login_btn" %>

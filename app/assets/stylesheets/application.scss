@@ -40,12 +40,12 @@ li {
 	font-size: 18px;
 	display: inline-block;
 	margin-top: 50px;
-	margin-right: 10px;
-	padding: 15px 20px;
+	margin-right: 20px;
+	padding: 60px 30px;
 	background: rgba(30, 255, 0, 0.7);
-	border-radius: 7px;
+	border-radius: 50%;
 	transition: all 1s;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
 }
 
 .sign_up_btn:hover {
@@ -63,12 +63,12 @@ li {
 	font-size: 18px;
 	display: inline-block;
 	margin-top: 50px;
-	margin-left: 10px;
-	padding: 15px 20px;
+	margin-left: 20px;
+	padding: 60px 30px;
 	background: rgba(0, 200, 255, 0.8);
-	border-radius: 7px;
+	border-radius: 50%;
 	transition: all 1s;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
 }
 
 .login_btn:hover {
@@ -376,44 +376,64 @@ input[type="email"] { // email_formの幅指定
 	}
 }
 
-#about_player {
+#about_story {
 	margin: 0 auto;
 	text-align: center;
 	height: 880px;
-	width: 70%;
-	.player_boxs {
+	width: 80%;
+}
+
+#about_player {
+	margin: 0 auto;
+	text-align: center;
+	height: 2400px;
+	width: 80%;
+	.player_box {
+		width: 90%;
+		height: 350px;
 		display: flex;
-		.player_box {
+		margin: 100px auto;
+		.box_text_area {
 			width: 30%;
-			margin: 0 auto;
-			.player_box_item1 {
-				margin: 10px auto;
-				height: 200px;
-				width: 280px;
-				background-image: image-url("player1.jpg");
-				background-size: cover;
-				box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
-			}
-			.player_box_item2 {
-				margin: 10px auto;
-				height: 200px;
-				width: 280px;
-				background-image: image-url("player2.jpg");
-				background-size: cover;
-				box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
-			}
-			.player_box_item3 {
-				margin: 10px auto;
-				height: 200px;
-				width: 280px;
-				background-image: image-url("player3.jpg");
-				background-size: cover;
-				box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
-			}
+			margin: 50px auto;
 			.player_box_text {
-				margin: 20px auto;
-				width: 250px;
+				font-size: 17px;
 			}
+		}
+		.player_box_img1 {
+			margin: 10px auto;
+			height: 250px;
+			width: 350px;
+			background-image: image-url("player1.jpg");
+			background-size: cover;
+			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+		}
+		.player_box_img2 {
+			margin: 10px auto;
+			height: 250px;
+			width: 350px;
+			background-image: image-url("player2.jpg");
+			background-size: cover;
+			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+		}
+		.player_box_img3 {
+			margin: 10px auto;
+			height: 250px;
+			width: 350px;
+			background-image: image-url("player3.jpg");
+			background-size: cover;
+			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+		}
+		.player_box_img4 {
+			margin: 10px auto;
+			height: 250px;
+			width: 350px;
+			background-image: image-url("player3.jpg");
+			background-size: cover;
+			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+		}
+		p {
+			font-size: 20px;
 		}
 	}
 }
@@ -422,62 +442,43 @@ input[type="email"] { // email_formの幅指定
 	margin: 0 auto;
 	text-align: center;
 	height: 950px;
-	width: 70%;
-	.team_img_boxs {
-		margin: 0 auto;
-		width: 880px;
+	width: 80%;
+	.team_boxes {
 		display: flex;
-		flex-wrap: wrap;
-		.team_box_item1 {
-			margin: 10px auto;
-			height: 200px;
-			width: 400px;
-			background-image: image-url("team1.jpg");
-			background-size: cover;
-			background-position: center;
-			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
-		}
-		.team_box_item2 {
-			margin: 10px auto;
-			height: 200px;
-			width: 400px;
-			background-image: image-url("team2.jpg");
-			background-size: cover;
-			background-position: center;
-			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
-		}
-		.team_box_item3 {
-			margin: 10px auto;
-			height: 200px;
-			width: 400px;
-			background-image: image-url("team3.jpg");
-			background-size: cover;
-			background-position: center;
-			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
-		}
-		.team_box_item4 {
-			margin: 10px auto;
-			height: 200px;
-			width: 400px;
-			background-image: image-url("team4.jpg");
-			background-size: cover;
-			background-position: center;
-			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+		.team_box_area {
+			width: 33%;
+			.team_box_top1 {
+				margin: 0 auto;
+				height: 200px;
+				width: 350px;
+				background-image: image-url("team1.jpg");
+				background-size: cover;
+				background-position: center;
+			}
+			.team_box_top2 {
+				margin: 0 auto;
+				height: 200px;
+				width: 350px;
+				background-image: image-url("team2.jpg");
+				background-size: cover;
+				background-position: center;
+			}
+			.team_box_top3 {
+				margin: 0 auto;
+				height: 200px;
+				width: 350px;
+				background-image: image-url("team3.jpg");
+				background-size: cover;
+				background-position: center;
+			}
 		}
 	}
-}
-
-#about_story {
-	margin: 0 auto;
-	text-align: center;
-	height: 880px;
-	width: 70%;
 }
 
 #about_profile {
 	margin: 0 auto;
 	height: 350px;
-	width: 70%;
+	width: 80%;
 	.profile_area {
 		margin: 30px auto;
 		display: flex;

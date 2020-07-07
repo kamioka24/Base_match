@@ -9,7 +9,6 @@ class Player::ContactsController < ApplicationController
 		@contact = Contact.new(contact_params)
 		@contact.player_id = current_player.id
 		@team = Team.find(params[:team_id])
-		# @team = Team.find(params[:id])
 		if @contact.save
 		   ContactMailer.contact_mail(@contact).deliver
 		   redirect_to complete_player_team_contacts_path(team_id: @team.id)
