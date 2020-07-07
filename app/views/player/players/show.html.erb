@@ -4,7 +4,7 @@
 			<h1 class="page_title">マイページ
 				<% if @player == current_player %>
 					<%= link_to edit_player_player_path do %>
-						<i class="fa fa-cog"></i>
+						<i class="fa fa-cog"> 編集する</i>
 					<% end %>
 				<% end %>
 			</h1>
@@ -31,7 +31,7 @@
 			</table>
 		</div>
 		<div class="col-xs-9">
-			<h2>お近くのチーム(<%= current_player.prefecture_name %>)</h2>
+			<h2 class="mypage_top">お近くのチーム(<%= current_player.prefecture_name %>)</h2>
 			<!-- prefecture_codeをprefecture_nameに変換しているため -->
 			<div class="near_team">
 				<% @teams.each do |team| %>
