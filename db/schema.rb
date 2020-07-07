@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_01_124808) do
+ActiveRecord::Schema.define(version: 2020_07_07_090329) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer "player_id"
@@ -34,6 +34,25 @@ ActiveRecord::Schema.define(version: 2020_07_01_124808) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "entries", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_entries_on_room_id"
+    t.index ["team_id"], name: "index_entries_on_team_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "room_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_messages_on_room_id"
+    t.index ["team_id"], name: "index_messages_on_team_id"
+  end
+
   create_table "players", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -53,6 +72,12 @@ ActiveRecord::Schema.define(version: 2020_07_01_124808) do
     t.string "title"
     t.text "body"
     t.string "post_image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

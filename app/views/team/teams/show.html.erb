@@ -72,6 +72,18 @@
 				</table>
 				<div id="map" class="<%= @team.prefecture_name + @team.city + @team.street %>"></div>
 			</div>
+			<% if @team.id != current_team.id %>
+				<% if @isRoom == true %>
+					<%= link_to "チャットへ", team_room_path(@roomId) %>
+				<% else %>
+					<%= form_for(@room, url: team_room_path(@roomId)) do |f| %>
+						<%= fields_for @entry do |e| %>
+							<%= e.hidden_field :team_id, :value=> @team.id %>
+						<% end %>
+						<%= f.submit "チャットを始める" %>
+					<% end %>
+				<% end %>
+			<% end %>
 			<% if @team != current_team %>
 				<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
 			<% end %>
