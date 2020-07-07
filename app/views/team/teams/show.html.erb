@@ -76,7 +76,7 @@
 				<% if @isRoom == true %>
 					<%= link_to "チャットへ", team_room_path(@roomId) %>
 				<% else %>
-					<%= form_for(@room, url: team_room_path(@roomId)) do |f| %>
+					<%= form_for(@room, url: team_rooms_path) do |f| %>
 						<%= fields_for @entry do |e| %>
 							<%= e.hidden_field :team_id, :value=> @team.id %>
 						<% end %>

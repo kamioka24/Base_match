@@ -2,8 +2,8 @@
     <h1>チャット</h1>
 
     <h4>参加者</h4>
-    <% @entries.each do |entrie| %>
-        <h5><strong><%= link_to entrie.team.name, team_team_path(entrie.team) %>さん</strong></h5>
+    <% @entries.each do |entry| %>
+        <h5><strong><%= link_to entry.team.name, team_team_path(entry.team) %>さん</strong></h5>
     <% end %>
 
     <hr>
