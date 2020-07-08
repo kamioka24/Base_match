@@ -23,6 +23,8 @@
 
 * {
 	box-sizing: border-box;
+	scroll-behavior: smooth; // スクロールをスムーズにする。対応ブラウザが限定的？
+	text-decoration: none !important; // リンクの下線を消す
 }
 
 li {
@@ -36,7 +38,6 @@ li {
 }
 
 .sign_up_btn {
-	text-decoration: none !important;
 	font-size: 18px;
 	display: inline-block;
 	margin-top: 50px;
@@ -59,7 +60,6 @@ li {
 }
 
 .login_btn {
-	text-decoration: none !important;
 	font-size: 18px;
 	display: inline-block;
 	margin-top: 50px;
@@ -118,7 +118,6 @@ li {
 .back_btn {
 	margin: 30px 0;
 	float: right;
-	text-decoration: none !important;
 	transition: .3s;
 	-webkit-transform: scale(1);
 	transform: scale(1);
@@ -157,7 +156,6 @@ html, body {
 				margin: 0 auto;
 				display: flex;
 				.nav_list_item {
-					text-decoration: none !important;
 					margin-right: 50px;
 				}
 			}
@@ -334,11 +332,11 @@ input[type="email"] { // email_formの幅指定
 	padding-top: 50px;
 	height: 500px;
 	text-align: center;
-	background-image: image-url("main_visual.jpg");
+	background-image: image-url("main.jpg");
 	background-size: cover;
+	background-position: center;
 	position: relative;
 	.main_btn {
-		text-decoration: none !important;
 		border-radius: 50%;
 		background: #F1D9F5;
 		padding: 30px;
@@ -353,18 +351,71 @@ input[type="email"] { // email_formの幅指定
 		top: 100px;
 		right: 50px;
 	}
-	.main_text {
-		font-size: 25px;
-		margin: 70px 0;
+	.main_left {
+		color: #fff;
+		font-size: 20px;
+		position: absolute;
+		left: 80px;
 	}
-	.subtext {
-		font-size: 15px;
+	.main_center {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		width: 80%;
+		height: 150px;
+		color: #fff;
+		.main_text {
+			font-size: 50px;
+			margin-bottom: 50px;
+		}
+		.main_text:first-letter {
+			color: #FB1508;
+			font-size: 65px;
+		}
+		.subtext {
+			font-size: 16px;
+			opacity: 0.7;
+		}
+	}
+	.main_right {
+		color: #fff;
+		font-size: 20px;
+		position: absolute;
+		bottom: 50px;
+		right: 80px;
+	}
+}
+
+.header_ber {
+	height: 70px;
+	font-size: 15px;
+	position: -webkit-sticky; // 位置固定
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: rgba(225, 225, 225, 0.9);
+	ul {
+		margin: 0 auto;
+		width: 80%;
+		display: flex;
+		li {
+			padding: 0 25px;
+			line-height: 70px;
+			margin: 0 auto;
+			transition: all 1s;
+		}
+		li:hover {
+			background: rgba(0, 190, 255, 0.9);
+		}
 	}
 }
 
 .section_title {
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 80px;
 	padding-bottom: 10px;
 	border-bottom: 2px solid #1BD2FA;
 }
@@ -648,7 +699,6 @@ input[type="email"] { // email_formの幅指定
 
 .fa-paper-plane { // post_showと共有したいからネストなし
 	float: right;
-	text-decoration: none !important;
 	transition: .3s;
 	-webkit-transform: scale(1);
 	transform: scale(1);
@@ -660,7 +710,7 @@ input[type="email"] { // email_formの幅指定
 
 // ここからチーム側と共通
 .side_posts {
-	position: -webkit-sticky;
+	position: -webkit-sticky; // 位置固定
 	position: sticky;
 	top: 70px;
 	.side_table {
@@ -672,7 +722,6 @@ input[type="email"] { // email_formの幅指定
 				font-size: 15px;
 			}
 			.post_title {
-				text-decoration: none !important;
 				transition: .3s;
 				-webkit-transform: scale(1);
 				transform: scale(1);
@@ -690,7 +739,6 @@ input[type="email"] { // email_formの幅指定
 .post_index_path {
 	margin-top: 30px;
 	float: right;
-	text-decoration: none !important;
 	transition: .3s;
 	-webkit-transform: scale(1);
 	transform: scale(1);
@@ -767,7 +815,6 @@ input[type="email"] { // email_formの幅指定
 
 .change_pass_btn { // プレイヤー側と共通
 	// transition: all 1s;
-	text-decoration: none !important;
 }
 
 // .change_pass_btn:hover {
@@ -845,7 +892,6 @@ input[type="email"] { // email_formの幅指定
 	}
 	.fa-edit, .team_post_index {
 		float: right;
-		text-decoration: none !important;
 		transition: .3s;
 	}
 	.fa-edit:hover { // 文字を強調させる
@@ -918,7 +964,6 @@ input[type="email"] { // email_formの幅指定
 	}
 	.complete_back_btn {
 		font-size: 18px;
-		text-decoration: none !important;
 		transition: 1s;
 	}
 	.complete_back_btn:hover {
