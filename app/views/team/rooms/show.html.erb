@@ -12,12 +12,12 @@
             <% @messages.each do |message| %>
                 <% if current_team == message.team %>
                     <div class="my_message">
-                        <%= safe_join(message.content.split("\n"), tag(:br)) %>
+                        <%= safe_join(message.content.split("\n"), tag(:br)) %><br>
                         <!-- safe_joinによって改行が反映される -->
                     </div>
                 <% else %>
                     <div class="other_message">
-                        <%= safe_join(message.content.split("\n"), tag(:br)) %>
+                        <%= safe_join(message.content.split("\n"), tag(:br)) %><br>
                     </div>
                 <% end %>
             <% end %>
@@ -27,10 +27,8 @@
 
         <%= form_for(@message, url: team_messages_path) do |f| %>
             <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , class: "chats_form" %>
-            <%= f.hidden_field :room_id, :value => @room.id %><br>
-            <%= f.submit "送信", class: "btn create_btn chats_create_btn" %>
+            <%= f.hidden_field :room_id, :value => @room.id %>
+            <%= f.submit "送信", class: "btn update_btn chats_create_btn" %>
         <% end %>
-
-        <%= link_to "チーム一覧に戻る", team_teams_path, class: "back_btn" %>
     </div>
 </div>

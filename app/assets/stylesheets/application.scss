@@ -956,24 +956,35 @@ input[type="email"] { // email_formの幅指定
 
 // チャット
 
-.my_message {
-	padding: 7px;
-	background: rgba(30, 255, 0, 0.7);
-	border-radius: 10px;
-}
-
-.other_message {
-	padding: 5px;
-	background: #CDE3F1;
-	border-radius: 10px;
-}
-
-.chats_form {
+.chats_area {
 	width: 50%;
-	height: 100px;
-}
+	margin: 0 auto;
+	.my_message {
+		text-align: right;
+		max-width: 70%;
+		padding: 7px;
+		margin-bottom: 10px;
+		background: rgba(30, 255, 0, 0.7);
+		border-radius: 10px;
+	}
 
-.chats_create_btn {
+	.other_message {
+		max-width: 60%;
+		padding: 7px;
+		margin-bottom: 10px;
+		background: #CDE3F1;
+		border-radius: 10px;
+	}
+
+	.chats_form {
+		margin: 15px 0;
+		width: 100%;
+		height: 50px;
+	}
+
+	.chats_create_btn {
+		float: right;
+	}
 }
 
 // コンタクトform
