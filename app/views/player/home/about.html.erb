@@ -1,6 +1,8 @@
 <section id="main_visual">
     <%= link_to "選手登録はこちら", new_player_registration_path, class: "main_btn player_sign_up_btn" %>
     <%= link_to "チーム登録はこちら", new_team_registration_path, class: "main_btn team_sign_up_btn" %>
+    <%= link_to "選手ログインはこちら", player_session_path, class: "main_player_login" %>
+    <%= link_to "チームログインはこちら", team_session_path, class: "main_team_login" %>
 	<div class="main_left">
 		理想のチームを見つけませんか？
 	</div>
@@ -125,33 +127,16 @@
 		<div class="team_box_area">
 			<div class="team_box_top">
 				<div class="team_box_img1"></div>
-				<p>紹介文でチームをアピール</p>
+				<p>紹介文や投稿機能でアピール</p>
 			</div>
 			<div class="team_box_text">
-				チーム紹介文はあとから編集もできますが、<br>
-				絶好のアピールの場となりますので、<br>
-				それを見ればおおよそのチームカラーが<br>
-				わかるようにしっかり記入しましょう。<br>
-				チームのアピールポイントに加え、<br>
-				毎週の練習時間やチームの決まり事などが<br>
-				書いてあると、選手にその先を見てもらえる<br>
-				可能性が高まります。
-			</div>
-		</div>
-		<div class="team_box_area">
-			<div class="team_box_top">
-				<div class="team_box_img2"></div>
-				<p>毎週欠かさず投稿</p>
-			</div>
-			<div class="team_box_text">
-				チームの活動記録として、練習内容や<br>
-				試合結果を投稿し、選手に伝えましょう。<br>
-				写真投稿もできますので、チームの雰囲気が<br>
-				1番伝えられる機能です。コンスタントに<br>
-				欠かさず投稿することで、選手の目に<br>
-				留まりやすくなり、見てもらえる回数が<br>
-				増えます。まずは見てもらえるよう、<br>
-				継続して投稿していきましょう。
+				紹介文には練習時間や決まり事などを記述し、<br>
+				チームのことをよく知ってもらいましょう。<br>
+				また、投稿機能を使って練習の様子や<br>
+				試合結果などの活動記録を残しましょう。<br>
+				定期的に更新することで選手に見てもらえる<br>
+				機会が増えますので、たくさん更新しましょう。<br>
+				<br>
 			</div>
 		</div>
 		<div class="team_box_area">
@@ -168,6 +153,22 @@
 				それ以降はお客様同士のやりとりになるので、<br>
 				入団してもらえるよう、引き続き<br>
 				チームの良いところを伝えていってください。
+			</div>
+		</div>
+		<div class="team_box_area">
+			<div class="team_box_top">
+				<div class="team_box_img2"></div>
+				<p>チーム同士で情報交換</p>
+			</div>
+			<div class="team_box_text">
+				チームの活動記録として、練習内容や<br>
+				試合結果を投稿し、選手に伝えましょう。<br>
+				写真投稿もできますので、チームの雰囲気が<br>
+				1番伝えられる機能です。コンスタントに<br>
+				欠かさず投稿することで、選手の目に<br>
+				留まりやすくなり、見てもらえる回数が<br>
+				増えます。まずは見てもらえるよう、<br>
+				継続して投稿していきましょう。
 			</div>
 		</div>
 	</div>
