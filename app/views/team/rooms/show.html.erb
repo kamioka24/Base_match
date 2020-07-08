@@ -1,27 +1,36 @@
 <div class="container">
-    <h1>チャット</h1>
-
-    <h4>参加者</h4>
-    <% @entries.each do |entry| %>
-        <h5><strong><%= link_to entry.team.name, team_team_path(entry.team) %>さん</strong></h5>
-    <% end %>
-
-    <hr>
-    <% if @messages.present? %>
-        <% @messages.each do |message| %>
-            <strong><%= message.content %></strong>
-            <small>by <strong><%= link_to message.team.name, team_team_path(message.team) %>さん</strong></small>
-            <hr>
+    <h1 class="page_title">チャット</h1>
+    <div class="chats_area">
+        <% @entries.each do |entry| %>
+            <% if current_team != entry.team %>
+                <h5><strong><%= link_to entry.team.name, team_team_path(entry.team) %>さん</strong></h5>
+            <% end %>
         <% end %>
-    <% else %>
-        <h3 class="text_center">メッセージはまだありません</h3>
-    <% end %>
 
-    <%= form_for(@message, url: team_messages_path) do |f| %>
-        <%= f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 70 %>
-        <%= f.hidden_field :room_id, :value => @room.id %><br>
-        <%= f.submit "投稿する" %>
-    <% end %>
+        <hr>
+        <% if @messages.present? %>
+            <% @messages.each do |message| %>
+                <% if current_team == message.team %>
+                    <div class="my_message">
+                        <%= safe_join(message.content.split("\n"), tag(:br)) %>
+                        <!-- safe_joinによって改行が反映される -->
+                    </div>
+                <% else %>
+                    <div class="other_message">
+                        <%= safe_join(message.content.split("\n"), tag(:br)) %>
+                    </div>
+                <% end %>
+            <% end %>
+        <% else %>
+            <h4 class="text_center">メッセージはまだありません</h4>
+        <% end %>
 
-    <%= link_to "チーム一覧に戻る", team_teams_path %>
+        <%= form_for(@message, url: team_messages_path) do |f| %>
+            <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , class: "chats_form" %>
+            <%= f.hidden_field :room_id, :value => @room.id %><br>
+            <%= f.submit "送信", class: "btn create_btn chats_create_btn" %>
+        <% end %>
+
+        <%= link_to "チーム一覧に戻る", team_teams_path, class: "back_btn" %>
+    </div>
 </div>

@@ -1,28 +1,46 @@
 <div class="container">
 	<p class="flash_message"><%= flash[:notice] %></p>
-	<div class="post_show_box">
-		<%= link_to @post.team.name, team_team_path(@post.team), class: "post_team_name" %>
-		<% if @post.team == current_team %>
-			<%= link_to edit_team_post_path(@post) do %>
-				<i class="fa fa-edit"> 編集する</i>
+	<div class="post_show_area">
+		<div class="post_show_box">
+			<%= link_to @post.team.name, team_team_path(@post.team), class: "post_team_name" %>
+			<% if @post.team == current_team %>
+				<%= link_to edit_team_post_path(@post) do %>
+					<i class="fa fa-edit"> 編集する</i>
+				<% end %>
+			<% else %>
+				<%= link_to "#{@post.team.name}投稿一覧へ", team_posts_path(team: @post.team.id), class: "team_post_index" %> <!-- postページなので、@post.team.idとしないとpost.idとteam.idが混同して遷移がうまくいかない。)teamページではteam.id) -->
 			<% end %>
-		<% else %>
-			<%= link_to "#{@post.team.name}投稿一覧へ", team_posts_path(team: @post.team.id), class: "team_post_index" %> <!-- postページなので、@post.team.idとしないとpost.idとteam.idが混同して遷移がうまくいかない。)teamページではteam.id) -->
+			<div class="post_title_area">
+				<div class="post_title">
+					<%= @post.title %>
+				</div>
+				<div class="post_date">
+					<%= @post.created_at.strftime("%Y/%m/%d") %>
+				</div>
+			</div>
+			<div class="post_img">
+				<%= attachment_image_tag @post, :post_image, :fill, 900, 500 %>
+			</div>
+			<div class="post_body">
+				<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
+			</div>
+		</div>
+		<% if @post.team.id != current_team.id %>
+			<% if @isRoom == true %>
+				<%= link_to team_room_path(@roomId) do %>
+					<i class="fas fa-paper-plane"> チャットへ</i>
+				<% end %>
+			<% else %>
+				<%= form_for(@room, url: team_rooms_path) do |f| %>
+					<%= fields_for @entry do |e| %>
+						<%= e.hidden_field :team_id, :value=> @team.id %>
+					<% end %>
+					<%= f.submit "チャットを始める", class: "chats_btn" %>
+				<% end %>
+			<% end %>
 		<% end %>
-		<div class="post_title_area">
-			<div class="post_title">
-				<%= @post.title %>
-			</div>
-			<div class="post_date">
-				<%= @post.created_at.strftime("%Y/%m/%d") %>
-			</div>
-		</div>
-		<div class="post_img">
-			<%= attachment_image_tag @post, :post_image, :fill, 900, 500 %>
-		</div>
-		<div class="post_body">
-			<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
-		</div>
-		<%= link_to "前の画面へ戻る", :back, class: "back_btn" %>
+		<% if @team != current_team %>
+			<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
+		<% end %>
 	</div>
 </div>

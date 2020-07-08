@@ -710,13 +710,14 @@ input[type="email"] { // email_formの幅指定
 	}
 }
 
-.fa-paper-plane { // post_showと共有したいからネストなし
+.fa-envelope { // post_showと共有したいからネストなし
 	float: right;
+	font-weight: bold;
 	transition: .3s;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
-.fa-paper-plane:hover { // 文字を強調する
+.fa-envelope:hover { // 文字を強調する
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 }
@@ -734,13 +735,13 @@ input[type="email"] { // email_formの幅指定
 				text-align: center;
 				font-size: 15px;
 			}
-			.post_title {
+			.post_title { // 反応がない
 				transition: .3s;
 				-webkit-transform: scale(1);
 				transform: scale(1);
 				text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
 			}
-			.post_title:hover { // 文字を強調させる
+			.post_title:hover { // 文字を強調させる // 反応がない
 				-webkit-transform: scale(1.1);
 				transform: scale(1.1);
 			}
@@ -827,7 +828,7 @@ input[type="email"] { // email_formの幅指定
 // チーム編集
 
 .change_pass_btn { // プレイヤー側と共通
-	// transition: all 1s;
+	transition: .3s;
 }
 
 // .change_pass_btn:hover {
@@ -893,6 +894,10 @@ input[type="email"] { // email_formの幅指定
 
 // 投稿詳細(共通)
 
+.post_show_area {
+	margin: 0 auto;
+	width: 940px;
+}
 .post_show_box {
 	background: #fff;
 	box-shadow: 0 0px 20px rgba(0,0,0,0.2);
@@ -934,6 +939,41 @@ input[type="email"] { // email_formの幅指定
 		margin: 30px 0;
 		font-size: 18px;
 	}
+}
+
+// チャットへのリンク＆ボタン(team_team_show/ team_post_show)
+
+.fa-paper-plane {
+	transition: .3s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.fa-paper-plane:hover { // 文字を強調させる
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+// チャット
+
+.my_message {
+	padding: 7px;
+	background: rgba(30, 255, 0, 0.7);
+	border-radius: 10px;
+}
+
+.other_message {
+	padding: 5px;
+	background: #CDE3F1;
+	border-radius: 10px;
+}
+
+.chats_form {
+	width: 50%;
+	height: 100px;
+}
+
+.chats_create_btn {
 }
 
 // コンタクトform

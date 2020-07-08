@@ -3,7 +3,7 @@
 		<% if @team == current_team %>
 			<h1 class="page_title">マイチーム
 				<%= link_to edit_team_team_path(@team) do %>
-					<i class="fa fa-cog"></i>
+					<i class="fa fa-cog"> 編集する</i>
 				<% end %>
 			</h1>
 		<% end %>
@@ -74,13 +74,15 @@
 			</div>
 			<% if @team.id != current_team.id %>
 				<% if @isRoom == true %>
-					<%= link_to "チャットへ", team_room_path(@roomId) %>
+					<%= link_to team_room_path(@roomId) do %>
+						<i class="fas fa-paper-plane"> チャットへ</i>
+					<% end %>
 				<% else %>
 					<%= form_for(@room, url: team_rooms_path) do |f| %>
 						<%= fields_for @entry do |e| %>
 							<%= e.hidden_field :team_id, :value=> @team.id %>
 						<% end %>
-						<%= f.submit "チャットを始める" %>
+						<%= f.submit "チャットを始める", class: "chats_btn" %>
 					<% end %>
 				<% end %>
 			<% end %>
