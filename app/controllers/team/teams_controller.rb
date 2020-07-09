@@ -3,7 +3,7 @@ class Team::TeamsController < ApplicationController
 	before_action :protect, only:[:edit, :update, :destroy]
 	def index
 		@q = Team.ransack(params[:q])
-		@teams = @q.result(distinct: true).page(params[:page]).per(10).order(:prefecture_code).order(:city).order(member: "DESC")
+		@teams = @q.result(distinct: true).page(params[:page]).per(15).order(:prefecture_code).order(:city).order(member: "DESC")
 	end
 
 	def show

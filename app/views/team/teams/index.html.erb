@@ -17,36 +17,25 @@
 			<% end %>
 		</div>
 	</div>
-	<table width="700" class="team_table">
-		<thead>
-			<tr>
-				<th></th>
-				<th>都道府県</th>
-				<th>市区町村</th>
-				<th>チーム名</th>
-				<th>カテゴリー</th>
-				<th>人数</th>
-			</tr>
-		</thead>
+	<div class="team_boxes">
 		<% @teams.each do |team| %>
-			<tbody>
-				<tr>
-					<% if team == current_team %>
-						<td>
-							<%= link_to edit_team_team_path(current_team) do %>
-								<i class="fas fa-baseball-ball"></i>
-							<% end %>
-						</td>
-					<% else %>
-						<td></td>
+			<div class="team_box">
+				<%= team.prefecture_name %>
+				<% if team == current_team %>
+					<%= link_to edit_team_team_path(current_team) do %>
+						<i class="fas fa-baseball-ball"></i>
 					<% end %>
-					<td><%= team.prefecture_name %></td>
-					<td><%= team.city %></td>
-					<td><%= link_to team.name, team_team_path(team) %></td>
-					<td><%= team.category %></td>
-					<td><%= team.member %></td>
-				</tr>
-			</tbody>
+				<% end %><br>
+				<%= link_to team_team_path(team) do %>
+					<%= attachment_image_tag team, :team_image, :fill, 200, 130 %><br>
+					<p class="team_box_name"><%= team.name %></p>
+				<% end %>
+				<div class="team_box_bottom">
+					・<%= team.city %><br>
+					・<%= team.category %><br>
+					・<%= team.member %>人
+				</div>
+			</div>
 		<% end %>
-	</table>
+	</div>
 </div>
