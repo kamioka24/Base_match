@@ -663,7 +663,7 @@ input[type="email"] { // email_formの幅指定
 
 // プレイヤー側チーム一覧＆お気に入り一覧
 
-.team_boxes {
+.team_boxes { // チーム側と共通
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 15px;

@@ -19,6 +19,12 @@ class Player::ContactsController < ApplicationController
 
 	def complete # 送信完了画面
 		@team = Team.find(params[:team_id])
+		@i = current_player.contacts
+		@all = Team.all
+		@i.each do |team|
+			@all = @all.where.not(id: team.team_id)
+		end
+		@team_picup = @team.order("RANDOM()").limit(2)
 	end
 
 	private
