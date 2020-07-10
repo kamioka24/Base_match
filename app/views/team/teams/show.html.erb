@@ -61,11 +61,13 @@
 				<!-- safe_joinによって改行が反映される -->
 				<table width="350" class="address_table">
 					<tr>
-						<th><i class="fas fa-mobile-alt"></i> 連絡先</th>
+						<th><i class="fas fa-mobile-alt fa-fw"></i> 連絡先</th>
+						<!-- クラスにfa-fwを追加するとアイコンの横幅が統一される -->
 						<td><%= @team.phone_number %></td>
 					</tr>
 					<tr>
-						<th><i class="fas fa-baseball-ball"></i> 住所</th>
+						<th><i class="fas fa-baseball-ball fa-fw"></i> 住所</th>
+						<!-- クラスにfa-fwを追加するとアイコンの横幅が統一される -->
 						<td><%= @team.prefecture_name %><%= @team.city %><%= @team.street %></td>
 						<!-- prefecture_codeをprefecture_nameに変換しているため -->
 					</tr>
