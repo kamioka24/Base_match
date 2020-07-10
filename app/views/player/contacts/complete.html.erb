@@ -8,17 +8,22 @@
 		</h2>
 		<%= link_to "もっとチームを探す", player_teams_path, class: "btn complete_back_btn" %>
 	</div>
-	<% @team_picup.each do |team_picup| %>
-		<div class="team_box">
-			<%= link_to player_team_path(team_picup.team) do %>
-				<%= attachment_image_tag team_picup, :team_image, :fill, 200, 130 %><br>
-				<p class="team_box_name"><%= team.name %></p>
-			<% end %>
-			<div class="team_box_bottom">
-				・<%= team_picup.prefecture_name %><%= team_picup.city %><br>
-				・<%= team_picup.category %><br>
-				・<%= team_picup.member %>人
+	<h3>その他、よく閲覧されているチーム</h3>
+	<% @picup_team.each do |picup_team| %>
+		<% if picup_team.prefecture_name == current_player.prefecture_name %>
+			<div class="complete_team_boxes">
+				<div class="team_box">
+					<%= link_to player_team_path(picup_team) do %>
+						<%= attachment_image_tag picup_team, :team_image, :fill, 200, 130 %><br>
+						<p class="team_box_name"><%= picup_team.name %></p>
+					<% end %>
+					<div class="team_box_bottom">
+						・<%= picup_team.prefecture_name %><%= picup_team.city %><br>
+						・<%= picup_team.category %><br>
+						・<%= picup_team.member %>人
+					</div>
+				</div>
 			</div>
-		</div>
+		<% end %>
 	<% end %>
 </div>

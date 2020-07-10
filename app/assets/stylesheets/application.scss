@@ -1016,7 +1016,7 @@ input[type="email"] { // email_formの幅指定
 }
 
 .message_area {
-	margin-top: 120px;
+	margin-top: 70px;
 	text-align: center;
 	.complete_message {
 		font-size: 25px;
@@ -1032,5 +1032,27 @@ input[type="email"] { // email_formの幅指定
 	}
 	.complete_back_btn:hover {
 		background: rgba(0, 190, 255, 1.0);
+	}
+}
+
+.complete_team_boxes { // 他のteam_boxと変わらないが、ここだけdisplay: flex; が効かないためfloatを使用。
+	float: left;
+	.team_box { // 他のteam_boxesにfloatを使うと、アバウトのteam_boxが崩れるため、共有できない。
+		background: #fff;
+		box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+		border-radius: 10px;
+		padding: 10px;
+		margin-right: 31px;
+		margin-bottom: 30px;
+		transition: .3s;
+	}
+	.team_box_name {
+		margin-top: 5px;
+		font-size: 18px;
+		text-align: center;
+	}
+	.team_box_bottom {
+		line-height: 22px;
+		font-size: 15px;
 	}
 }
