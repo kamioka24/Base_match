@@ -19,6 +19,7 @@ class Player::ContactsController < ApplicationController
 
 	def complete # 送信完了画面
 		@team = Team.find(params[:team_id])
+		# オススメチームの表示↓↓
 		@i = current_player.contacts
 		@all = Team.all
 		@i.each do |team|
