@@ -40,7 +40,7 @@ li {
 .sign_up_btn {
 	font-size: 18px;
 	display: inline-block;
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-right: 20px;
 	padding: 60px 30px;
 	background: rgba(30, 255, 0, 0.7);
@@ -62,7 +62,7 @@ li {
 .login_btn {
 	font-size: 18px;
 	display: inline-block;
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-left: 20px;
 	padding: 60px 30px;
 	background: rgba(0, 200, 255, 0.8);
@@ -436,27 +436,49 @@ input[type="email"] { // email_formの幅指定
 .section_text {
 	font-size: 20px;
 	p {
-		margin: 50px 0;
+		margin: 80px 0;
 	}
 }
 
 #about_story {
 	margin: 0 auto;
 	text-align: center;
-	height: 800px;
+	height: 1200px;
 	width: 80%;
+	.story_boxes {
+		display: flex;
+		.story_box {
+			margin: 0 auto;
+			font-size: 14px;
+			width: 22%;
+			border: 2px solid #eee;
+			.story_box_title {
+				color: #fff;
+				font-weight: bold;
+				height: 150px;
+				line-height: 150px;
+				background: rgba(0, 0, 0, 0.5);
+			}
+			.story_box_body {
+				line-height: 23px;
+				margin: 10px auto;
+				text-align: left;
+				width: 95%;
+			}
+		}
+	}
 }
 
 #about_player {
 	margin: 0 auto;
 	text-align: center;
-	height: 2300px;
+	height: 2000px;
 	width: 80%;
 	.player_box {
 		width: 90%;
 		height: 350px;
 		display: flex;
-		margin: 100px auto;
+		margin: 30px auto;
 		.box_text_area {
 			width: 30%;
 			margin: 50px auto;
@@ -505,7 +527,7 @@ input[type="email"] { // email_formの幅指定
 #about_team {
 	margin: 0 auto;
 	text-align: center;
-	height: 950px;
+	height: 980px;
 	width: 80%;
 	.team_boxes {
 		display: flex;
@@ -569,32 +591,6 @@ input[type="email"] { // email_formの幅指定
 				line-height: 23px;
 				width: 300px;
 			}
-		}
-	}
-}
-
-#about_profile {
-	margin: 0 auto;
-	height: 350px;
-	width: 80%;
-	.profile_area {
-		margin: 30px auto;
-		display: flex;
-		.profile_left {
-			margin: 0px 120px;
-			width: 50%;
-			.profile_image {
-				height: 210px;
-				width: 210px;
-				background-image: image-url("profile.jpg");
-				background-position: center;
-				background-size: 100%;
-				border-radius: 50%;
-			}
-		}
-		.profile_right {
-			margin: 10px auto;
-			line-height: 40px;
 		}
 	}
 }
