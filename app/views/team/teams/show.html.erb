@@ -72,7 +72,9 @@
 						<!-- prefecture_codeをprefecture_nameに変換しているため -->
 					</tr>
 				</table>
-				<div id="map" class="<%= @team.prefecture_name + @team.city + @team.street %>"></div>
+				<div class="map_area">
+					<div id="map" class="<%= @team.prefecture_name + @team.city + @team.street %>"></div>
+				</div>
 			</div>
 			<% if @team.id != current_team.id %>
 				<% if @isRoom == true %>

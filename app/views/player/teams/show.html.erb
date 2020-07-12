@@ -52,7 +52,9 @@
 						<!-- prefecture_codeをprefecture_nameに変換しているため -->
 					</tr>
 				</table>
-				<div id="map" class="<%= @team.prefecture_name + @team.city + @team.street %>"></div>
+				<div class="map_area">
+					<div id="map" class="<%= @team.prefecture_name + @team.city + @team.street %>"></div>
+				</div>
 			</div>
 			<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
 		</div>
