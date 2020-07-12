@@ -27,6 +27,10 @@
 	text-decoration: none !important; // リンクの下線を消す
 }
 
+html {
+	height: 100%;
+}
+
 li {
 	list-style: none;
 }
@@ -766,12 +770,12 @@ input[type="email"] { // email_formの幅指定
 }
 
 .address_table {
-		margin: 20px 0;
-		font-size: 15px;
-		tr {
-			line-height: 25px;
-		}
+	margin: 20px 0;
+	font-size: 15px;
+	tr {
+		line-height: 25px;
 	}
+}
 
 #map {
 	width: 900px;
