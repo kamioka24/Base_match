@@ -5,7 +5,7 @@ class Player::PlayersController < ApplicationController
 		@player = current_player
 		@teams = Team.where(prefecture_code: @player.prefecture_code).page(params[:page]).per(8).order(:city).order(member: "DESC")
 		# @teams = Team.page(params[:page]).per(8).order(:prefecture_code).order(:city).order(member: "DESC")
-		# 5行目でも出力できたが、4行目の方が確実？ (current_playerと同じ都道府県テームの出力。一応viewにも定義はしてある。)
+		# 7行目でも出力できたが、6行目の方が確実？ (current_playerと同じ都道府県テームの出力。一応viewにも定義はしてある。)
 		@posts = Post.page(params[:page]).per(8).order(created_at: "DESC")
 		# @posts = Post.joins(:team).where(prefecture_code: @player.prefecture_code).page(params[:page]).per(8).order(:prefecture_code).order(created_at: "DESC")
 		# @teamsと同じようにできない？

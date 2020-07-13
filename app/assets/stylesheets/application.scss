@@ -487,9 +487,11 @@ input[type="email"] { // email_formの幅指定
 		margin: 30px auto;
 		.box_text_area {
 			width: 30%;
-			margin: 50px auto;
+			margin: 90px auto;
 			.player_box_text {
+				height: 100%;
 				font-size: 17px;
+				line-height: 30px;
 			}
 		}
 		.player_box_img1 {
