@@ -25,7 +25,6 @@ class Team::PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
-		@team = Team.find(params[:id])
 		@currentTeamEntry=Entry.where(team_id: current_team.id)
 		@teamEntry=Entry.where(team_id: @team.id)
 		if @team.id != current_team.id
