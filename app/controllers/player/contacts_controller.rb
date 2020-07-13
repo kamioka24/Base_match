@@ -25,7 +25,7 @@ class Player::ContactsController < ApplicationController
 		@i.each do |team|
 			@all = @all.where.not(id: team.team_id)
 		end
-		@picup_team = @all.order("RANDOM()").limit(3)
+		@picup_team = @all.order("RAND()").limit(3)
 	end
 
 	private
