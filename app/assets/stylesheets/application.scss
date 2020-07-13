@@ -27,13 +27,6 @@
 	text-decoration: none !important; // リンクの下線を消す
 }
 
-html {
-	height: 100%;
-	body {
-		min-height: 100%;
-	}
-}
-
 li {
 	list-style: none;
 }
@@ -780,12 +773,9 @@ input[type="email"] { // email_formの幅指定
 	}
 }
 
-.map_area {
-	height: 550px;
-	#map {
-		width: 900px;
-		height: 500px;
-	}
+#map {
+	width: 900px;
+	height: 500px;
 }
 // ここまでチーム側と共通
 
