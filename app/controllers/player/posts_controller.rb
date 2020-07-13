@@ -11,7 +11,7 @@ class Player::PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
-		@team = Team.find(params[:id])
-		@posts = Post.page(params[:page]).per(8).order(created_at: "DESC")
+		@posts = @post.team.posts.page(params[:page]).per(8).order(created_at: "DESC")
+		# 投稿チームのpostsを表示。
 	end
 end
