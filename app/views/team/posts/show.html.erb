@@ -25,20 +25,6 @@
 				<%= safe_join(@post.body.split("\n"), tag(:br)) %> <!-- 投稿時の改行が反映される -->
 			</div>
 		</div>
-		<% if @post.team.id != current_team.id %>
-			<% if @isRoom == true %>
-				<%= link_to team_room_path(@roomId) do %>
-					<i class="fas fa-paper-plane"> チャットへ</i>
-				<% end %>
-			<% else %>
-				<%= form_for(@room, url: team_rooms_path) do |f| %>
-					<%= fields_for @entry do |e| %>
-						<%= e.hidden_field :team_id, :value=> @team.id %>
-					<% end %>
-					<%= f.submit "チャットを始める", class: "chats_btn" %>
-				<% end %>
-			<% end %>
-		<% end %>
 		<% if @team != current_team %>
 			<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
 		<% end %>

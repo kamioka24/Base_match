@@ -25,23 +25,6 @@ class Team::PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
-		@currentTeamEntry=Entry.where(team_id: current_team.id)
-		@teamEntry=Entry.where(team_id: @team.id)
-		if @team.id != current_team.id
-		   @currentTeamEntry.each do |cu|
-		       @teamEntry.each do |u|
-		       	   if cu.room_id == u.room_id then
-		       	   	   @isRoom = true
-		       	   	   @roomId = cu.room_id
-		       	   end
-		       	end
-		    end
-		    if @isRoom
-		    else
-		    	@room = Room.new
-		        @entry = Entry.new
-		    end
-		end
 	end
 
 	def edit
