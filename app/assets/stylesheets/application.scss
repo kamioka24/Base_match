@@ -420,13 +420,17 @@ input[type="email"] { // email_formの幅指定
 		margin: 0 auto;
 		width: 80%;
 		display: flex;
-		li {
-			padding: 0 25px;
-			line-height: 70px;
+		.li_area {
 			margin: 0 auto;
 			transition: all 1s;
+			li a{ // aを付けるとarea全体がリンクになる。
+				display: block;
+				height: 70px;
+				padding: 0 25px;
+				line-height: 70px;
+			}
 		}
-		li:hover {
+		.li_area:hover {
 			background: rgba(0, 190, 255, 0.9);
 		}
 	}
