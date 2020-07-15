@@ -6,17 +6,16 @@
                 <h5><strong><%= link_to entry.team.name, team_team_path(entry.team) %>さん</strong></h5>
             <% end %>
         <% end %>
-
         <hr>
         <% if @messages.present? %>
             <% @messages.each do |message| %>
                 <% if current_team == message.team %>
-                    <div class="my_message">
+                    <div class="message my_message">
                         <%= safe_join(message.content.split("\n"), tag(:br)) %><br>
                         <!-- safe_joinによって改行が反映される -->
                     </div>
                 <% else %>
-                    <div class="other_message">
+                    <div class="message other_message">
                         <%= safe_join(message.content.split("\n"), tag(:br)) %><br>
                     </div>
                 <% end %>
