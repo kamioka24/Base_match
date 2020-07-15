@@ -42,9 +42,9 @@ li {
 	display: inline-block;
 	margin-top: 20px;
 	margin-right: 20px;
-	padding: 60px 30px;
+	padding: 20px;
 	background: rgba(30, 255, 0, 0.7);
-	border-radius: 50%;
+	border-radius: 8px;
 	transition: all 1s;
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
 }
@@ -56,7 +56,7 @@ li {
 .sign_up_btn:active {
 	box-shadow: none;
 	position: relative;
-	top: 1px;
+	top: 2px;
 }
 
 .login_btn {
@@ -64,9 +64,9 @@ li {
 	display: inline-block;
 	margin-top: 20px;
 	margin-left: 20px;
-	padding: 60px 30px;
+	padding: 20px;
 	background: rgba(0, 200, 255, 0.8);
-	border-radius: 50%;
+	border-radius: 8px;
 	transition: all 1s;
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
 }
@@ -78,19 +78,19 @@ li {
 .login_btn:active {
 	box-shadow: none;
 	position: relative;
-	top: 1px;
+	top: 2px;
 }
 
 .btn {
 	display: inline-block;
 	margin-top: 10px;
-	border-radius: 5px;
+	border-radius: 7px;
 }
 
 .btn:active {
 	box-shadow: none;
 	position: relative;
-	top: 1px;
+	top: 2px;
 }
 
 .create_btn {
@@ -478,7 +478,7 @@ input[type="email"] { // email_formの幅指定
 #about_player {
 	margin: 0 auto;
 	text-align: center;
-	height: 2000px;
+	height: 1950px;
 	width: 80%;
 	.player_box {
 		width: 90%;
