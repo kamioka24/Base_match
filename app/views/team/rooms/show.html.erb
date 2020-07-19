@@ -21,7 +21,7 @@
                 <% end %>
             <% end %>
         <% else %>
-            <h4 class="text_center">メッセージはまだありません</h4>
+            <h4 class="text_center">記念すべき最初のメッセージです！</h4>
         <% end %>
         <%= form_for(@message, url: team_messages_path) do |f| %>
             <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , class: "chats_form" %>
