@@ -1065,6 +1065,23 @@ input[type="email"] { // email_formの幅指定
 }
 
 @media screen and (max-width: 480px) {
+	.header_ber {
+		height: 60px;
+		ul {
+			width: 100%;
+			.li_area {
+				li a{ // aを付けるとarea全体がリンクになる。
+					height: 60px;
+					padding: 0 15px;
+					line-height: 60px;
+				}
+			}
+			.li_area:hover {
+				// hoverをなしにしたいので、同じbackgroundを使用。
+				background: rgba(225, 225, 225, 0.9);
+			}
+		}
+	}
 	.header_logo {
 		font-size: 30px;
 		strong {
@@ -1080,12 +1097,11 @@ input[type="email"] { // email_formの幅指定
 			font-size: 20px;
 		}
 		.contact_area {
+			flex-direction: column; // 上から下へ並べる
 			font-size: 15px;
-			.contact_left {
+			.contact_left, .contact_right {
 				width: 100%;
-			}
-			.contact_right {
-				width: 100%;
+				padding-top: 15px;
 			}
 		}
 	}
