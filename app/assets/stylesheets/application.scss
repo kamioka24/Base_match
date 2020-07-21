@@ -1082,6 +1082,7 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
+
 	.header_logo {
 		font-size: 30px;
 		strong {
@@ -1091,6 +1092,7 @@ input[type="email"] { // email_formの幅指定
 	.nav_list_item {
 		margin-right: 25px;
 	}
+
 	footer {
 		height: 200px;
 		.footer_section_title {
@@ -1105,6 +1107,7 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
+
 	.sign_up_btn {
 		font-size: 13px;
 		margin-top: 10px;
@@ -1123,6 +1126,16 @@ input[type="email"] { // email_formの幅指定
 		padding: 8px 5px;
 	}
 
+	.container {
+		width: 95%;
+		.page_title {
+			font-size: 20px;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #E1A253;
+		}
+	}
+
 	// 退会ページ(共通)
 
 	.exit_page {
@@ -1132,16 +1145,6 @@ input[type="email"] { // email_formの幅指定
 		}
 		h2 {
 			font-size: 15px;
-		}
-	}
-
-	.container {
-		width: 95%;
-		.page_title {
-			font-size: 20px;
-			padding-left: 10px;
-			padding-bottom: 10px;
-			border-bottom: 2px solid #E1A253;
 		}
 	}
 
@@ -1169,3 +1172,85 @@ input[type="email"] { // email_formの幅指定
 		}
 	}
 }
+
+	// story
+
+	#about_story {
+		height: 100%;
+		.story_boxes {
+			flex-direction: column;
+			.story_box {
+				margin-bottom: 20px;
+				width: 100%;
+				border: 1px solid #eee;
+				.story_box_title {
+					font-size: 17px;
+				}
+				.story_box_body {
+					line-height: 23px;
+					margin: 10px auto;
+					text-align: left;
+					width: 95%;
+				}
+			}
+		}
+	}
+
+	// player
+
+	#about_player {
+		height: 100%;
+		.section_text {
+			display: none;
+		}
+		.player_box {
+			width: 90%;
+			height: 350px;
+			display: flex;
+			margin: 30px auto;
+			.box_text_area {
+				width: 30%;
+				margin: 90px auto;
+				.player_box_text {
+					height: 100%;
+					font-size: 17px;
+					line-height: 30px;
+				}
+			}
+			.player_box_img1 {
+				margin: 10px auto;
+				height: 150px;
+				width: 220px;
+				background-image: image-url("player1.jpg");
+				background-size: cover;
+				box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+			}
+			.player_box_img2 {
+				margin: 10px auto;
+				height: 150px;
+				width: 220px;
+				background-image: image-url("player2.jpg");
+				background-size: cover;
+				box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+			}
+			.player_box_img3 {
+				margin: 10px auto;
+				height: 150px;
+				width: 220px;
+				background-image: image-url("player3.jpg");
+				background-size: cover;
+				box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+			}
+			.player_box_img4 {
+				margin: 10px auto;
+				height: 150px;
+				width: 220px;
+				background-image: image-url("player4.jpg");
+				background-size: cover;
+				box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+			}
+			p {
+				font-size: 13px;
+			}
+		}
+	}
