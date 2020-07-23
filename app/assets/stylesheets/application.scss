@@ -1083,27 +1083,30 @@ input[type="email"] { // email_formの幅指定
 		}
 	}
 
-	.header_logo {
-		font-size: 30px;
-		strong {
-			font-size: 40px;
-		}
-	}
-	.nav_list_item {
-		margin-right: 25px;
-	}
-
-	footer {
-		height: 200px;
-		.footer_section_title {
-			font-size: 20px;
-		}
-		.contact_area {
-			flex-direction: column; // 上から下へ並べる
-			font-size: 15px;
-			.contact_left, .contact_right {
-				width: 100%;
-				padding-top: 15px;
+	html, body {
+		.wrapper {
+			.header_logo {
+				font-size: 30px;
+				strong {
+					font-size: 40px;
+				}
+			}
+			.nav_list_item {
+				margin-right: 25px;
+			}
+			footer {
+				height: 150px;
+				.footer_section_title {
+					display: none;
+				}
+				.contact_area {
+					flex-direction: column; // 上から下へ並べる
+					font-size: 15px;
+					.contact_left, .contact_right {
+						width: 100%;
+						padding-top: 15px;
+					}
+				}
 			}
 		}
 	}
