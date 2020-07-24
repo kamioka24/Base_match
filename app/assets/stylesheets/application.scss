@@ -1164,15 +1164,17 @@ input[type="email"] { // email_formの幅指定
 			line-height: 25px;
 		}
 	}
+
 	.team_signup_image_area {
-		width: 250px;
+		width: 100%;
 		.team_info {
 			margin: 10px 0;
 		}
 		.introduction_area {
-			height: 100px;
+			height: 150px;
 		}
 	}
+
 	.team_signup_table {
 		margin: 10px auto;
 		th {
