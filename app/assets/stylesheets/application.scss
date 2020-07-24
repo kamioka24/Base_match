@@ -1085,14 +1085,16 @@ input[type="email"] { // email_formの幅指定
 
 	html, body {
 		.wrapper {
-			.header_logo {
-				font-size: 30px;
-				strong {
-					font-size: 40px;
+			header {
+				.header_logo {
+					font-size: 30px;
+					strong {
+						font-size: 40px;
+					}
 				}
-			}
-			.nav_list_item {
-				margin-right: 25px;
+				.nav_list_item {
+					margin-right: 25px;
+				}
 			}
 			footer {
 				height: 150px;
@@ -1105,6 +1107,9 @@ input[type="email"] { // email_formの幅指定
 					.contact_left, .contact_right {
 						width: 100%;
 						padding-top: 15px;
+					}
+					.footer_table {
+						margin: 0 auto;
 					}
 				}
 			}
