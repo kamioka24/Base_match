@@ -539,7 +539,7 @@ input[type="email"] { // email_formの幅指定
 #about_team {
 	margin: 0 auto;
 	text-align: center;
-	height: 980px;
+	height: 950px;
 	width: 80%;
 	.team_boxes {
 		display: flex;
@@ -838,9 +838,6 @@ input[type="email"] { // email_formの幅指定
 .change_pass_btn { // プレイヤー側と共通
 	transition: .3s;
 }
-
-// .change_pass_btn:hover {
-// }
 
 .team_image_edit_area {
 	width: 500px;
@@ -1283,6 +1280,21 @@ input[type="email"] { // email_formの幅指定
 				.team_box_text {
 					width: 98%;
 				}
+			}
+		}
+	}
+
+	// プレイヤー側チーム一覧＆お気に入り一覧
+
+	.team_boxes { // チーム側と共通
+		flex-direction: column; // 上から下へ並べる
+		margin-top: 20px;
+		.team_box {
+			margin-right: 0;
+			margin-bottom: 20px;
+			.team_box_name {
+			}
+			.team_box_bottom {
 			}
 		}
 	}
