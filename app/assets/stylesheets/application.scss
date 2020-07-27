@@ -1304,7 +1304,6 @@ input[type="email"] { // email_formの幅指定
 	.team_information {
 		padding: 15px;
 		.player_teams_information_top {
-			display: flex;
 			width: 100%;
 			height: 50px;
 			.category, .member {
@@ -1317,15 +1316,8 @@ input[type="email"] { // email_formの幅指定
 		}
 	}
 
-	.fa-envelope { // post_showと共有したいからネストなし
-		float: right;
-		font-weight: bold;
-		transition: .3s;
-		-webkit-transform: scale(1);
-		transform: scale(1);
-	}
-	.fa-envelope:hover { // 文字を強調する
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
+	#map {
+		width: 100%;
+		height: 250px;
 	}
 }
