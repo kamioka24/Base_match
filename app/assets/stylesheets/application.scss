@@ -1320,4 +1320,22 @@ input[type="email"] { // email_formの幅指定
 		width: 100%;
 		height: 250px;
 	}
+
+	// チーム詳細(マイチーム)
+
+	.team_information {
+		margin: 15px auto;
+		padding: 15px;
+		.information_top {
+			width: 100%;
+			h2 {
+				margin: 10px 30px;
+			}
+		}
+		.team_image {
+		}
+		.team_introduction {
+			font-size: 15px;
+		}
+	}
 }
