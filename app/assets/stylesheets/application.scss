@@ -1316,6 +1316,11 @@ input[type="email"] { // email_formの幅指定
 		}
 	}
 
+	// ここからチーム側と共通
+	.side_posts {
+		display: none;
+	}
+
 	#map {
 		width: 100%;
 		height: 250px;
@@ -1324,6 +1329,7 @@ input[type="email"] { // email_formの幅指定
 	// チーム詳細(マイチーム)
 
 	.team_information {
+		width: 100%;
 		margin: 15px auto;
 		padding: 15px;
 		.information_top {
@@ -1333,6 +1339,7 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 		.team_image {
+			width: 100%;
 		}
 		.team_introduction {
 			font-size: 15px;
