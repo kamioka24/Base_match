@@ -28,7 +28,6 @@ Rails.application.routes.draw do
 
 	# team
 	namespace :team do
-		get 'home/about'
 		resources :teams, only: [:index, :show, :edit, :update, :destroy] do
 			get :exit, on: :member # idが必要なためmemberを使う
 		end
