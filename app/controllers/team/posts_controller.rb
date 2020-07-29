@@ -1,5 +1,7 @@
 class Team::PostsController < ApplicationController
 	before_action :authenticate_team!
+	# showを含めるとpostのリンクが機能しなくなってしまうので入れない。
+	before_action :protect, only:[:edit, :update, :destroy]
 	def new
 		@post = Post.new
 	end
@@ -25,14 +27,13 @@ class Team::PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		# マイページのサイドテーブルのpostリンクが機能しなくなるのでbefore_actionに入れない。
 	end
 
 	def edit
-		@post = Post.find(params[:id])
 	end
 
 	def update
-		@post = Post.find(params[:id])
 		if @post.update(post_params)
 		   redirect_to team_post_path, notice: "投稿を編集しました。"
 		else
@@ -41,12 +42,18 @@ class Team::PostsController < ApplicationController
 	end
 
 	def destroy
-		@post = Post.find(params[:id])
 		@post.destroy
 		redirect_to team_posts_path, notice: "投稿を削除しました。"
 	end
 
 	private
+
+	def protect
+		@post = Post.find(params[:id])
+		if current_team != @team
+	       redirect_to team_team_path(current_team)
+	    end
+	end
 
 	def post_params
 		params.require(:post).permit(:team_id, :title, :body, :post_image)
