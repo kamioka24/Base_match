@@ -8,6 +8,7 @@ set :deploy_to, "/home/ec2-user/Base_match"
 set :rbenv_ruby, '2.5.7'
 set :linked_files, %w{config/master.key .env}
 append :linked_dirs, "log", "public/system", "tmp"
+# capistranoでデプロイ時にエラーが出た為、追記した。(カリキュラム外)
 set :ssh_options, auth_methods: ['publickey'],
                   keys: ['~/.ssh/pf.pem'],
                   forward_agent: true
