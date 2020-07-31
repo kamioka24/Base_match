@@ -50,7 +50,7 @@ class Team::PostsController < ApplicationController
 
 	def protect
 		@post = Post.find(params[:id])
-		if current_team != @team
+		if current_team != @post.team
 	       redirect_to team_team_path(current_team)
 	    end
 	end
