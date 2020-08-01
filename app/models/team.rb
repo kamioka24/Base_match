@@ -11,10 +11,9 @@ class Team < ApplicationRecord
 	has_many :entries, dependent: :destroy
 	attachment :team_image
 
-	validates :team_image, presence: true
+	validates :team_image, :category, presence: true
 	validates :name, presence: true, length: {maximum: 20}
 	validates :member, numericality: :only_integer, length: {maximum: 3} # 数値のみ 3桁まで
-	validates :category, presence: true
 	# validates :introduction, presence: true, length: {in: 20..300}
 	validates :city, presence: true, length: {in: 2..8}
 	validates :street, presence: true, length: {in: 2..20}

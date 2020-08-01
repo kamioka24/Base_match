@@ -1373,4 +1373,32 @@ input[type="email"] { // email_formの幅指定
 			margin-right: 10px;
 		}
 	}
+
+	// 投稿詳細(共通)
+
+	.post_show_area {
+		width: 100%;
+	}
+	.post_show_box {
+		width: 100%;
+		padding: 15px;
+		.post_team_name {
+			font-size: 20px;
+		}
+		.fa-edit, .team_post_index {
+		}
+		.post_title_area {
+			width: 100%;
+			.post_title {
+				font-size: 20px;
+			}
+			.post_date {
+			}
+		}
+		.post_img {
+		}
+		.post_body {
+			font-size: 18px;
+		}
+	}
 }
