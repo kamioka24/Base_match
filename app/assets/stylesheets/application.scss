@@ -370,6 +370,14 @@ input[type="email"] { // email_formの幅指定
 		bottom: 70px;
 	}
 	.main_left {
+		opacity: 0;
+		animation-name: fade-in2;
+	    animation-duration: 3s; //アニメーション時間
+	    animation-timing-function: ease-out; //アニメーションさせるイージング
+	    animation-delay: 1s; //アニメーション開始させる時間
+	    animation-iteration-count: 1; //繰り返し回数
+	    animation-direction: normal; //往復処理をするかどうか
+	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 		color: #fff;
 		font-size: 20px;
 		position: absolute;
@@ -387,6 +395,14 @@ input[type="email"] { // email_formの幅指定
 		height: 150px;
 		color: #fff;
 		.main_text {
+			opacity: 0;
+			animation-name: fade-in;
+		    animation-duration: 3.5s; //アニメーション時間
+		    animation-timing-function: ease-out; //アニメーションさせるイージング
+		    animation-delay: 3s; //アニメーション開始させる時間
+		    animation-iteration-count: 1; //繰り返し回数
+		    animation-direction: normal; //往復処理をするかどうか
+		    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 			font-size: 50px;
 			margin-bottom: 50px;
 		}
@@ -395,16 +411,64 @@ input[type="email"] { // email_formの幅指定
 			font-size: 65px;
 		}
 		.subtext {
+			opacity: 0;
+			animation-name: fade-in3;
+		    animation-duration: 0s; //アニメーション時間
+		    animation-timing-function: ease-out; //アニメーションさせるイージング
+		    animation-delay: 7.5s; //アニメーション開始させる時間
+		    animation-iteration-count: 1; //繰り返し回数
+		    animation-direction: normal; //往復処理をするかどうか
+		    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+			font-size: 50px;
+			margin-bottom: 50px;
 			font-size: 16px;
-			opacity: 0.7;
 		}
 	}
 	.main_right {
+		opacity: 0;
+		animation-name: fade-in2;
+	    animation-duration: 3s; //アニメーション時間
+	    animation-timing-function: ease-out; //アニメーションさせるイージング
+	    animation-delay: 2s; //アニメーション開始させる時間
+	    animation-iteration-count: 1; //繰り返し回数
+	    animation-direction: normal; //往復処理をするかどうか
+	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 		color: #fff;
 		font-size: 20px;
 		position: absolute;
 		bottom: 60px;
 		right: 80px;
+	}
+	// アニメーション
+	@keyframes fade-in {
+	    0% {
+		    opacity: 0;
+		    transform: translate3d(0, 0, 0);
+	    }
+	    100% {
+		    opacity: 1;
+		    transform: translate3d(0, 0, 0);
+	    }
+	}
+	@keyframes fade-in2 {
+	    0% {
+		    opacity: 0;
+		    transform: translate3d(0, -30px, 0);
+	    }
+	    100% {
+		    opacity: 1;
+		    transform: translate3d(0, 0, 0);
+	    }
+	}
+	@keyframes fade-in3 {
+	    0% {
+		    opacity: 0;
+		    transform: translate3d(0, 0, 0);
+	    }
+	    100% {
+		    opacity: 0.7;
+		    transform: translate3d(0, 0, 0);
+	    }
 	}
 }
 
@@ -453,7 +517,7 @@ input[type="email"] { // email_formの幅指定
 #about_story {
 	margin: 0 auto;
 	text-align: center;
-	height: 1150px;
+	height: 900px;
 	width: 80%;
 	.story_boxes {
 		display: flex;
