@@ -22,7 +22,7 @@
 			<div class="post_balloon">
 				<div class="balloon_text">
 					<%= post.created_at.strftime("%Y/%m/%d") %><br>
-					<%= link_to post.title, player_post_path(post), class: "post_title" %><br>
+					<%= link_to post.title, team_post_path(post), class: "post_title" %><br>
 					<% if params[:team].nil? %>
 						<%= post.team.name %> (<%= post.team.prefecture_name %>)<br>
 					<% end %>

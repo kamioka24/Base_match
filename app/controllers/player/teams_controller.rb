@@ -7,6 +7,6 @@ class Player::TeamsController < ApplicationController
 
 	def show
 		@team = Team.find(params[:id])
-		@posts = Post.page(params[:page]).per(10).order(created_at: "DESC")
+		@posts = @team.posts.page(params[:page]).per(10).order(created_at: "DESC")
 	end
 end
