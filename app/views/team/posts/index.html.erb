@@ -17,38 +17,28 @@
 			<% end %>
 		</div>
 	</div>
-	<table width="700" class="post_table">
-		<thead>
-			<tr>
-				<th>投稿日</th>
-				<th>タイトル</th>
-				<% if params[:team].nil? %>
-					<th>チーム名</th>
-				<% end %>
-				<th></th>
-			</tr>
-		</thead>
+	<div class="post_balloons">
 		<% @posts.each do |post| %>
-			<tbody>
-				<tr>
-					<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-					<td><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
+			<div class="post_balloon">
+				<div class="balloon_text">
+					<%= post.created_at.strftime("%Y/%m/%d") %><br>
+					<%= link_to post.title, player_post_path(post), class: "post_title" %><br>
 					<% if params[:team].nil? %>
-						<td><%= post.team.name %> (<%= post.team.prefecture_name %>)</td>
+						<%= post.team.name %> (<%= post.team.prefecture_name %>)<br>
 					<% end %>
 					<% if post.team_id == current_team.id %>
 						<td>
 							<%= link_to edit_team_post_path(post) do %>
-								<i class="fa fa-edit"> 編集</i>
+								<i class="fa fa-edit"></i>
 							<% end %>
 							<%= link_to team_post_path(post), method: :delete, "data-confirm" => "投稿を削除してよろしいですか？" do %>
-								<i class="fa fa-trash"> 削除</i>
+								<i class="fa fa-trash"></i>
 							<% end %>
 						</td>
 					<% end %>
-				</tr>
-			</tbody>
+				</div>
+			</div>
 		<% end %>
-	</table>
+	</div>
 	<%= paginate @posts %> <!-- ページ遷移ボタン -->
 </div>

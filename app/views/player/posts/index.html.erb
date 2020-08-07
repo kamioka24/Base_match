@@ -16,27 +16,18 @@
 			<% end %>
 		</div>
 	</div>
-	<table width="600" class="post_table">
-		<thead>
-			<tr>
-				<th>投稿日</th>
-				<th>タイトル</th>
-				<% if params[:team].nil? %>
-					<th>チーム名</th>
-				<% end %>
-			</tr>
-		</thead>
+	<div class="post_balloons">
 		<% @posts.each do |post| %>
-			<tbody>
-				<tr>
-					<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-					<td><%= link_to post.title, player_post_path(post), class: "post_title" %></td>
+			<div class="post_balloon">
+				<div class="balloon_text">
+					<%= post.created_at.strftime("%Y/%m/%d") %><br>
+					<%= link_to post.title, player_post_path(post), class: "post_title" %><br>
 					<% if params[:team].nil? %>
-						<td><%= post.team.name %> (<%= post.team.prefecture_name %>)</td>
+						<%= post.team.name %> (<%= post.team.prefecture_name %>)
 					<% end %>
-				</tr>
-			</tbody>
+				</div>
+			</div>
 		<% end %>
-	</table>
+	</div>
 	<%= paginate @posts %> <!-- ページ遷移ボタン -->
 </div>

@@ -733,9 +733,22 @@ input[type="email"] { // email_formの幅指定
 	transform: translateY(-5px);
 }
 
-// プレイヤー側チーム一覧＆お気に入り一覧
+// チーム一覧＆お気に入り一覧(共通)
 
-.team_boxes { // チーム側と共通
+.seach {
+	float: right;
+	.seach_form {
+		width: 160px;
+		margin-top: 5px;
+		margin-bottom: 3px;
+	}
+	.seach_member_form {
+		width: 50px;
+		margin-bottom: 3px;
+	}
+}
+
+.team_boxes {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 15px;
@@ -876,19 +889,6 @@ input[type="email"] { // email_formの幅指定
 
 // チーム側チーム一覧
 
-.seach { // プレイヤー側と共通
-	float: right;
-	.seach_form {
-		width: 160px;
-		margin-top: 5px;
-		margin-bottom: 3px;
-	}
-	.seach_member_form {
-		width: 50px;
-		margin-bottom: 3px;
-	}
-}
-
 .team_table {
 	margin: 0 auto;
 	font-size: 18px;
@@ -919,7 +919,6 @@ input[type="email"] { // email_formの幅指定
 	}
 }
 
-
 .team_edit_table {
 	margin: 10px auto;
 	th {
@@ -944,21 +943,45 @@ input[type="email"] { // email_formの幅指定
 
 // 投稿一覧(共通)
 
-.post_table {
-	margin: 0 auto;
-	font-size: 18px;
-	th {
-		line-height: 40px;
+.post_balloons {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	.post_balloon {
+		height: 180px;
+		width: 180px;
+		background: #fff;
+		box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+		border-radius: 50%;
+		margin-right: 31px;
+		margin-bottom: 30px;
+		position: relative;
+		transition: .3s;
+		.balloon_text {
+			line-height: 25px;
+			text-align: center;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			width: 180px;
+			.post_title {
+				font-size: 18px;
+			}
+			.fa-edit {
+				margin-right: 5px;
+			}
+			.fa-trash {
+				margin-left: 5px;
+			}
+		}
 	}
-	td {
-		line-height: 30px;
-	}
-	.post_title {
-		text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
-	}
-	.fa-edit {
-		margin-right: 15px;
-	}
+}
+
+.post_balloon:hover { // 上に少し動く
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
 }
 
 // 投稿詳細(共通)
