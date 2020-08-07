@@ -349,23 +349,30 @@ input[type="email"] { // email_formの幅指定
 		height: 180px;
 		line-height: 180px;
 	}
-	.player_sign_up_btn {
+	.player_sign_up_btn, .team_sign_up_btn, .main_player_login, .main_team_login {
+		opacity: 0;
+		animation-name: fade-in3;
+	    animation-duration: 0.2s; //アニメーション時間
+	    animation-timing-function: ease-out; //アニメーションさせるイージング
+	    animation-delay: 9s; //アニメーション開始させる時間
+	    animation-iteration-count: 1; //繰り返し回数
+	    animation-direction: normal; //往復処理をするかどうか
+	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 		position: absolute;
+	}
+	.player_sign_up_btn {
 		top: 80px;
 		right: 270px;
 	}
 	.team_sign_up_btn {
-		position: absolute;
 		top: 80px;
 		right: 70px;
 	}
 	.main_player_login {
-		position: absolute;
 		left: 150px;
 		bottom: 100px;
 	}
 	.main_team_login {
-		position: absolute;
 		left: 150px;
 		bottom: 70px;
 	}
@@ -399,7 +406,7 @@ input[type="email"] { // email_formの幅指定
 			animation-name: fade-in;
 		    animation-duration: 3.5s; //アニメーション時間
 		    animation-timing-function: ease-out; //アニメーションさせるイージング
-		    animation-delay: 3s; //アニメーション開始させる時間
+		    animation-delay: 5s; //アニメーション開始させる時間
 		    animation-iteration-count: 1; //繰り返し回数
 		    animation-direction: normal; //往復処理をするかどうか
 		    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
@@ -411,11 +418,12 @@ input[type="email"] { // email_formの幅指定
 			font-size: 65px;
 		}
 		.subtext {
+			color: #E1F6F2;
 			opacity: 0;
 			animation-name: fade-in3;
-		    animation-duration: 0s; //アニメーション時間
+		    animation-duration: 0.2s; //アニメーション時間
 		    animation-timing-function: ease-out; //アニメーションさせるイージング
-		    animation-delay: 7.5s; //アニメーション開始させる時間
+		    animation-delay: 9s; //アニメーション開始させる時間
 		    animation-iteration-count: 1; //繰り返し回数
 		    animation-direction: normal; //往復処理をするかどうか
 		    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
@@ -429,7 +437,7 @@ input[type="email"] { // email_formの幅指定
 		animation-name: fade-in2;
 	    animation-duration: 3s; //アニメーション時間
 	    animation-timing-function: ease-out; //アニメーションさせるイージング
-	    animation-delay: 2s; //アニメーション開始させる時間
+	    animation-delay: 3s; //アニメーション開始させる時間
 	    animation-iteration-count: 1; //繰り返し回数
 	    animation-direction: normal; //往復処理をするかどうか
 	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
@@ -466,7 +474,7 @@ input[type="email"] { // email_formの幅指定
 		    transform: translate3d(0, 0, 0);
 	    }
 	    100% {
-		    opacity: 0.7;
+		    opacity: 1;
 		    transform: translate3d(0, 0, 0);
 	    }
 	}
