@@ -1,0 +1,34 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// チャット
+.chats_area {
+	width: 50%;
+	margin: 0 auto;
+	.message {
+		max-width: 50%;
+		padding: 7px;
+		border-radius: 10px;
+	}
+	.my_message {
+		margin: 0 0 0 auto; // 要素ごと右寄せ
+		text-align: right;
+		margin-bottom: 10px;
+		background: rgba(30, 255, 0, 0.7);
+	}
+	.other_message {
+		margin-bottom: 10px;
+		background: #CDE3F1;
+	}
+
+	.chats_form {
+		margin: 15px 0;
+		width: 100%;
+		height: 70px;
+	}
+
+	.chats_create_btn {
+		float: right;
+	}
+}
