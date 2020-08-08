@@ -337,68 +337,6 @@ input[type="email"] { // email_formの幅指定
 	}
 }
 
-// プレイヤー詳細(マイページ)
-
-.fa-cog {
-	font-size: 15px;
-	padding-right: 30px;
-	float: right;
-	transition: .3s;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-.fa-cog:hover { // 文字を強調する
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-}
-
-.mypage_table {
-	margin-top: 20px;
-	tr {
-		line-height: 35px;
-		th {
-			text-align: center;
-			font-size: 15px;
-		}
-		.post_title {
-			text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
-		}
-	}
-}
-
-.mypage_top {
-	font-size: 25px;
-}
-
-.near_team {
-	display: flex;
-	flex-wrap: wrap;
-	.team_box {
-		background: #fff;
-		box-shadow: 0 0px 10px rgba(0,0,0,0.2);
-		border-radius: 10px;
-		padding: 15px 10px;
-		margin-right: 13px;
-		margin-bottom: 20px;
-		transition: .3s;
-		.team_box_name {
-			margin-top: 5px;
-			font-size: 18px;
-			text-align: center;
-		}
-		.team_box_bottom {
-			line-height: 22px;
-			font-size: 15px;
-		}
-	}
-}
-
-.team_box:hover { // 上に少し動く
-	-webkit-transform: translateY(-5px);
-	transform: translateY(-5px);
-}
-
 // チーム一覧＆お気に入り一覧(共通)
 
 .seach {
