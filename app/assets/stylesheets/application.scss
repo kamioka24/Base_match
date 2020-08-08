@@ -1162,6 +1162,12 @@ input[type="email"] { // email_formの幅指定
 	}
 }
 
+@media screen and (max-width: 991px) {
+	.player_sign_up_btn, .team_sign_up_btn, .main_player_login, .main_team_login {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 480px) {
 	.header_ber {
 		height: 60px;
