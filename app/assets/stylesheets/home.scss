@@ -12,6 +12,9 @@
 	background-size: cover;
 	background-position: center;
 	position: relative;
+	.drawer {
+		display: none;
+	}
 	.main_btn {
 		border-radius: 50%;
 		background: rgba(255, 255, 255, 0.8);
