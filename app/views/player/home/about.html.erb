@@ -1,255 +1,255 @@
 <section id="main_visual">
-	<!-- ハンバーガーメニュー部分 -->
-	<div class="drawer">
-		<!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-		<input type="checkbox" id="drawer_check" class="drawer_hidden" >
+  <!-- ハンバーガーメニュー部分 -->
+  <div class="drawer">
+    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+    <input type="checkbox" id="drawer_check" class="drawer_hidden" >
 
-		<!-- ハンバーガーアイコン -->
-		<label for="drawer_check" class="drawer_open"><span></span></label>
+    <!-- ハンバーガーアイコン -->
+    <label for="drawer_check" class="drawer_open"><span></span></label>
 
-		<!-- メニュー -->
-		<nav class="drawer_content">
-			<ul class="drawer_list">
-				<li class="drawer_item">
-					<%= link_to "選手登録はこちら", new_player_registration_path %>
-				</li>
-				<li class="drawer_item">
-					<%= link_to "チーム登録はこちら", new_team_registration_path %>
-				</li>
-				<li class="drawer_item">
-					<%= link_to "選手ログインはこちら", player_session_path %>
-				</li>
-				<li class="drawer_item">
-					<%= link_to "チームログインはこちら", team_session_path %>
-				</li>
-			</ul>
-		</nav>
-	</div>
+    <!-- メニュー -->
+    <nav class="drawer_content">
+      <ul class="drawer_list">
+        <li class="drawer_item">
+          <%= link_to "選手登録はこちら", new_player_registration_path %>
+        </li>
+        <li class="drawer_item">
+          <%= link_to "チーム登録はこちら", new_team_registration_path %>
+        </li>
+        <li class="drawer_item">
+          <%= link_to "選手ログインはこちら", player_session_path %>
+        </li>
+        <li class="drawer_item">
+          <%= link_to "チームログインはこちら", team_session_path %>
+        </li>
+      </ul>
+    </nav>
+  </div>
     <%= link_to "選手登録はこちら", new_player_registration_path, class: "main_btn player_sign_up_btn" %>
     <%= link_to "チーム登録はこちら", new_team_registration_path, class: "main_btn team_sign_up_btn" %>
     <%= link_to "選手ログインはこちら", player_session_path, class: "main_player_login" %>
     <%= link_to "チームログインはこちら", team_session_path, class: "main_team_login" %>
-	<div class="main_left">
-		理想のチームを見つけませんか？
-	</div>
-	<div class="main_center">
-		<div class="main_text">
-			<strong>B</strong>aseMatch
-		</div>
-		<div class="subtext">
-			選手もしくはチームとして登録後にご利用ください
-		</div>
-	</div>
-	<div class="main_right">
-		運命の選手に出会いませんか？
-	</div>
+  <div class="main_left">
+    理想のチームを見つけませんか？
+  </div>
+  <div class="main_center">
+    <div class="main_text">
+      <strong>B</strong>aseMatch
+    </div>
+    <div class="subtext">
+      選手もしくはチームとして登録後にご利用ください
+    </div>
+  </div>
+  <div class="main_right">
+    運命の選手に出会いませんか？
+  </div>
 </section>
 <div class="header_ber">
-	<ul>
-		<div class="li_area">
-			<li><%= link_to "About", "#main_visual" %></li>
-		</div>
-		<div class="li_area">
-			<li><%= link_to "Story", "#about_story" %></li>
-		</div>
-		<div class="li_area">
-			<li><%= link_to "Player", "#about_player" %></li>
-		</div>
-		<div class="li_area">
-			<li><%= link_to "Team", "#about_team" %></li>
-		</div>
-	</ul>
+  <ul>
+    <div class="li_area">
+      <li><%= link_to "About", "#main_visual" %></li>
+    </div>
+    <div class="li_area">
+      <li><%= link_to "Story", "#about_story" %></li>
+    </div>
+    <div class="li_area">
+      <li><%= link_to "Player", "#about_player" %></li>
+    </div>
+    <div class="li_area">
+      <li><%= link_to "Team", "#about_team" %></li>
+    </div>
+  </ul>
 </div>
 <section id="about_story">
-	<h1 class="section_title">Story</h1>
-	<div class="section_text">
-		<p>
-			最近10年間で、野球人口は約40％減少し、<br>
-			2020年8月現在も尚、野球人口は減り続けている。<br>
-			この問題に少しでも歯止めをかけるために、<br>
-			以下の4つの問題解決を目指す。
-		</p>
-		<div class="story_boxes">
-			<div class="story_box">
-				<div class="story_box_title">
-					チームの存在自体が知られない
-				</div>
-				<div class="story_box_body">
-					特に野球に詳しくない家庭はどこにどんなチームが
-					存在しているのかを知らずに、近くのチームや
-					友達のいるチームに決めてしまう。
-					BaseMatchではいくつかの条件検索ができ、
-					より選手や家庭に合ったチームを見つけやすくなっている。
-				</div>
-			</div>
-			<div class="story_box">
-				<div class="story_box_title">
-					チーム情報を知る方法がない
-				</div>
-				<div class="story_box_body">
-					チームのレベルや決まり事、練習時間などを
-					事前にチェックするのは現状では難しい。
-					これではグラウンドへ運ぶ足を軽くすることはできない。
-					BaseMatchでは、チーム情報を詳しく見ることができ、
-					活動記録も随時更新されるので、チームのことを全く
-					知らない方でも、選手たちの雰囲気を感じ取ったり、
-					親の負担の有無などを確認することができる。
-				</div>
-			</div>
-			<div class="story_box">
-				<div class="story_box_title">
-					選手とチームのミスマッチが起きる
-				</div>
-				<div class="story_box_body">
-					近年の問題として、チーム(監督)と合わずに
-					移籍を繰り返す子どもが多くなってきている
-					ということがある。理由は様々だが、入団前に
-					チームのことを詳しく知ることができれば
-					こういったミスマッチは減らせるはず。
-					BaseMatchではお問い合わせ機能を使って
-					気軽にチームとコンタクトがとれ、体験・入団の
-					申し込みや、質問まで、チームのことを事前に
-					しっかりと確認することが可能。
-				</div>
-			</div>
-			<div class="story_box">
-				<div class="story_box_title">
-					チーム同士で交流できる場が少ない
-				</div>
-				<div class="story_box_body">
-					普段、他のチームがどんなに良い練習や指導を
-					していても、それを共有するチームは少ない。
-					BaseMatchでは、各チームが新規の選手に向けた
-					説明や投稿を多くするので、練習内容や指導内容が
-					見えやすくなる。それに加え、チャット機能で
-					簡単にチーム同士が交流できるので、野球界全体で
-					切磋琢磨でき、各チームの質も向上していく。
-				</div>
-			</div>
-		</div>
-	</div>
+  <h1 class="section_title">Story</h1>
+  <div class="section_text">
+    <p>
+      最近10年間で、野球人口は約40％減少し、<br>
+      2020年8月現在も尚、野球人口は減り続けている。<br>
+      この問題に少しでも歯止めをかけるために、<br>
+      以下の4つの問題解決を目指す。
+    </p>
+    <div class="story_boxes">
+      <div class="story_box">
+        <div class="story_box_title">
+          チームの存在自体が知られない
+        </div>
+        <div class="story_box_body">
+          特に野球に詳しくない家庭はどこにどんなチームが
+          存在しているのかを知らずに、近くのチームや
+          友達のいるチームに決めてしまう。
+          BaseMatchではいくつかの条件検索ができ、
+          より選手や家庭に合ったチームを見つけやすくなっている。
+        </div>
+      </div>
+      <div class="story_box">
+        <div class="story_box_title">
+          チーム情報を知る方法がない
+        </div>
+        <div class="story_box_body">
+          チームのレベルや決まり事、練習時間などを
+          事前にチェックするのは現状では難しい。
+          これではグラウンドへ運ぶ足を軽くすることはできない。
+          BaseMatchでは、チーム情報を詳しく見ることができ、
+          活動記録も随時更新されるので、チームのことを全く
+          知らない方でも、選手たちの雰囲気を感じ取ったり、
+          親の負担の有無などを確認することができる。
+        </div>
+      </div>
+      <div class="story_box">
+        <div class="story_box_title">
+          選手とチームのミスマッチが起きる
+        </div>
+        <div class="story_box_body">
+          近年の問題として、チーム(監督)と合わずに
+          移籍を繰り返す子どもが多くなってきている
+          ということがある。理由は様々だが、入団前に
+          チームのことを詳しく知ることができれば
+          こういったミスマッチは減らせるはず。
+          BaseMatchではお問い合わせ機能を使って
+          気軽にチームとコンタクトがとれ、体験・入団の
+          申し込みや、質問まで、チームのことを事前に
+          しっかりと確認することが可能。
+        </div>
+      </div>
+      <div class="story_box">
+        <div class="story_box_title">
+          チーム同士で交流できる場が少ない
+        </div>
+        <div class="story_box_body">
+          普段、他のチームがどんなに良い練習や指導を
+          していても、それを共有するチームは少ない。
+          BaseMatchでは、各チームが新規の選手に向けた
+          説明や投稿を多くするので、練習内容や指導内容が
+          見えやすくなる。それに加え、チャット機能で
+          簡単にチーム同士が交流できるので、野球界全体で
+          切磋琢磨でき、各チームの質も向上していく。
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <section id="about_player">
-	<h1 class="section_title">Player</h1>
-	<div class="section_text">
-		<p>〜選手会員様のBaseMatchの使い方・流れ〜</p>
-	</div>
-	<div class="player_box">
-		<div class="box_img_area">
-			<p>Step1　<strong>自分に合ったチームを探す</strong></p>
-			<div class="player_box_img1"></div>
-		</div>
-		<div class="box_text_area">
-			<div class="player_box_text">
-				都道府県や、市区町村、チーム名などのワード検索に加えて、
-				人数や硬式・軟式といった条件を絞り込んでの検索により、
-				お客様の希望するチームがさらに探しやすくなりました。
-			</div>
-		</div>
-	</div>
-	<div class="player_box">
-		<div class="box_text_area">
-			<div class="player_box_text">
-				各チームの練習の様子や試合結果などを、
-				チーム投稿からチェックし、実際の雰囲気や
-				レベルなどを事前にチェックしましょう。
-			</div>
-		</div>
-		<div class="box_img_area">
-			<p>Step2　<strong>チームの動向をチェック</strong></p>
-			<div class="player_box_img2"></div>
-		</div>
-	</div>
-	<div class="player_box">
-		<div class="box_img_area">
-			<p>Step3　<strong>気になるチームをキープ</strong></p>
-			<div class="player_box_img3"></div>
-		</div>
-		<div class="box_text_area">
-			<div class="player_box_text">
-				お気に入り登録すると、いつでもそのチームを
-				確認できます。あとから解除もできますので、
-				気になるチームはどんどん追加登録しましょう！
-			</div>
-		</div>
-	</div>
-	<div class="player_box">
-		<div class="box_text_area">
-			<div class="player_box_text">
-				実際に練習に参加してみたい、雰囲気を見てみたい、
-				というチームが見つかりましたら、そのチームに
-				連絡をしてみましょう。お問い合わせフォームより
-				簡単にチームとコンタクトがとれます。
-				もちろん、入団の申し込みも可能です。
-			</div>
-		</div>
-		<div class="box_img_area">
-			<p>Step4　<strong>練習に参加できる</strong></p>
-			<div class="player_box_img4"></div>
-		</div>
-	</div>
-	<%= link_to "新規選手登録", new_player_registration_path, class: "sign_up_btn" %>
-	<%= link_to "選手ログイン", player_session_path, class: "login_btn" %>
+  <h1 class="section_title">Player</h1>
+  <div class="section_text">
+    <p>〜選手会員様のBaseMatchの使い方・流れ〜</p>
+  </div>
+  <div class="player_box">
+    <div class="box_img_area">
+      <p>Step1　<strong>自分に合ったチームを探す</strong></p>
+      <div class="player_box_img1"></div>
+    </div>
+    <div class="box_text_area">
+      <div class="player_box_text">
+        都道府県や、市区町村、チーム名などのワード検索に加えて、
+        人数や硬式・軟式といった条件を絞り込んでの検索により、
+        お客様の希望するチームがさらに探しやすくなりました。
+      </div>
+    </div>
+  </div>
+  <div class="player_box">
+    <div class="box_text_area">
+      <div class="player_box_text">
+        各チームの練習の様子や試合結果などを、
+        チーム投稿からチェックし、実際の雰囲気や
+        レベルなどを事前にチェックしましょう。
+      </div>
+    </div>
+    <div class="box_img_area">
+      <p>Step2　<strong>チームの動向をチェック</strong></p>
+      <div class="player_box_img2"></div>
+    </div>
+  </div>
+  <div class="player_box">
+    <div class="box_img_area">
+      <p>Step3　<strong>気になるチームをキープ</strong></p>
+      <div class="player_box_img3"></div>
+    </div>
+    <div class="box_text_area">
+      <div class="player_box_text">
+        お気に入り登録すると、いつでもそのチームを
+        確認できます。あとから解除もできますので、
+        気になるチームはどんどん追加登録しましょう！
+      </div>
+    </div>
+  </div>
+  <div class="player_box">
+    <div class="box_text_area">
+      <div class="player_box_text">
+        実際に練習に参加してみたい、雰囲気を見てみたい、
+        というチームが見つかりましたら、そのチームに
+        連絡をしてみましょう。お問い合わせフォームより
+        簡単にチームとコンタクトがとれます。
+        もちろん、入団の申し込みも可能です。
+      </div>
+    </div>
+    <div class="box_img_area">
+      <p>Step4　<strong>練習に参加できる</strong></p>
+      <div class="player_box_img4"></div>
+    </div>
+  </div>
+  <%= link_to "新規選手登録", new_player_registration_path, class: "sign_up_btn" %>
+  <%= link_to "選手ログイン", player_session_path, class: "login_btn" %>
 </section>
 <section id="about_team">
-	<h1 class="section_title">Team</h1>
-	<div class="section_text">
-		<p>〜チーム会員様のBaseMatchの使い方・流れ〜</p>
-	</div>
-	<div class="team_boxes">
-		<div class="team_box_area">
-			<div class="team_box_top">
-				<div class="team_box_img1"></div>
-				<p>紹介文・投稿でアピール</p>
-			</div>
-			<div class="team_box_text">
-				紹介文には練習時間や決まり事などを記述し、<br>
-				チームのことをよく知ってもらいましょう。<br>
-				また、投稿機能を使って練習の様子や<br>
-				試合結果などの活動記録を残しましょう。<br>
-				定期的に更新することで選手に見てもらえる<br>
-				機会が増えますので、たくさん更新しましょう。<br>
-				<br>
-			</div>
-		</div>
-		<div class="team_box_area">
-			<div class="team_box_top">
-				<div class="team_box_img2"></div>
-				<p>選手からの連絡に返信</p>
-			</div>
-			<div class="team_box_text">
-				チームの魅力が伝わり、選手がチームとの<br>
-				コンタクトを希望された場合、登録アドレスに<br>
-				メールが届きます。体験希望や入団希望など、<br>
-				複数項目がありますので、内容を確認し<br>
-				選手に返信をしてください。<br>
-				それ以降はお客様同士のやりとりになるので、<br>
-				入団してもらえるよう、引き続きチームの<br>
-				良いところを伝えてください。
-			</div>
-		</div>
-		<div class="team_box_area">
-			<div class="team_box_top">
-				<div class="team_box_img3"></div>
-				<p>チーム同士で情報交換</p>
-			</div>
-			<div class="team_box_text">
-				他のチームとの交流はチャット機能を<br>
-				使ってください。練習方法などの情報を<br>
-				交換するのも良し、練習試合など実際の<br>
-				交流を申し込むのも良し。地域、カテゴリー<br>
-				関係なく、多くのチームと交流して、<br>
-				皆さんで野球界を盛り上げていきましょう。
-			</div>
-		</div>
-	</div>
-	<%= link_to "新規チーム登録", new_team_registration_path, class: "sign_up_btn" %>
-	<%= link_to "チームログイン", team_session_path, class: "login_btn" %>
+  <h1 class="section_title">Team</h1>
+  <div class="section_text">
+    <p>〜チーム会員様のBaseMatchの使い方・流れ〜</p>
+  </div>
+  <div class="team_boxes">
+    <div class="team_box_area">
+      <div class="team_box_top">
+        <div class="team_box_img1"></div>
+        <p>紹介文・投稿でアピール</p>
+      </div>
+      <div class="team_box_text">
+        紹介文には練習時間や決まり事などを記述し、<br>
+        チームのことをよく知ってもらいましょう。<br>
+        また、投稿機能を使って練習の様子や<br>
+        試合結果などの活動記録を残しましょう。<br>
+        定期的に更新することで選手に見てもらえる<br>
+        機会が増えますので、たくさん更新しましょう。<br>
+        <br>
+      </div>
+    </div>
+    <div class="team_box_area">
+      <div class="team_box_top">
+        <div class="team_box_img2"></div>
+        <p>選手からの連絡に返信</p>
+      </div>
+      <div class="team_box_text">
+        チームの魅力が伝わり、選手がチームとの<br>
+        コンタクトを希望された場合、登録アドレスに<br>
+        メールが届きます。体験希望や入団希望など、<br>
+        複数項目がありますので、内容を確認し<br>
+        選手に返信をしてください。<br>
+        それ以降はお客様同士のやりとりになるので、<br>
+        入団してもらえるよう、引き続きチームの<br>
+        良いところを伝えてください。
+      </div>
+    </div>
+    <div class="team_box_area">
+      <div class="team_box_top">
+        <div class="team_box_img3"></div>
+        <p>チーム同士で情報交換</p>
+      </div>
+      <div class="team_box_text">
+        他のチームとの交流はチャット機能を<br>
+        使ってください。練習方法などの情報を<br>
+        交換するのも良し、練習試合など実際の<br>
+        交流を申し込むのも良し。地域、カテゴリー<br>
+        関係なく、多くのチームと交流して、<br>
+        皆さんで野球界を盛り上げていきましょう。
+      </div>
+    </div>
+  </div>
+  <%= link_to "新規チーム登録", new_team_registration_path, class: "sign_up_btn" %>
+  <%= link_to "チームログイン", team_session_path, class: "login_btn" %>
 </section>
 
 <!-- このページのみヘッダーを非表示にする -->
 <style>
 header {
-	display: none;
+  display: none;
 }
 </style>
