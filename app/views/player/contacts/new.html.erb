@@ -1,7 +1,7 @@
 <div class="container">
 
 	<%= form_for(@contact, url: player_team_contacts_path) do |f| %>
-		<table width="500" class="contact_table">
+		<table width="550" class="contact_table">
 			<thead>
 				<tr>
 					<td colspan="3" class="contact_table_head"><strong><%= @team.name %></strong>へお問い合わせ</td>
@@ -45,7 +45,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th>ご希望日程</th>
+					<th>ご希望日程(右端マークを押す)</th>
 					<td></td>
 					<td><%= f.date_field :day %>
 					</td>
