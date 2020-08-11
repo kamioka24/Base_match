@@ -60,7 +60,7 @@
 </div>
 
 <script type="text/javascript">
-  function initMap() {
+	function initMap() {
 // latitude,longitudeから位置を特定
     var test ={lat: <%= @team.latitude %>, lng: <%= @team.longitude %>};
     var map = new google.maps.Map(document.getElementById('map'), {

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_07_090329) do
+ActiveRecord::Schema.define(version: 2020_08_10_035028) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer "player_id"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_07_07_090329) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "unread"
     t.index ["room_id"], name: "index_messages_on_room_id"
     t.index ["team_id"], name: "index_messages_on_team_id"
   end
