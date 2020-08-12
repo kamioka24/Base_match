@@ -1,98 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>BaseMatch</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="responsive.scss">
-        <%= csrf_meta_tags %>
-        <%= csp_meta_tag %>
+  <head>
+    <title>BaseMatch</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="responsive.scss">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    </head>
-    <body>
-        <div class="wrapper"> <!-- フッターを最下位で固定するために親要素を追加 -->
-            <header>
-                <div class="container">
-                    <div class="header_logo"><strong>B</strong>aseMatch</div>
-                    <nav>
-                        <ul class="nav_list">
-                            <% if player_signed_in? %>
-                                <li>
-                                    <%= link_to "当サイトについて", root_path, class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "マイページ", player_player_path(current_player), class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "チーム一覧", player_teams_path, class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "投稿一覧", player_posts_path, class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "お気に入り", player_bookmarks_path, class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "ログアウト", destroy_player_session_path, class: "nav_list_item", method: :delete %>
-                                </li>
-                            <% elsif team_signed_in? %>
-                                <li>
-                                    <%= link_to "当サイトについて", root_path, class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "マイチーム", team_team_path(current_team), class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "新規投稿", new_team_post_path, class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "チーム一覧", team_teams_path, class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "投稿一覧", team_posts_path, class: "nav_list_item" %>
-                                </li>
-                                <li>
-                                    <%= link_to "ログアウト", destroy_team_session_path, class: "nav_list_item", method: :delete %>
-                                </li>
-                            <% else %>
-                                <li>
-                                    <%= link_to "当サイトについて", root_path, class: "nav_list_item" %>
-                                </li>
-                            <% end %>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            <main>
-                <%= yield %>
-            </main>
-            <footer>
-                <section id="about_contact">
-                    <h1 class="footer_section_title">Contact</h1>
-                    <div class="contact_area">
-                        <div class="contact_left">
-                            <table width="350" class="footer_table">
-                                <tr>
-                                    <th>Email</th>
-                                    <td>xxx@xxx.com</td>
-                                </tr>
-                                <tr>
-                                    <th>Tell</th>
-                                    <td>080-xxxx-xxxx</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="contact_right">
-                            <span class="insta">
-                                <i class="fab fa-instagram"></i>
-                            </span>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-facebook-f"></i>
-                        </div>
-                    </div>
-                </section>
-            </footer>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="wrapper"> <!-- フッターを最下位で固定するために親要素を追加 -->
+      <header>
+        <div class="container">
+          <div class="header_logo"><strong>B</strong>aseMatch</div>
+          <nav>
+            <ul class="nav_list">
+              <% if player_signed_in? %>
+                <li>
+                    <%= link_to "当サイトについて", root_path, class: "nav_list_item" %>
+                </li>
+                <li>
+                    <%= link_to "マイページ", player_player_path(current_player), class: "nav_list_item" %>
+                </li>
+                <li>
+                    <%= link_to "チーム一覧", player_teams_path, class: "nav_list_item" %>
+                </li>
+                <li>
+                    <%= link_to "投稿一覧", player_posts_path, class: "nav_list_item" %>
+                </li>
+                <li>
+                    <%= link_to "お気に入り", player_bookmarks_path, class: "nav_list_item" %>
+                </li>
+                <li>
+                    <%= link_to "ログアウト", destroy_player_session_path, class: "nav_list_item", method: :delete %>
+                </li>
+              <% elsif team_signed_in? %>
+                <li>
+                  <%= link_to "当サイトについて", root_path, class: "nav_list_item" %>
+                </li>
+                <li>
+                  <%= link_to "マイチーム", team_team_path(current_team), class: "nav_list_item" %>
+                </li>
+                <li>
+                  <%= link_to "新規投稿", new_team_post_path, class: "nav_list_item" %>
+                </li>
+                <li>
+                  <%= link_to "チーム一覧", team_teams_path, class: "nav_list_item" %>
+                </li>
+                <li>
+                  <%= link_to "投稿一覧", team_posts_path, class: "nav_list_item" %>
+                </li>
+                <li>
+                  <%= link_to "ログアウト", destroy_team_session_path, class: "nav_list_item", method: :delete %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to "当サイトについて", root_path, class: "nav_list_item" %>
+                </li>
+              <% end %>
+            </ul>
+          </nav>
         </div>
-    </body>
+      </header>
+      <main>
+        <%= yield %>
+      </main>
+      <footer>
+        <section id="about_contact">
+          <h1 class="footer_section_title">Contact</h1>
+          <div class="contact_area">
+            <div class="contact_left">
+              <table width="350" class="footer_table">
+                <tr>
+                  <th>Email</th>
+                  <td>xxx@xxx.com</td>
+                </tr>
+                <tr>
+                  <th>Tell</th>
+                  <td>080-xxxx-xxxx</td>
+                </tr>
+              </table>
+            </div>
+            <div class="contact_right">
+              <span class="insta">
+                <i class="fab fa-instagram"></i>
+              </span>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
 </html>

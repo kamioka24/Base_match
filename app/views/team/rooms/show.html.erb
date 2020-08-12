@@ -1,32 +1,32 @@
 <div class="container">
-    <h1 class="page_title">チャット</h1>
-    <div class="chats_area">
-        <% @entries.each do |entry| %>
-            <% if current_team != entry.team %>
-                <h5><strong><%= link_to entry.team.name, team_team_path(entry.team) %>さん</strong></h5>
-            <% end %>
-        <% end %>
-        <hr>
-        <% if @messages.present? %>
-            <% @messages.each do |message| %>
-                <% if current_team == message.team %>
-                    <div class="message my_message">
-                        <%= safe_join(message.content.split("\n"), tag(:br)) %><br>
-                        <!-- safe_joinによって改行が反映される -->
-                    </div>
-                <% else %>
-                    <div class="message other_message">
-                        <%= safe_join(message.content.split("\n"), tag(:br)) %><br>
-                    </div>
-                <% end %>
-            <% end %>
+  <h1 class="page_title">チャット</h1>
+  <div class="chats_area">
+    <% @entries.each do |entry| %>
+      <% if current_team != entry.team %>
+        <h5><strong><%= link_to entry.team.name, team_team_path(entry.team) %>さん</strong></h5>
+      <% end %>
+    <% end %>
+    <hr>
+    <% if @messages.present? %>
+      <% @messages.each do |message| %>
+        <% if current_team == message.team %>
+          <div class="message my_message">
+            <%= safe_join(message.content.split("\n"), tag(:br)) %>
+            <!-- safe_joinによって改行が反映される -->
+          </div><br>
         <% else %>
-            <h4 class="text_center">記念すべき最初のメッセージです！</h4>
+          <div class="message other_message">
+              <%= safe_join(message.content.split("\n"), tag(:br)) %>
+          </div><br>
         <% end %>
-        <%= form_for(@message, url: team_messages_path) do |f| %>
-            <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , class: "chats_form" %>
-            <%= f.hidden_field :room_id, :value => @room.id %>
-            <%= f.submit "送信", class: "btn update_btn chats_create_btn" %>
-        <% end %>
-    </div>
+      <% end %>
+    <% else %>
+      <h4 class="text_center">記念すべき最初のメッセージです！</h4>
+    <% end %>
+    <%= form_for(@message, url: team_messages_path) do |f| %>
+      <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , class: "chats_form" %>
+      <%= f.hidden_field :room_id, :value => @room.id %>
+      <%= f.submit "送信", class: "btn update_btn chats_create_btn" %>
+    <% end %>
+  </div>
 </div>

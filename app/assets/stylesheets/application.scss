@@ -134,13 +134,13 @@ li {
 
 html, body {
 	margin: 0;
-    padding: 0;
+  padding: 0;
 	height: 100%; // フッターを最下位で固定するための設定
 	.wrapper {
 		position: relative;
-	    min-height: 100%; // 最低の高さ設定
-	    header {
-	    	width: 100%;
+    min-height: 100%; // 最低の高さ設定
+    header {
+	    width: 100%;
 			height: 90px;
 			position: fixed;
 			top: 0;
@@ -301,7 +301,7 @@ html, body {
 
 // 新規登録＆ログイン画面
 input[type="email"] { // email_formの幅指定
-    width: 100%;
+  width: 100%;
 }
 
 .signup_table, .login_table {
@@ -561,7 +561,7 @@ input[type="email"] { // email_formの幅指定
 			display:block;
 			float: right;
 			.drawer_hidden { // チェックボックスは非表示に
-			display: none;
+				display: none;
 			}
 			// ハンバーガーアイコンの設置スペース
 			.drawer_open {
@@ -632,7 +632,7 @@ input[type="email"] { // email_formの幅指定
 		    animation-delay: 1s; //アニメーション開始させる時間
 			}
 			.subtext {
-			    animation-delay: 4.5s; //アニメーション開始させる時間
+			  animation-delay: 4.5s; //アニメーション開始させる時間
 			}
 		}
 	}
