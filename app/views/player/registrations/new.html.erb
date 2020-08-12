@@ -27,7 +27,7 @@
                 <td><%= f.password_field :password_confirmation, placeholder: "パスワード確認用" %></td>
             </tr>
             <tr>
-                <td><%= link_to "選手ログインはこちら", player_session_path %></td>
+                <td><%= link_to "選手ログインはこちら", player_session_path, class: "login_link btn" %></td>
                 <td><%= f.submit "新規登録", class: "btn create_btn" %></td>
             </tr>
         </table>

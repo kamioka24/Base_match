@@ -304,11 +304,11 @@ input[type="email"] { // email_formの幅指定
     width: 100%;
 }
 
-
 .signup_table, .login_table {
 	margin: 30px auto;
 	th {
 		line-height: 50px;
+		padding-left: 12px;
 	}
 }
 
@@ -332,7 +332,20 @@ input[type="email"] { // email_formの幅指定
 	margin: 20px auto;
 	th {
 		line-height: 37px;
+		padding-left: 12px;
 	}
+}
+
+.signup_link, .login_link {
+	transition: 1s;
+}
+
+.signup_link:hover {
+	background: rgba(30, 255, 0, 0.7);
+}
+
+.login_link:hover {
+	background: rgba(0, 190, 255, 0.7);
 }
 
 // プレイヤー側チーム詳細
