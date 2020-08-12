@@ -25,12 +25,12 @@
 	.player_sign_up_btn, .team_sign_up_btn, .main_player_login, .main_team_login {
 		opacity: 0;
 		animation-name: fade-in;
-	    animation-duration: 0.3s; //アニメーション時間
-	    animation-timing-function: ease-out; //アニメーションさせるイージング
-	    animation-delay: 8.5s; //アニメーション開始させる時間
-	    animation-iteration-count: 1; //繰り返し回数
-	    animation-direction: normal; //往復処理をするかどうか
-	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+    animation-duration: 0.3s; //アニメーション時間
+    animation-timing-function: ease-out; //アニメーションさせるイージング
+    animation-delay: 8.5s; //アニメーション開始させる時間
+    animation-iteration-count: 1; //繰り返し回数
+    animation-direction: normal; //往復処理をするかどうか
+    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 		position: absolute;
 	}
 	.player_sign_up_btn {
@@ -52,12 +52,12 @@
 	.main_left {
 		opacity: 0;
 		animation-name: fade-in2;
-	    animation-duration: 3s; //アニメーション時間
-	    animation-timing-function: ease-out; //アニメーションさせるイージング
-	    animation-delay: 1s; //アニメーション開始させる時間
-	    animation-iteration-count: 1; //繰り返し回数
-	    animation-direction: normal; //往復処理をするかどうか
-	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+    animation-duration: 3s; //アニメーション時間
+    animation-timing-function: ease-out; //アニメーションさせるイージング
+    animation-delay: 1s; //アニメーション開始させる時間
+    animation-iteration-count: 1; //繰り返し回数
+    animation-direction: normal; //往復処理をするかどうか
+    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 		color: #fff;
 		font-size: 20px;
 		position: absolute;
@@ -77,12 +77,12 @@
 		.main_text {
 			opacity: 0;
 			animation-name: fade-in;
-		    animation-duration: 3.5s; //アニメーション時間
-		    animation-timing-function: ease-out; //アニメーションさせるイージング
-		    animation-delay: 5s; //アニメーション開始させる時間
-		    animation-iteration-count: 1; //繰り返し回数
-		    animation-direction: normal; //往復処理をするかどうか
-		    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+	    animation-duration: 3.5s; //アニメーション時間
+	    animation-timing-function: ease-out; //アニメーションさせるイージング
+	    animation-delay: 5s; //アニメーション開始させる時間
+	    animation-iteration-count: 1; //繰り返し回数
+	    animation-direction: normal; //往復処理をするかどうか
+	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 			font-size: 50px;
 			margin-bottom: 50px;
 		}
@@ -94,12 +94,12 @@
 			color: #E1F6F2;
 			opacity: 0;
 			animation-name: fade-in;
-		    animation-duration: 0.3s; //アニメーション時間
-		    animation-timing-function: ease-out; //アニメーションさせるイージング
-		    animation-delay: 8.5s; //アニメーション開始させる時間
-		    animation-iteration-count: 1; //繰り返し回数
-		    animation-direction: normal; //往復処理をするかどうか
-		    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+	    animation-duration: 0.3s; //アニメーション時間
+	    animation-timing-function: ease-out; //アニメーションさせるイージング
+	    animation-delay: 8.5s; //アニメーション開始させる時間
+	    animation-iteration-count: 1; //繰り返し回数
+	    animation-direction: normal; //往復処理をするかどうか
+	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 			font-size: 50px;
 			margin-bottom: 50px;
 			font-size: 16px;
@@ -108,12 +108,12 @@
 	.main_right {
 		opacity: 0;
 		animation-name: fade-in3;
-	    animation-duration: 3s; //アニメーション時間
-	    animation-timing-function: ease-out; //アニメーションさせるイージング
-	    animation-delay: 3s; //アニメーション開始させる時間
-	    animation-iteration-count: 1; //繰り返し回数
-	    animation-direction: normal; //往復処理をするかどうか
-	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+    animation-duration: 3s; //アニメーション時間
+    animation-timing-function: ease-out; //アニメーションさせるイージング
+    animation-delay: 3s; //アニメーション開始させる時間
+    animation-iteration-count: 1; //繰り返し回数
+    animation-direction: normal; //往復処理をするかどうか
+    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 		color: #fff;
 		font-size: 20px;
 		position: absolute;
