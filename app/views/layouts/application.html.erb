@@ -19,22 +19,22 @@
             <ul class="nav_list">
               <% if player_signed_in? %>
                 <li>
-                    <%= link_to "当サイトについて", root_path, class: "nav_list_item" %>
+                  <%= link_to "当サイトについて", root_path, class: "nav_list_item" %>
                 </li>
                 <li>
-                    <%= link_to "マイページ", player_player_path(current_player), class: "nav_list_item" %>
+                  <%= link_to "マイページ", player_player_path(current_player), class: "nav_list_item" %>
                 </li>
                 <li>
-                    <%= link_to "チーム一覧", player_teams_path, class: "nav_list_item" %>
+                  <%= link_to "チーム一覧", player_teams_path, class: "nav_list_item" %>
                 </li>
                 <li>
-                    <%= link_to "投稿一覧", player_posts_path, class: "nav_list_item" %>
+                  <%= link_to "投稿一覧", player_posts_path, class: "nav_list_item" %>
                 </li>
                 <li>
-                    <%= link_to "お気に入り", player_bookmarks_path, class: "nav_list_item" %>
+                  <%= link_to "お気に入り", player_bookmarks_path, class: "nav_list_item" %>
                 </li>
                 <li>
-                    <%= link_to "ログアウト", destroy_player_session_path, class: "nav_list_item", method: :delete %>
+                  <%= link_to "ログアウト", destroy_player_session_path, class: "nav_list_item", method: :delete %>
                 </li>
               <% elsif team_signed_in? %>
                 <li>
@@ -87,8 +87,8 @@
               <span class="insta">
                 <i class="fab fa-instagram"></i>
               </span>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-facebook-f"></i>
             </div>
           </div>
         </section>
