@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-	devise_for :players, :controllers => {
-		:sessions => 'player/sessions',
-		:registrations => 'player/registrations'
+	devise_for :players, controllers: {
+		sessions: 'player/sessions',
+		registrations: 'player/registrations',
+		passwords: 'player/passwords'
 	}
 
-	devise_for :teams, :controllers => {
-		:sessions => 'team/sessions',
-		:registrations => 'team/registrations'
+	devise_for :teams, controllers: {
+		sessions: 'team/sessions',
+		registrations: 'team/registrations'
 	}
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -25,6 +26,10 @@ Rails.application.routes.draw do
 		resources :bookmarks, only: [:index] # 上に混ぜるとpathが消えるので分けた。
 		resources :posts, only: [:index, :show]
 	end
+
+	devise_scope :player do # ゲストプレイヤーログイン用
+    post 'player/guest_sign_in', to: 'player/sessions#new_guest'
+  end
 
 	# team
 	namespace :team do

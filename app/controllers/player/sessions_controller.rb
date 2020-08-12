@@ -18,6 +18,12 @@ class Player::SessionsController < Devise::SessionsController
     super
   end
 
+  def new_guest
+    player = Player.guest
+    sign_in player
+    redirect_to player_player_path(current_player), notice: "ゲストプレイヤーとしてログインしました。"
+  end
+
   protected
 
   # If you have extra params to permit, append them to the sanitizer.
