@@ -16,8 +16,6 @@
 何より子どもが野球を辞めるきっかけが増えてしまう可能性が大きい。<br>
 こういったことから、チーム選びの重要性を感じ、マッチングサイトを作成することにした。
 
-![profile](images/profile.png "profile")
-
 ### ターゲットユーザ
 ①野球を始めたいと思っている、または<br>
 　事情により、チーム移籍を検討しているお子さんとその家族。<br>
@@ -45,4 +43,4 @@
 ## 設計書
 
 ### 機能一覧
-https://docs.google.com/spreadsheets/d/1FYRGo0XCJfp79SE3WXRhj1XnyRRuQRZYxAh9I1tOsTI/edit#gid=0
+[Googleドキュメントへ移動](https://docs.google.com/spreadsheets/d/1FYRGo0XCJfp79SE3WXRhj1XnyRRuQRZYxAh9I1tOsTI/edit#gid=0)
