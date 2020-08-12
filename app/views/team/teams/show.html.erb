@@ -76,12 +76,8 @@
 			</div>
 			<% if @team.id != current_team.id %>
 				<% if @isRoom == true %>
-					<!-- チャット未読数表示 -->
-					<% @team.messages.where(unread: true).each do |message| %>
-				    <% message.update(unread: false) %>
-				  <% end %>
 					<%= link_to team_room_path(@roomId) do %>
-						<i class="fas fa-paper-plane"> チャットへ.../<%= @team.messages.where(unread: true).count %></i>
+						<i class="fas fa-paper-plane"> チャットへ...</i>
 					<% end %>
 				<% else %>
 					<%= form_for(@room, url: team_rooms_path) do |f| %>

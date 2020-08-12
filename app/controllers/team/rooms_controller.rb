@@ -9,6 +9,9 @@ class Team::RoomsController < ApplicationController
 		else
 		   redirect_back(fallback_location: root_path)
 		end
+		@room.messages.where(unread: true).each do |message|
+      message.update(unread: false)
+    end
 	end
 
 	def create

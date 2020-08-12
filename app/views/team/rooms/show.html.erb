@@ -10,21 +10,29 @@
     <% if @messages.present? %>
       <% @messages.each do |message| %>
         <% if current_team == message.team %>
-          <div class="message my_message">
-            <%= safe_join(message.content.split("\n"), tag(:br)) %>
-            <!-- safe_joinによって改行が反映される -->
-          </div><br>
+          <div class="my_message_area">
+            <div class="message my_message">
+              <%= safe_join(message.content.split("\n"), tag(:br)) %>
+              <!-- safe_joinによって改行が反映される -->
+            </div><br>
+            <div class="message_time">
+              <%= message.created_at.strftime("%m/%d %H:%M") %><br>
+            </div>
+          </div>
         <% else %>
           <div class="message other_message">
               <%= safe_join(message.content.split("\n"), tag(:br)) %>
           </div><br>
+          <div class="message_time">
+            <%= message.created_at.strftime("%m/%d %H:%M") %><br>
+          </div>
         <% end %>
       <% end %>
     <% else %>
       <h4 class="text_center">記念すべき最初のメッセージです！</h4>
     <% end %>
     <%= form_for(@message, url: team_messages_path) do |f| %>
-      <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , class: "chats_form" %>
+      <%= f.text_area :content, :placeholder => "メッセージを入力して下さい", class: "chats_form" %>
       <%= f.hidden_field :room_id, :value => @room.id %>
       <%= f.submit "送信", class: "btn update_btn chats_create_btn" %>
     <% end %>
