@@ -84,5 +84,5 @@ gem 'geocoder'
 gem 'jp_prefecture'
 gem 'font-awesome-sass'
 gem 'pry-rails' # デバッグ
-gem 'ed25519'
-gem 'bcrypt_pbkdf'
+gem 'ed25519' # capistrano関係
+gem 'bcrypt_pbkdf' # capistrano関係

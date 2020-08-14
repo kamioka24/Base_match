@@ -17,8 +17,8 @@
 こういったことから、チーム選びの重要性を感じ、マッチングサイトを作成することにした。
 
 ### ターゲットユーザ
-①野球を始めたいと思っている、または<br>
-　事情により、チーム移籍を検討しているお子さんとその家族。<br>
+①野球を始めたいと思っている、または事情により<br>
+  チーム移籍を検討しているお子さんとその家族。<br>
 ②選手募集中の少年野球チーム
 
 ### 主な利用シーン
@@ -40,7 +40,16 @@
 ④チャット機能を活用し、チーム同士で交流して情報交換などを行い、野球界の発展に努める。<br>
 ⑤選手からのお問い合わせに返事をする。(体験練習日や入団日を決める)
 
-## 設計書
+## 設計書関連
+
+### テーブル定義書
+データベースに関連。
+[Googleドキュメントへ移動](https://docs.google.com/spreadsheets/d/1N1m5Bx6Zf-yG2lAlxLBOt-WRaW4NnfU24PziIqP6_B0/edit#gid=0)
+
+### WBS & 詳細設計書
+サイト制作計画書、使用したGemなど。
+[Googleドキュメントへ移動](https://docs.google.com/spreadsheets/d/1VL7Cam4g_L5y-th-NDYEmjBWydERykOuTX1Hp66oF00/edit#gid=1773513600)
 
 ### 機能一覧
+使用技術や、機能について。
 [Googleドキュメントへ移動](https://docs.google.com/spreadsheets/d/1FYRGo0XCJfp79SE3WXRhj1XnyRRuQRZYxAh9I1tOsTI/edit#gid=0)
