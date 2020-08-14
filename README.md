@@ -43,13 +43,13 @@
 ## 設計書関連
 
 ### テーブル定義書
-データベースに関連。
+データベース関連。<br>
 [Googleドキュメントへ移動](https://docs.google.com/spreadsheets/d/1N1m5Bx6Zf-yG2lAlxLBOt-WRaW4NnfU24PziIqP6_B0/edit#gid=0)
 
 ### WBS & 詳細設計書
-サイト制作計画書、使用したGemなど。
+サイト制作計画書、使用したGemなど。<br>
 [Googleドキュメントへ移動](https://docs.google.com/spreadsheets/d/1VL7Cam4g_L5y-th-NDYEmjBWydERykOuTX1Hp66oF00/edit#gid=1773513600)
 
 ### 機能一覧
-使用技術や、機能について。
+使用技術や機能について。<br>
 [Googleドキュメントへ移動](https://docs.google.com/spreadsheets/d/1FYRGo0XCJfp79SE3WXRhj1XnyRRuQRZYxAh9I1tOsTI/edit#gid=0)
