@@ -1,27 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe Player, type: :model do
-	describe 'バリデーションのテスト' do
-		let(:player) { build(:player) }
-	  subject { test_player.valid? }
-	  context 'nameカラム' do
-			let(:test_player) { player }
-			it '空欄でないこと' do
-		        test_player.name = ''
-		        is_expected.to eq false;
-		  end
-			it '15文字以下であること' do
-				test_player.name = Faker::Lorem.characters(number:16)
-				is_expected.to eq false;
-			end
+  context '正しく保存される' do
+  	before do
+  		@player = Player.new
+  		@player.name = "野球太郎"
+  		@player.prefecture_code = 11
+  		@player.email = "player@example.com"
+  		@player.password = 111111
+  		@player.save
+  	end
+		it "全て入力してあるので保存される" do
+      expect(@player).to be_valid
 	  end
-
-	  context 'prefecture_codeカラム' do
-			let(:test_player) { player }
-			it '空欄でないこと' do
-				test_player.prefecture_code = ''
-				is_expected.to eq false
-			end
-		end
-	end
+  end
 end
