@@ -85,10 +85,10 @@
 	    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
 			font-size: 50px;
 			margin-bottom: 50px;
-		}
-		.main_text:first-letter {
-			color: #FB1508;
-			font-size: 65px;
+			&:first-letter {
+				color: #FB1508;
+				font-size: 65px;
+			}
 		}
 		.subtext {
 			color: #E1F6F2;
@@ -174,9 +174,9 @@
 				padding: 0 25px;
 				line-height: 70px;
 			}
-		}
-		.li_area:hover {
-			background: rgba(0, 190, 255, 0.9);
+			&:hover {
+				background: rgba(0, 190, 255, 0.9);
+			}
 		}
 	}
 }

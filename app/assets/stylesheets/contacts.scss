@@ -42,9 +42,9 @@
 	.complete_back_btn {
 		font-size: 18px;
 		transition: 1s;
-	}
-	.complete_back_btn:hover {
-		background: rgba(0, 190, 255, 1.0);
+		&:hover {
+			background: rgba(0, 190, 255, 1.0);
+		}
 	}
 }
 

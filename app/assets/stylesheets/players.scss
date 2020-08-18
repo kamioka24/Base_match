@@ -10,11 +10,10 @@
 	transition: .3s;
 	-webkit-transform: scale(1);
 	transform: scale(1);
-}
-
-.fa-cog:hover { // 文字を強調する
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+	&:hover { // 文字を強調する
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 }
 
 .mypage_table {
@@ -55,10 +54,9 @@
 			line-height: 22px;
 			font-size: 15px;
 		}
+		&:hover { // 上に少し動く
+			-webkit-transform: translateY(-5px);
+			transform: translateY(-5px);
+		}
 	}
-}
-
-.team_box:hover { // 上に少し動く
-	-webkit-transform: translateY(-5px);
-	transform: translateY(-5px);
 }

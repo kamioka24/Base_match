@@ -47,12 +47,11 @@
 				margin-left: 5px;
 			}
 		}
+		&:hover { // 上に少し動く
+			-webkit-transform: translateY(-5px);
+			transform: translateY(-5px);
+		}
 	}
-}
-
-.post_balloon:hover { // 上に少し動く
-	-webkit-transform: translateY(-5px);
-	transform: translateY(-5px);
 }
 
 // 投稿詳細(共通)
