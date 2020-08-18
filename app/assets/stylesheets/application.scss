@@ -47,16 +47,14 @@ li {
 	border-radius: 8px;
 	transition: all 1s;
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
-}
-
-.sign_up_btn:hover {
-	background: rgba(30, 255, 0, 0.9);
-}
-
-.sign_up_btn:active {
-	box-shadow: none;
-	position: relative;
-	top: 2px;
+	&:hover {
+		background: rgba(30, 255, 0, 0.9);
+	}
+	&:active { // &をつけることで入れ子対応を可能にし、セクレタ名も省略できる
+		box-shadow: none;
+		position: relative;
+		top: 2px;
+	}
 }
 
 .login_btn {
@@ -69,28 +67,25 @@ li {
 	border-radius: 8px;
 	transition: all 1s;
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
-}
-
-.login_btn:hover {
-	background: rgba(0, 190, 255, 1.0);
-}
-
-.login_btn:active {
-	box-shadow: none;
-	position: relative;
-	top: 2px;
+	&:hover {
+		background: rgba(0, 190, 255, 1.0);
+	}
+	&:active {
+		box-shadow: none;
+		position: relative;
+		top: 2px;
+	}
 }
 
 .btn {
 	display: inline-block;
 	margin-top: 10px;
 	border-radius: 7px;
-}
-
-.btn:active {
-	box-shadow: none;
-	position: relative;
-	top: 2px;
+	&:active {
+		box-shadow: none;
+		position: relative;
+		top: 2px;
+	}
 }
 
 .create_btn {
@@ -98,10 +93,9 @@ li {
 	background: rgba(30, 255, 0, 0.7);
 	transition: all 1s;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
-}
-
-.create_btn:hover {
-	background: rgba(30, 255, 0, 0.9);
+	&:hover {
+		background: rgba(30, 255, 0, 0.9);
+	}
 }
 
 .update_btn {
@@ -109,10 +103,9 @@ li {
 	background: rgba(0, 190, 255, 0.8);
 	transition: all 1s;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
-}
-
-.update_btn:hover {
-	background: rgba(0, 190, 255, 1.0);
+	&:hover {
+		background: rgba(0, 190, 255, 1.0);
+	}
 }
 
 .back_btn {
@@ -121,11 +114,10 @@ li {
 	transition: .3s;
 	-webkit-transform: scale(1);
 	transform: scale(1);
-}
-
-.back_btn:hover { // 文字を強調する
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+	&:hover { // 文字を強調する
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 }
 
 .fa-star {
@@ -163,11 +155,11 @@ html, body {
 					display: block;
 					transition: .3s;
 					margin-right: 50px;
+					&:hover {
+						-webkit-transform: translateY(-3px);
+						transform: translateY(-3px);
+					}
 				}
-			}
-			.nav_list_item:hover {
-				-webkit-transform: translateY(-3px);
-				transform: translateY(-3px);
 			}
 		}
 		main {
@@ -224,34 +216,34 @@ html, body {
 							border-radius: 13px;
 							background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
 							background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-						}
-						.insta:hover {
-							-webkit-transform: translateY(-5px);
-							transform: translateY(-5px);
-						}
-						.insta:before {
-							content: '';
-							position: absolute;
-							top: 23px;
-							left: -18px;
-							width: 60px;
-							height: 60px;
-							background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
-							background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+							&:hover {
+								-webkit-transform: translateY(-5px);
+								transform: translateY(-5px);
+							}
+							&:before {
+								content: '';
+								position: absolute;
+								top: 23px;
+								left: -18px;
+								width: 60px;
+								height: 60px;
+								background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+								background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+							}
 						}
 						.fa-twitter {
 							background: #22b8ff;;
-						}
-						.fa-twitter:hover {
-							-webkit-transform: translateY(-5px);
-							transform: translateY(-5px);
+							&:hover {
+								-webkit-transform: translateY(-5px);
+								transform: translateY(-5px);
+							}
 						}
 						.fa-facebook-f {
 							background: #6680d8;
-						}
-						.fa-facebook-f:hover {
-							-webkit-transform: translateY(-5px);
-							transform: translateY(-5px);
+							&:hover {
+								-webkit-transform: translateY(-5px);
+								transform: translateY(-5px);
+							}
 						}
 					}
 				}
@@ -283,20 +275,18 @@ html, body {
 	.no_exit_btn {
 		margin-right: 10px;
 		transition: all 1s;
+		&:hover {
+			background: rgba(0, 190, 255, 1.0);
+		}
 	}
 }
 
 .exit_btn { // 情報編集ページでも使っているため、ネストしない。
 	margin-left: 10px;
 	transition: all 1s;
-}
-
-.no_exit_btn:hover {
-	background: rgba(0, 190, 255, 1.0);
-}
-
-.exit_btn:hover {
-	background: rgba(200, 0, 0, 1.0);
+	&:hover {
+		background: rgba(200, 0, 0, 1.0);
+	}
 }
 
 // 新規登録＆ログイン画面
@@ -378,11 +368,10 @@ input[type="email"] { // email_formの幅指定
 	transition: .3s;
 	-webkit-transform: scale(1);
 	transform: scale(1);
-}
-
-.fa-envelope:hover { // 文字を強調する
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+	&:hover { // 文字を強調する
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 }
 
 // ここからチーム側と共通
@@ -403,10 +392,10 @@ input[type="email"] { // email_formの幅指定
 				-webkit-transform: scale(1);
 				transform: scale(1);
 				text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
-			}
-			.post_title:hover { // 文字を強調させる // 反応がない
-				-webkit-transform: scale(1.1);
-				transform: scale(1.1);
+				&:hover { // 文字を強調させる // 反応がない
+					-webkit-transform: scale(1.1);
+					transform: scale(1.1);
+				}
 			}
 		}
 	}
@@ -419,11 +408,10 @@ input[type="email"] { // email_formの幅指定
 	transition: .3s;
 	-webkit-transform: scale(1);
 	transform: scale(1);
-}
-
-.post_index_path:hover { // 文字を強調させる
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+	&:hover { // 文字を強調させる
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 }
 
 .address_table {
@@ -547,11 +535,10 @@ input[type="email"] { // email_formの幅指定
 	transition: .3s;
 	-webkit-transform: scale(1);
 	transform: scale(1);
-}
-
-.fa-paper-plane:hover { // 文字を強調させる
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+	&:hover { // 文字を強調させる
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
 }
 
 @media screen and (max-width: 991px) {
