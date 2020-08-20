@@ -204,17 +204,31 @@
 		display: flex;
 		.story_box {
 			margin: 0 auto;
-			font-size: 14px;
 			width: 22%;
 			border: 2px solid #eee;
-			.story_box_title {
-				color: #fff;
+			.story_box_top {
+				font-size: 15px;
+				color: #333;
 				font-weight: bold;
 				height: 150px;
 				line-height: 150px;
-				background: rgba(0, 0, 0, 0.5);
+				background-size: cover;
+				background-position: center;
+			}
+			.story_box_title1 {
+				background-image: image-url("story1.jpg");
+			}
+			.story_box_title2 {
+				background-image: image-url("story2.jpg");
+			}
+			.story_box_title3 {
+				background-image: image-url("story3.jpg");
+			}
+			.story_box_title4 {
+				background-image: image-url("story4.jpg");
 			}
 			.story_box_body {
+				font-size: 14px;
 				line-height: 23px;
 				margin: 10px auto;
 				text-align: left;
@@ -233,7 +247,7 @@
 		width: 90%;
 		height: 350px;
 		display: flex;
-		margin: 30px auto;
+		margin: 20px auto;
 		.box_text_area {
 			width: 30%;
 			margin: 90px auto;
@@ -244,7 +258,7 @@
 			}
 		}
 		.player_box_img1 {
-			margin: 10px auto;
+			margin: 20px auto;
 			height: 250px;
 			width: 350px;
 			background-image: image-url("player1.jpg");
