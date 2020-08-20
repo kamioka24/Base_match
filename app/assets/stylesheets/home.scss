@@ -198,7 +198,7 @@
 #about_story {
 	margin: 0 auto;
 	text-align: center;
-	height: 900px;
+	height: 870px;
 	width: 80%;
 	.story_boxes {
 		display: flex;
@@ -241,7 +241,7 @@
 #about_player {
 	margin: 0 auto;
 	text-align: center;
-	height: 1950px;
+	height: 1900px;
 	width: 80%;
 	.player_box {
 		width: 90%;
@@ -257,37 +257,24 @@
 				line-height: 30px;
 			}
 		}
-		.player_box_img1 {
-			margin: 20px auto;
+		.player_box_top {
+			margin: 10px auto;
 			height: 250px;
 			width: 350px;
-			background-image: image-url("player1.jpg");
 			background-size: cover;
 			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
+		}
+		.player_box_img1 {
+			background-image: image-url("player1.jpg");
 		}
 		.player_box_img2 {
-			margin: 10px auto;
-			height: 250px;
-			width: 350px;
 			background-image: image-url("player2.jpg");
-			background-size: cover;
-			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
 		}
 		.player_box_img3 {
-			margin: 10px auto;
-			height: 250px;
-			width: 350px;
 			background-image: image-url("player3.jpg");
-			background-size: cover;
-			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
 		}
 		.player_box_img4 {
-			margin: 10px auto;
-			height: 250px;
-			width: 350px;
 			background-image: image-url("player4.jpg");
-			background-size: cover;
-			box-shadow: 10px 15px 10px rgba(0,0,0,0.25);
 		}
 		p {
 			font-size: 20px;
@@ -298,7 +285,7 @@
 #about_team {
 	margin: 0 auto;
 	text-align: center;
-	height: 950px;
+	height: 930px;
 	width: 80%;
 	.team_boxes {
 		display: flex;
@@ -311,35 +298,23 @@
 				width: 320px;
 				background: #000;
 				position: relative;
-				.team_box_img1 {
+				.box_top_image {
 					height: 100%;
 					width: 100%;
 					position: absolute;
 					top: 0;
-					background-image: image-url("team1.jpg");
 					background-size: cover;
 					background-position: center;
 					opacity: 0.5;
+				}
+				.team_box_img1 {
+					background-image: image-url("team1.jpg");
 				}
 				.team_box_img2 {
-					height: 100%;
-					width: 100%;
-					position: absolute;
-					top: 0;
 					background-image: image-url("team2.jpg");
-					background-size: cover;
-					background-position: center;
-					opacity: 0.5;
 				}
 				.team_box_img3 {
-					height: 100%;
-					width: 100%;
-					position: absolute;
-					top: 0;
 					background-image: image-url("team3.jpg");
-					background-size: cover;
-					background-position: center;
-					opacity: 0.5;
 				}
 				p {
 					width: 100%;
