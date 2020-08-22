@@ -65,6 +65,11 @@
 5. チャット機能を活用してチーム同士で交流・情報交換を行い、野球界の発展に努める。
 6. 選手からのお問い合わせ内容に答えたり、体験日や入団日の連絡をする。
 
+## スクリーンショット
+ActionMailerによるメール通知
+<img width="839" alt="slide1" src="https://user-images.githubusercontent.com/62239995/90945598-c4532c80-e460-11ea-8908-20455eab144c.png">
+<img width="839" alt="slide2" src="https://user-images.githubusercontent.com/62239995/90945965-84da0f80-e463-11ea-9021-7dda97173d80.png">
+
 ## 設計書関連
 
 ### テーブル定義書
