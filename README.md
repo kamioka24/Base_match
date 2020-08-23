@@ -26,8 +26,12 @@
 - geocoder(地図表示)
 - dotenv-rails(環境変数化)
 
+### API
+- Maps JavaScript API
+- Geocoding API
+
 ### デプロイ環境
-- AWS(EC2, ElasticIP, RDS, Route53, IAM)
+- AWS(EC2, ElasticIP, RDS, Route53, CloudWatch, IAM)
 - puma
 - nginx
 - capistrano
@@ -66,9 +70,9 @@
 6. 選手からのお問い合わせ内容に答えたり、体験日や入団日の連絡をする。
 
 ## スクリーンショット
-ActionMailerによるメール通知
+### ActionMailerによるメール通知
 <img width="839" alt="slide1" src="https://user-images.githubusercontent.com/62239995/90945598-c4532c80-e460-11ea-8908-20455eab144c.png">
-<img width="839" alt="slide2" src="https://user-images.githubusercontent.com/62239995/90945965-84da0f80-e463-11ea-9021-7dda97173d80.png">
+<img width="925" alt="slide2" src="https://user-images.githubusercontent.com/62239995/90946082-822bea00-e464-11ea-8cf0-2f84e73f9835.png">
 
 ## 設計書関連
 

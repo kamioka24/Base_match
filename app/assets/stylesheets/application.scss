@@ -492,6 +492,10 @@ input[type="email"] { // email_formの幅指定
 			line-height: 22px;
 			font-size: 15px;
 		}
+		&:hover { // 上に少し動く
+			-webkit-transform: translateY(-5px);
+			transform: translateY(-5px);
+		}
 	}
 }
 
