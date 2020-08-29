@@ -37,6 +37,10 @@ li {
 	clear: both;
 }
 
+.drawer {
+	display: none;
+}
+
 .flash_message {
 	color: #108001;
 	font-size: 15px;
@@ -632,9 +636,6 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
-}
-
-@media screen and (max-width: 480px) {
 	.header_ber {
 		height: 60px;
 		ul {
@@ -652,7 +653,6 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
-
 	html, body {
 		.wrapper {
 			header {
@@ -662,8 +662,8 @@ input[type="email"] { // email_formの幅指定
 						font-size: 40px;
 					}
 				}
-				.nav_list_item {
-					margin-right: 25px;
+				nav {
+					display: none;
 				}
 			}
 			footer {
@@ -671,7 +671,6 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
-
 	.sign_up_btn {
 		font-size: 13px;
 		margin-top: 10px;
@@ -689,7 +688,6 @@ input[type="email"] { // email_formの幅指定
 	.create_btn, .update_btn {
 		padding: 8px 5px;
 	}
-
 	.container {
 		width: 95%;
 		.page_title {
@@ -699,9 +697,7 @@ input[type="email"] { // email_formの幅指定
 			border-bottom: 2px solid #E1A253;
 		}
 	}
-
 	// 退会ページ(共通)
-
 	.exit_page {
 		padding: 50px;
 		h1 {
@@ -711,16 +707,13 @@ input[type="email"] { // email_formの幅指定
 			font-size: 15px;
 		}
 	}
-
 	// 新規登録＆ログイン画面
-
 	.signup_table, .login_table {
 		margin: 15px auto;
 		th {
 			line-height: 25px;
 		}
 	}
-
 	.team_signup_image_area {
 		width: 100%;
 		.team_info {
@@ -730,16 +723,13 @@ input[type="email"] { // email_formの幅指定
 			height: 150px;
 		}
 	}
-
 	.team_signup_table {
 		margin: 10px auto;
 		th {
 			line-height: 18px;
 		}
 	}
-
 	// story
-
 	#about_story {
 		height: 100%;
 		.story_boxes {
@@ -760,9 +750,7 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
-
 	// player
-
 	#about_player {
 		height: 100%;
 		.section_text {
@@ -794,9 +782,7 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
-
 	// team
-
 	#about_team {
 		height: 100%;
 		.section_text {
@@ -817,7 +803,6 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
-
 	// プレイヤー側チーム一覧＆お気に入り一覧
 	.team_boxes { // チーム側と共通
 		flex-direction: column; // 上から下へ並べる
@@ -831,7 +816,6 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
-
 	// プレイヤー側チーム詳細
 	.team_information {
 		padding: 15px;
@@ -847,17 +831,14 @@ input[type="email"] { // email_formの幅指定
 			}
 		}
 	}
-
 	// ここからチーム側と共通
 	.side_posts {
 		display: none;
 	}
-
 	#map {
 		width: 100%;
 		height: 250px;
 	}
-
 	// チーム詳細(マイチーム)
 	.team_information {
 		width: 100%;
@@ -876,17 +857,14 @@ input[type="email"] { // email_formの幅指定
 			font-size: 15px;
 		}
 	}
-
 	// 新規投稿
 	.post_title_form {
 		width: 100%;
 	}
-
 	.post_body_form {
 		width: 100%;
 		height: 300px;
 	}
-
 	// 投稿一覧(共通)
 	.post_table {
 		font-size: 15px;
@@ -902,7 +880,6 @@ input[type="email"] { // email_formの幅指定
 			margin-right: 10px;
 		}
 	}
-
 	// 投稿詳細(共通)
 	.post_show_area {
 		width: 100%;
