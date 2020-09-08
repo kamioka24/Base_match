@@ -4,100 +4,100 @@
 
 // 新規投稿
 .post_title_form {
-	width: 80%;
-	margin-bottom: 15px;
+  width: 80%;
+  margin-bottom: 15px;
 }
 
 .post_body_form {
-	width: 80%;
-	height: 300px;
+  width: 80%;
+  height: 300px;
 }
 
 // 投稿一覧(共通)
 .post_balloons {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 15px;
-	.post_balloon {
-		height: 180px;
-		width: 180px;
-		background: #fff;
-		box-shadow: 0 0px 20px rgba(0,0,0,0.2);
-		border-radius: 50%;
-		margin-right: 31px;
-		margin-bottom: 30px;
-		position: relative;
-		transition: .3s;
-		.balloon_text {
-			line-height: 25px;
-			text-align: center;
-			position: absolute;
-			left: 0;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);
-			width: 180px;
-			.post_title {
-				font-size: 18px;
-			}
-			.fa-edit {
-				margin-right: 5px;
-			}
-			.fa-trash {
-				margin-left: 5px;
-			}
-		}
-		&:hover { // 上に少し動く
-			-webkit-transform: translateY(-5px);
-			transform: translateY(-5px);
-		}
-	}
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  .post_balloon {
+    height: 180px;
+    width: 180px;
+    background: #fff;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+    border-radius: 50%;
+    margin-right: 31px;
+    margin-bottom: 30px;
+    position: relative;
+    transition: .3s;
+    .balloon_text {
+      line-height: 25px;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 180px;
+      .post_title {
+        font-size: 18px;
+      }
+      .fa-edit {
+        margin-right: 5px;
+      }
+      .fa-trash {
+        margin-left: 5px;
+      }
+    }
+    &:hover { // 上に少し動く
+      -webkit-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
 }
 
 // 投稿詳細(共通)
 .post_show_area {
-	margin: 0 auto;
-	width: 940px;
+  margin: 0 auto;
+  width: 940px;
 }
 .post_show_box {
-	background: #fff;
-	box-shadow: 0 0px 20px rgba(0,0,0,0.2);
-	border-radius: 10px;
-	width: 940px;
-	padding: 20px;
-	margin: 30px auto;
-	.post_team_name {
-		font-size: 25px;
-	}
-	.fa-edit, .team_post_index {
-		float: right;
-		transition: .3s;
-	}
-	.fa-edit:hover { // 文字を強調させる
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
-	}
-	.team_post_index:hover { // 文字を強調させる
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
-	}
-	.post_title_area {
-		width: 900px;
-		.post_title {
-			font-size: 25px;
-			text-align: center;
-		}
-		.post_date {
-			float: right;
-			font-size: 15px;
-			margin-bottom: 15px;
-		}
-	}
-	.post_img {
-		text-align: center;
-	}
-	.post_body {
-		margin: 30px 0;
-		font-size: 18px;
-	}
+  background: #fff;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  width: 940px;
+  padding: 20px;
+  margin: 30px auto;
+  .post_team_name {
+    font-size: 25px;
+  }
+  .fa-edit, .team_post_index {
+    float: right;
+    transition: .3s;
+  }
+  .fa-edit:hover { // 文字を強調させる
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .team_post_index:hover { // 文字を強調させる
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .post_title_area {
+    width: 900px;
+    .post_title {
+      font-size: 25px;
+      text-align: center;
+    }
+    .post_date {
+      float: right;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  .post_img {
+    text-align: center;
+  }
+  .post_body {
+    margin: 30px 0;
+    font-size: 18px;
+  }
 }

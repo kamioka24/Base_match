@@ -22,280 +22,280 @@
 // 全体共通
 
 * {
-	box-sizing: border-box;
-	scroll-behavior: smooth; // スクロールをスムーズにする。対応ブラウザが限定的？
-	text-decoration: none !important; // リンクの下線を消す
+  box-sizing: border-box;
+  scroll-behavior: smooth; // スクロールをスムーズにする。対応ブラウザが限定的？
+  text-decoration: none !important; // リンクの下線を消す
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 .clearfix ::after {
-	content: "";
-	display: block;
-	clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .drawer {
-	display: none;
+  display: none;
 }
 
 .flash_message {
-	color: #108001;
-	font-size: 15px;
+  color: #108001;
+  font-size: 15px;
 }
 
 .sign_up_btn {
-	font-size: 18px;
-	display: inline-block;
-	margin-top: 20px;
-	margin-right: 20px;
-	padding: 20px;
-	background: rgba(30, 255, 0, 0.7);
-	border-radius: 8px;
-	transition: all 1s;
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
-	&:hover {
-		background: rgba(30, 255, 0, 0.9);
-	}
-	&:active { // &をつけることで入れ子対応を可能にし、セクレタ名も省略できる
-		box-shadow: none;
-		position: relative;
-		top: 2px;
-	}
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  background: rgba(30, 255, 0, 0.7);
+  border-radius: 8px;
+  transition: all 1s;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
+  &:hover {
+    background: rgba(30, 255, 0, 0.9);
+  }
+  &:active { // &をつけることで入れ子対応を可能にし、セクレタ名も省略できる
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+  }
 }
 
 .login_btn {
-	font-size: 18px;
-	display: inline-block;
-	margin-top: 20px;
-	margin-left: 20px;
-	padding: 20px;
-	background: rgba(0, 200, 255, 0.8);
-	border-radius: 8px;
-	transition: all 1s;
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
-	&:hover {
-		background: rgba(0, 190, 255, 1.0);
-	}
-	&:active {
-		box-shadow: none;
-		position: relative;
-		top: 2px;
-	}
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 20px;
+  background: rgba(0, 200, 255, 0.8);
+  border-radius: 8px;
+  transition: all 1s;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
+  &:hover {
+    background: rgba(0, 190, 255, 1.0);
+  }
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+  }
 }
 
 .btn {
-	display: inline-block;
-	margin-top: 10px;
-	border-radius: 7px;
-	&:active {
-		box-shadow: none;
-		position: relative;
-		top: 2px;
-	}
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 7px;
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+  }
 }
 
 .create_btn {
-	padding: 8px 35px;
-	background: rgba(30, 255, 0, 0.7);
-	transition: all 1s;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
-	&:hover {
-		background: rgba(30, 255, 0, 0.9);
-	}
+  padding: 8px 35px;
+  background: rgba(30, 255, 0, 0.7);
+  transition: all 1s;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
+  &:hover {
+    background: rgba(30, 255, 0, 0.9);
+  }
 }
 
 .update_btn {
-	padding: 8px 35px;
-	background: rgba(0, 190, 255, 0.8);
-	transition: all 1s;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
-	&:hover {
-		background: rgba(0, 190, 255, 1.0);
-	}
+  padding: 8px 35px;
+  background: rgba(0, 190, 255, 0.8);
+  transition: all 1s;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2), 0 -4px 5px -2px gray inset;
+  &:hover {
+    background: rgba(0, 190, 255, 1.0);
+  }
 }
 
 .back_btn {
-	margin: 30px 0;
-	float: right;
-	transition: .3s;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	&:hover { // 文字を強調する
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
-	}
+  margin: 30px 0;
+  float: right;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  &:hover { // 文字を強調する
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 .fa-star {
-	font-size: 25px;
+  font-size: 25px;
 }
 
 html, body {
-	margin: 0;
+  margin: 0;
   padding: 0;
-	height: 100%; // フッターを最下位で固定するための設定
-	.wrapper {
-		position: relative;
+  height: 100%; // フッターを最下位で固定するための設定
+  .wrapper {
+    position: relative;
     min-height: 100%; // 最低の高さ設定
     header {
-	    width: 100%;
-			height: 90px;
-			position: fixed;
-			top: 0;
-			z-index: 10;
-			background: rgba(225, 225, 225, 0.9);
-			.header_logo {
-				text-align: center;
-				font-size: 45px;
-				color: #4C4C4C;
-				strong {
-					font-size: 48px;
-					color: #FB1508;
-				}
-			}
-			.nav_list {
-				justify-content: center; //中央表示
-				margin: 0 auto;
-				display: flex;
-				.nav_list_item {
-					display: block;
-					transition: .3s;
-					margin-right: 50px;
-					&:hover {
-						-webkit-transform: translateY(-3px);
-						transform: translateY(-3px);
-					}
-				}
-			}
-		}
-		main {
-			color: #4C4C4C;
-			padding: 90px 0 100px; // padding-topにヘッダー分の高さを入れることでヘッダー固定時のズレを解消。
-		}
-		footer {
-			color: #4C4C4C;
-			width: 100%;
-			height: 100px;
-			background: rgba(225, 225, 225, 0.9);
-			position: absolute;
-			bottom: 0;
-			#about_contact {
-				margin: 0 auto;
-				width: 70%;
-				.footer_section_title {
-					text-align: center;
-					padding-top: 7px;
-					margin: 0;
-					font-size: 23px;
-				}
-				.contact_area {
-					font-size: 17px;
-					display: flex;
-					.contact_left {
-						margin: 0 auto;
-						width: 50%;
-					}
-					.contact_right {
-						margin: 0 auto;
-						display: flex;
-						.fab {
-							color: #fff;
-							width: 50px;
-							height: 50px;
-							line-height: 50px;
-							font-size: 25px;
-							border-radius: 13px;
-							text-align: center;
-							position: relative;
-							z-index: 2;
-							margin-right: 30px;
-							transition: .3s;
-						}
-						.insta {
-							margin-right: 30px;
-							transition: .3s;
-							position: relative;
-							display: inline-block;
-							overflow: hidden;
-							width: 50px;
-							height: 50px;
-							border-radius: 13px;
-							background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-							background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-							&:hover {
-								-webkit-transform: translateY(-5px);
-								transform: translateY(-5px);
-							}
-							&:before {
-								content: '';
-								position: absolute;
-								top: 23px;
-								left: -18px;
-								width: 60px;
-								height: 60px;
-								background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
-								background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
-							}
-						}
-						.fa-twitter {
-							background: #22b8ff;;
-							&:hover {
-								-webkit-transform: translateY(-5px);
-								transform: translateY(-5px);
-							}
-						}
-						.fa-facebook-f {
-							background: #6680d8;
-							&:hover {
-								-webkit-transform: translateY(-5px);
-								transform: translateY(-5px);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+      width: 100%;
+      height: 90px;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+      background: rgba(225, 225, 225, 0.9);
+      .header_logo {
+        text-align: center;
+        font-size: 45px;
+        color: #4C4C4C;
+        strong {
+          font-size: 48px;
+          color: #FB1508;
+        }
+      }
+      .nav_list {
+        justify-content: center; //中央表示
+        margin: 0 auto;
+        display: flex;
+        .nav_list_item {
+          display: block;
+          transition: .3s;
+          margin-right: 50px;
+          &:hover {
+            -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+    main {
+      color: #4C4C4C;
+      padding: 90px 0 100px; // padding-topにヘッダー分の高さを入れることでヘッダー固定時のズレを解消。
+    }
+    footer {
+      color: #4C4C4C;
+      width: 100%;
+      height: 100px;
+      background: rgba(225, 225, 225, 0.9);
+      position: absolute;
+      bottom: 0;
+      #about_contact {
+        margin: 0 auto;
+        width: 70%;
+        .footer_section_title {
+          text-align: center;
+          padding-top: 7px;
+          margin: 0;
+          font-size: 23px;
+        }
+        .contact_area {
+          font-size: 17px;
+          display: flex;
+          .contact_left {
+            margin: 0 auto;
+            width: 50%;
+          }
+          .contact_right {
+            margin: 0 auto;
+            display: flex;
+            .fab {
+              color: #fff;
+              width: 50px;
+              height: 50px;
+              line-height: 50px;
+              font-size: 25px;
+              border-radius: 13px;
+              text-align: center;
+              position: relative;
+              z-index: 2;
+              margin-right: 30px;
+              transition: .3s;
+            }
+            .insta {
+              margin-right: 30px;
+              transition: .3s;
+              position: relative;
+              display: inline-block;
+              overflow: hidden;
+              width: 50px;
+              height: 50px;
+              border-radius: 13px;
+              background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+              background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+              &:hover {
+                -webkit-transform: translateY(-5px);
+                transform: translateY(-5px);
+              }
+              &:before {
+                content: '';
+                position: absolute;
+                top: 23px;
+                left: -18px;
+                width: 60px;
+                height: 60px;
+                background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+                background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+              }
+            }
+            .fa-twitter {
+              background: #22b8ff;;
+              &:hover {
+                -webkit-transform: translateY(-5px);
+                transform: translateY(-5px);
+              }
+            }
+            .fa-facebook-f {
+              background: #6680d8;
+              &:hover {
+                -webkit-transform: translateY(-5px);
+                transform: translateY(-5px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .container {
-	width: 90%;
-	.page_title {
-		font-size: 25px;
-		padding-left: 10px;
-		padding-bottom: 10px;
-		border-bottom: 2px solid #E1A253;
-	}
+  width: 90%;
+  .page_title {
+    font-size: 25px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E1A253;
+  }
 }
 
 // 退会ページ(共通)
 .exit_page {
-	padding: 100px;
-	text-align: center;
-	h1 {
-		font-size: 25px;
-	}
-	h2 {
-		font-size: 20px;
-	}
-	.no_exit_btn {
-		margin-right: 10px;
-		transition: all 1s;
-		&:hover {
-			background: rgba(0, 190, 255, 1.0);
-		}
-	}
+  padding: 100px;
+  text-align: center;
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .no_exit_btn {
+    margin-right: 10px;
+    transition: all 1s;
+    &:hover {
+      background: rgba(0, 190, 255, 1.0);
+    }
+  }
 }
 
 .exit_btn { // 情報編集ページでも使っているため、ネストしない。
-	margin-left: 10px;
-	transition: all 1s;
-	&:hover {
-		background: rgba(200, 0, 0, 1.0);
-	}
+  margin-left: 10px;
+  transition: all 1s;
+  &:hover {
+    background: rgba(200, 0, 0, 1.0);
+  }
 }
 
 // 新規登録＆ログイン画面
@@ -304,606 +304,606 @@ input[type="email"] { // email_formの幅指定
 }
 
 .signup_table, .login_table {
-	margin: 30px auto;
-	th {
-		line-height: 50px;
-		padding-left: 12px;
-	}
+  margin: 30px auto;
+  th {
+    line-height: 50px;
+    padding-left: 12px;
+  }
 }
 
 .team_signup_image_area {
-	width: 500px;
-	.img_attachment {
-		margin-top: 5px;
-		font-size: 10px;
-		float: right;
-	}
-	.team_info {
-		margin: 20px 0 10px;
-	}
-	.introduction_area {
-		height: 200px;
-		width: 100%;
-	}
+  width: 500px;
+  .img_attachment {
+    margin-top: 5px;
+    font-size: 10px;
+    float: right;
+  }
+  .team_info {
+    margin: 20px 0 10px;
+  }
+  .introduction_area {
+    height: 200px;
+    width: 100%;
+  }
 }
 
 .team_signup_table {
-	margin: 20px auto;
-	th {
-		line-height: 37px;
-		padding-left: 12px;
-	}
+  margin: 20px auto;
+  th {
+    line-height: 37px;
+    padding-left: 12px;
+  }
 }
 
 .signup_link, .login_link {
-	transition: 1s;
+  transition: 1s;
 }
 
 .signup_link:hover {
-	background: rgba(30, 255, 0, 0.7);
+  background: rgba(30, 255, 0, 0.7);
 }
 
 .login_link:hover {
-	background: rgba(0, 190, 255, 0.7);
+  background: rgba(0, 190, 255, 0.7);
 }
 
 // プレイヤー側チーム詳細
 .team_information {
-	background: #fff;
-	box-shadow: 0 0px 20px rgba(0,0,0,0.2);
-	border-radius: 10px;
-	padding: 20px;
-	.player_teams_information_top {
-		display: flex;
-		width: 100%;
-		height: 50px;
-		.category, .member {
-			font-size: 18px;
-			margin: 10px auto;
-			line-height: 50px;
-		}
-		.name {
-			font-size: 30px;
-			margin: 10px auto;
-		}
-	}
+  background: #fff;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 20px;
+  .player_teams_information_top {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    .category, .member {
+      font-size: 18px;
+      margin: 10px auto;
+      line-height: 50px;
+    }
+    .name {
+      font-size: 30px;
+      margin: 10px auto;
+    }
+  }
 }
 
 // team.scssに記述するとfont-weight: bold;が適応されないので戻した。
 .fa-envelope { // post_showと共有したいからネストなし
-	font-size: 15px;
-	float: right;
-	font-weight: bold;
-	transition: .3s;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	&:hover { // 文字を強調する
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
-	}
+  font-size: 15px;
+  float: right;
+  font-weight: bold;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  &:hover { // 文字を強調する
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 // ここからチーム側と共通
 .side_posts {
-	position: -webkit-sticky; // 位置固定
-	position: sticky;
-	top: 70px;
-	.side_table {
-		margin-top: 50px;
-		tr {
-			line-height: 35px;
-			th {
-				text-align: center;
-				font-size: 15px;
-			}
-			.post_title { // 反応がない
-				transition: .3s;
-				-webkit-transform: scale(1);
-				transform: scale(1);
-				text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
-				&:hover { // 文字を強調させる // 反応がない
-					-webkit-transform: scale(1.1);
-					transform: scale(1.1);
-				}
-			}
-		}
-	}
+  position: -webkit-sticky; // 位置固定
+  position: sticky;
+  top: 70px;
+  .side_table {
+    margin-top: 50px;
+    tr {
+      line-height: 35px;
+      th {
+        text-align: center;
+        font-size: 15px;
+      }
+      .post_title { // 反応がない
+        transition: .3s;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        text-overflow: ellipsis; // 領域をはみ出したテキストを三点リーダー（...）で省略表示する
+        &:hover { // 文字を強調させる // 反応がない
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
 }
 
 
 .post_index_path {
-	margin-top: 30px;
-	float: right;
-	transition: .3s;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	&:hover { // 文字を強調させる
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
-	}
+  margin-top: 30px;
+  float: right;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  &:hover { // 文字を強調させる
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 .address_table {
-	margin: 20px 0;
-	font-size: 15px;
-	tr {
-		line-height: 25px;
-	}
+  margin: 20px 0;
+  font-size: 15px;
+  tr {
+    line-height: 25px;
+  }
 }
 
 #map {
-	width: 900px;
-	height: 500px;
+  width: 900px;
+  height: 500px;
 }
 // ここまでチーム側と共通
 
 // チーム側チーム詳細(マイチーム)
 .team_information {
-	margin: 20px auto;
-	background: #fff;
-	box-shadow: 0 0px 20px rgba(0,0,0,0.2);
-	border-radius: 10px;
-	padding: 20px;
-	.information_top {
-		display: flex;
-		width: 350px;
-		margin: 0 auto;
-		h2 {
-			margin: 10px 30px;
-		}
-	}
-	.team_image {
-		margin-top: 5px;
-	}
-	.team_introduction {
-		font-size: 18px;
-		margin: 10px 0 20px;
-	}
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 20px;
+  .information_top {
+    display: flex;
+    width: 350px;
+    margin: 0 auto;
+    h2 {
+      margin: 10px 30px;
+    }
+  }
+  .team_image {
+    margin-top: 5px;
+  }
+  .team_introduction {
+    font-size: 18px;
+    margin: 10px 0 20px;
+  }
 }
 
 // チーム一覧＆お気に入り一覧(共通)
 .seach {
-	float: right;
-	.seach_form {
-		width: 160px;
-		margin-top: 5px;
-		margin-bottom: 3px;
-	}
-	.seach_member_form {
-		width: 50px;
-		margin-bottom: 3px;
-	}
+  float: right;
+  .seach_form {
+    width: 160px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+  .seach_member_form {
+    width: 50px;
+    margin-bottom: 3px;
+  }
 }
 
 .team_boxes {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 15px;
-	.team_box {
-		background: #fff;
-		box-shadow: 0 0px 20px rgba(0,0,0,0.2);
-		border-radius: 10px;
-		padding: 10px;
-		margin-right: 31px;
-		margin-bottom: 30px;
-		transition: .3s;
-		.team_box_name {
-			margin-top: 5px;
-			font-size: 18px;
-			text-align: center;
-		}
-		.team_box_bottom {
-			line-height: 22px;
-			font-size: 15px;
-		}
-		&:hover { // 上に少し動く
-			-webkit-transform: translateY(-5px);
-			transform: translateY(-5px);
-		}
-	}
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  .team_box {
+    background: #fff;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 31px;
+    margin-bottom: 30px;
+    transition: .3s;
+    .team_box_name {
+      margin-top: 5px;
+      font-size: 18px;
+      text-align: center;
+    }
+    .team_box_bottom {
+      line-height: 22px;
+      font-size: 15px;
+    }
+    &:hover { // 上に少し動く
+      -webkit-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
 }
 
 // チーム側チーム一覧
 .team_table {
-	margin: 0 auto;
-	font-size: 18px;
-	th {
-		line-height: 40px;
-	}
+  margin: 0 auto;
+  font-size: 18px;
+  th {
+    line-height: 40px;
+  }
 }
 
 // チーム編集
 .change_pass_btn { // プレイヤー側と共通
-	transition: .3s;
+  transition: .3s;
 }
 
 .team_image_edit_area {
-	width: 500px;
-	.img_attachment {
-		margin-top: 5px;
-		font-size: 10px;
-		float: right;
-	}
-	.team_info {
-		margin: 20px 0 10px;
-	}
-	.introduction_area {
-		height: 200px;
-		width: 100%;
-	}
+  width: 500px;
+  .img_attachment {
+    margin-top: 5px;
+    font-size: 10px;
+    float: right;
+  }
+  .team_info {
+    margin: 20px 0 10px;
+  }
+  .introduction_area {
+    height: 200px;
+    width: 100%;
+  }
 }
 
 .team_edit_table {
-	margin: 10px auto;
-	th {
-		line-height: 40px;
-	}
-	.edit_password {
-		padding-bottom: 20px;
-	}
+  margin: 10px auto;
+  th {
+    line-height: 40px;
+  }
+  .edit_password {
+    padding-bottom: 20px;
+  }
 }
 
 // チャットへのリンク＆ボタン(team_team_show/ team_post_show)
 .fa-paper-plane {
-	transition: .3s;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	&:hover { // 文字を強調させる
-		-webkit-transform: scale(1.1);
-		transform: scale(1.1);
-	}
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  &:hover { // 文字を強調させる
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 @media screen and (max-width: 991px) {
-	#main_visual {
-		//ここからハンバーガーメニュー
-		.drawer {
-			display:block;
-			float: right;
-			.drawer_hidden { // チェックボックスは非表示に
-				display: none;
-			}
-			// ハンバーガーアイコンの設置スペース
-			.drawer_open {
-				display: flex;
-				height: 60px;
-				width: 60px;
-				justify-content: center;
-				align-items: center;
-				position: relative;
-				z-index: 10; // 重なり順を一番上に
-				cursor: pointer;
-			}
-			// ハンバーガーメニューのアイコン
-			.drawer_open span,
-			.drawer_open span:before,
-			.drawer_open span:after {
-				content: '';
-				display: block;
-				height: 3px;
-				width: 25px;
-				border-radius: 3px;
-				background: #333;
-				transition: 0.5s;
-				position: absolute;
-			}
-			// 三本線のうち一番上の棒の位置調整
-			.drawer_open span:before {
-				bottom: 8px;
-			}
-			// 三本線のうち一番下の棒の位置調整
-			.drawer_open span:after {
-				top: 8px;
-			}
-			// アイコンがクリックされたら真ん中の線を透明にする
-			#drawer_check:checked ~ .drawer_open span {
-				background: rgba(255, 255, 255, 0);
-			}
-			// アイコンがクリックされたらアイコンが×印になように上下の線を回転
-			#drawer_check:checked ~ .drawer_open span::before {
-				bottom: 0;
-				transform: rotate(45deg);
-			}
-			#drawer_check:checked ~ .drawer_open span::after {
-				top: 0;
-				transform: rotate(-45deg);
-			}
-			// メニューのデザイン
-			.drawer_content {
-				width: 100%;
-				height: 100%;
-				position: fixed;
-				top: 0;
-				left: 100%;// メニューを画面の外に飛ばす
-				z-index: 9;
-				transition: .5s;
-			}
-			// アイコンがクリックされたらメニューを表示
-			#drawer_check:checked ~ .drawer_content {
-				left: 0; // メニューを画面に入れる
-			}
-			// ここまでハンバーガーメニュー
-		}
-		.player_sign_up_btn, .team_sign_up_btn, .main_player_login, .main_team_login, .main_left, .main_right {
-			display: none;
-		}
-		.main_center {
-			.main_text {
-		    animation-delay: 1s; //アニメーション開始させる時間
-			}
-			.subtext {
-			  animation-delay: 4.5s; //アニメーション開始させる時間
-			}
-		}
-	}
-	.header_ber {
-		height: 60px;
-		ul {
-			width: 100%;
-			.li_area {
-				li a{ // aを付けるとarea全体がリンクになる。
-					height: 60px;
-					padding: 0 15px;
-					line-height: 60px;
-				}
-			}
-			.li_area:hover {
-				// hoverをなしにしたいので、同じbackgroundを使用。
-				background: rgba(225, 225, 225, 0.9);
-			}
-		}
-	}
-	html, body {
-		.wrapper {
-			header {
-				.header_logo {
-					font-size: 30px;
-					strong {
-						font-size: 40px;
-					}
-				}
-				nav {
-					display: none;
-				}
-			}
-			footer {
-				display: none;
-			}
-		}
-	}
-	.sign_up_btn {
-		font-size: 13px;
-		margin-top: 10px;
-		margin-right: 10px;
-		padding: 15px 12px;
-		border-radius: 10px;
-	}
-	.login_btn {
-		font-size: 13px;
-		margin-top: 10px;
-		margin-left: 10px;
-		padding: 15px 12px;
-		border-radius: 10px;
-	}
-	.create_btn, .update_btn {
-		padding: 12px 10px;
-	}
-	.container {
-		width: 95%;
-		.page_title {
-			font-size: 20px;
-			padding-left: 10px;
-			padding-bottom: 10px;
-			border-bottom: 2px solid #E1A253;
-		}
-	}
-	// 退会ページ(共通)
-	.exit_page {
-		padding: 50px;
-		h1 {
-			font-size: 20px;
-		}
-		h2 {
-			font-size: 15px;
-		}
-	}
-	// 新規登録＆ログイン画面
-	.signup_table, .login_table {
-		margin: 15px auto;
-		th {
-			line-height: 25px;
-		}
-	}
-	.team_signup_image_area {
-		width: 100%;
-		.team_info {
-			margin: 10px 0;
-		}
-		.introduction_area {
-			height: 150px;
-		}
-	}
-	.team_signup_table {
-		margin: 10px auto;
-		th {
-			line-height: 18px;
-		}
-	}
-	// story
-	#about_story {
-		height: 100%;
-		.story_boxes {
-			flex-direction: column; // 上から下へ並べる
-			.story_box {
-				margin-bottom: 20px;
-				width: 100%;
-				border: 1px solid #eee;
-				.story_box_title {
-					font-size: 17px;
-				}
-				.story_box_body {
-					line-height: 23px;
-					margin: 10px auto;
-					text-align: left;
-					width: 95%;
-				}
-			}
-		}
-	}
-	// player
-	#about_player {
-		height: 100%;
-		.section_text {
-			display: none;
-		}
-		.player_box {
-			flex-direction: column; // 上から下へ並べる
-			width: 90%;
-			height: 100%;
-			display: flex;
-			margin: 10px auto;
-			.box_img_area {
-				width: 100%;
-			}
-			.box_text_area {
-				width: 100%;
-				margin: 15px auto;
-				.player_box_text {
-					height: 100%;
-					font-size: 15px;
-					line-height: 20px;
-				}
-			}
-			.player_box_top {
-				display: none;
-			}
-			p {
-				font-size: 17px;
-			}
-		}
-	}
-	// team
-	#about_team {
-		height: 100%;
-		.section_text {
-			display: none;
-		}
-		.team_boxes {
-			flex-direction: column; // 上から下へ並べる
-			margin-bottom: 30px;
-			.team_box_area {
-				width: 100%;
-				margin-top: 50px;
-				.team_box_top {
-					width: 100%;
-				}
-				.team_box_text {
-					width: 98%;
-				}
-			}
-		}
-	}
-	// プレイヤー側チーム一覧＆お気に入り一覧
-	.team_boxes { // チーム側と共通
-		flex-direction: column; // 上から下へ並べる
-		margin-top: 20px;
-		.team_box {
-			margin-right: 0;
-			margin-bottom: 20px;
-			.team_box_name {
-			}
-			.team_box_bottom {
-			}
-		}
-	}
-	// プレイヤー側チーム詳細
-	.team_information {
-		padding: 15px;
-		.player_teams_information_top {
-			width: 100%;
-			height: 50px;
-			.category, .member {
-				font-size: 15px;
-				line-height: 30px;
-			}
-			.name {
-				font-size: 20px;
-			}
-		}
-	}
-	// ここからチーム側と共通
-	.side_posts {
-		display: none;
-	}
-	#map {
-		width: 100%;
-		height: 250px;
-	}
-	// チーム詳細(マイチーム)
-	.team_information {
-		width: 100%;
-		margin: 15px auto;
-		padding: 15px;
-		.information_top {
-			width: 100%;
-			h2 {
-				margin: 10px 30px;
-			}
-		}
-		.team_image {
-			width: 100%;
-		}
-		.team_introduction {
-			font-size: 15px;
-		}
-	}
-	// 新規投稿
-	.post_title_form {
-		width: 100%;
-	}
-	.post_body_form {
-		width: 100%;
-		height: 300px;
-	}
-	// 投稿一覧(共通)
-	.post_table {
-		font-size: 15px;
-		th {
-			line-height: 30px;
-		}
-		td {
-			line-height: 25px;
-		}
-		.post_title {
-		}
-		.fa-edit {
-			margin-right: 10px;
-		}
-	}
-	// 投稿詳細(共通)
-	.post_show_area {
-		width: 100%;
-	}
-	.post_show_box {
-		width: 100%;
-		padding: 15px;
-		.post_team_name {
-			font-size: 20px;
-		}
-		.fa-edit, .team_post_index {
-		}
-		.post_title_area {
-			width: 100%;
-			.post_title {
-				font-size: 20px;
-			}
-			.post_date {
-			}
-		}
-		.post_img {
-		}
-		.post_body {
-			font-size: 18px;
-		}
-	}
+  #main_visual {
+    //ここからハンバーガーメニュー
+    .drawer {
+      display:block;
+      float: right;
+      .drawer_hidden { // チェックボックスは非表示に
+        display: none;
+      }
+      // ハンバーガーアイコンの設置スペース
+      .drawer_open {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10; // 重なり順を一番上に
+        cursor: pointer;
+      }
+      // ハンバーガーメニューのアイコン
+      .drawer_open span,
+      .drawer_open span:before,
+      .drawer_open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #333;
+        transition: 0.5s;
+        position: absolute;
+      }
+      // 三本線のうち一番上の棒の位置調整
+      .drawer_open span:before {
+        bottom: 8px;
+      }
+      // 三本線のうち一番下の棒の位置調整
+      .drawer_open span:after {
+        top: 8px;
+      }
+      // アイコンがクリックされたら真ん中の線を透明にする
+      #drawer_check:checked ~ .drawer_open span {
+        background: rgba(255, 255, 255, 0);
+      }
+      // アイコンがクリックされたらアイコンが×印になように上下の線を回転
+      #drawer_check:checked ~ .drawer_open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+      }
+      #drawer_check:checked ~ .drawer_open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+      // メニューのデザイン
+      .drawer_content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;// メニューを画面の外に飛ばす
+        z-index: 9;
+        transition: .5s;
+      }
+      // アイコンがクリックされたらメニューを表示
+      #drawer_check:checked ~ .drawer_content {
+        left: 0; // メニューを画面に入れる
+      }
+      // ここまでハンバーガーメニュー
+    }
+    .player_sign_up_btn, .team_sign_up_btn, .main_player_login, .main_team_login, .main_left, .main_right {
+      display: none;
+    }
+    .main_center {
+      .main_text {
+        animation-delay: 1s; //アニメーション開始させる時間
+      }
+      .subtext {
+        animation-delay: 4.5s; //アニメーション開始させる時間
+      }
+    }
+  }
+  .header_ber {
+    height: 60px;
+    ul {
+      width: 100%;
+      .li_area {
+        li a{ // aを付けるとarea全体がリンクになる。
+          height: 60px;
+          padding: 0 15px;
+          line-height: 60px;
+        }
+      }
+      .li_area:hover {
+        // hoverをなしにしたいので、同じbackgroundを使用。
+        background: rgba(225, 225, 225, 0.9);
+      }
+    }
+  }
+  html, body {
+    .wrapper {
+      header {
+        .header_logo {
+          font-size: 30px;
+          strong {
+            font-size: 40px;
+          }
+        }
+        nav {
+          display: none;
+        }
+      }
+      footer {
+        display: none;
+      }
+    }
+  }
+  .sign_up_btn {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 15px 12px;
+    border-radius: 10px;
+  }
+  .login_btn {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 15px 12px;
+    border-radius: 10px;
+  }
+  .create_btn, .update_btn {
+    padding: 12px 10px;
+  }
+  .container {
+    width: 95%;
+    .page_title {
+      font-size: 20px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #E1A253;
+    }
+  }
+  // 退会ページ(共通)
+  .exit_page {
+    padding: 50px;
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+  }
+  // 新規登録＆ログイン画面
+  .signup_table, .login_table {
+    margin: 15px auto;
+    th {
+      line-height: 25px;
+    }
+  }
+  .team_signup_image_area {
+    width: 100%;
+    .team_info {
+      margin: 10px 0;
+    }
+    .introduction_area {
+      height: 150px;
+    }
+  }
+  .team_signup_table {
+    margin: 10px auto;
+    th {
+      line-height: 18px;
+    }
+  }
+  // story
+  #about_story {
+    height: 100%;
+    .story_boxes {
+      flex-direction: column; // 上から下へ並べる
+      .story_box {
+        margin-bottom: 20px;
+        width: 100%;
+        border: 1px solid #eee;
+        .story_box_title {
+          font-size: 17px;
+        }
+        .story_box_body {
+          line-height: 23px;
+          margin: 10px auto;
+          text-align: left;
+          width: 95%;
+        }
+      }
+    }
+  }
+  // player
+  #about_player {
+    height: 100%;
+    .section_text {
+      display: none;
+    }
+    .player_box {
+      flex-direction: column; // 上から下へ並べる
+      width: 90%;
+      height: 100%;
+      display: flex;
+      margin: 10px auto;
+      .box_img_area {
+        width: 100%;
+      }
+      .box_text_area {
+        width: 100%;
+        margin: 15px auto;
+        .player_box_text {
+          height: 100%;
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+      .player_box_top {
+        display: none;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+  // team
+  #about_team {
+    height: 100%;
+    .section_text {
+      display: none;
+    }
+    .team_boxes {
+      flex-direction: column; // 上から下へ並べる
+      margin-bottom: 30px;
+      .team_box_area {
+        width: 100%;
+        margin-top: 50px;
+        .team_box_top {
+          width: 100%;
+        }
+        .team_box_text {
+          width: 98%;
+        }
+      }
+    }
+  }
+  // プレイヤー側チーム一覧＆お気に入り一覧
+  .team_boxes { // チーム側と共通
+    flex-direction: column; // 上から下へ並べる
+    margin-top: 20px;
+    .team_box {
+      margin-right: 0;
+      margin-bottom: 20px;
+      .team_box_name {
+      }
+      .team_box_bottom {
+      }
+    }
+  }
+  // プレイヤー側チーム詳細
+  .team_information {
+    padding: 15px;
+    .player_teams_information_top {
+      width: 100%;
+      height: 50px;
+      .category, .member {
+        font-size: 15px;
+        line-height: 30px;
+      }
+      .name {
+        font-size: 20px;
+      }
+    }
+  }
+  // ここからチーム側と共通
+  .side_posts {
+    display: none;
+  }
+  #map {
+    width: 100%;
+    height: 250px;
+  }
+  // チーム詳細(マイチーム)
+  .team_information {
+    width: 100%;
+    margin: 15px auto;
+    padding: 15px;
+    .information_top {
+      width: 100%;
+      h2 {
+        margin: 10px 30px;
+      }
+    }
+    .team_image {
+      width: 100%;
+    }
+    .team_introduction {
+      font-size: 15px;
+    }
+  }
+  // 新規投稿
+  .post_title_form {
+    width: 100%;
+  }
+  .post_body_form {
+    width: 100%;
+    height: 300px;
+  }
+  // 投稿一覧(共通)
+  .post_table {
+    font-size: 15px;
+    th {
+      line-height: 30px;
+    }
+    td {
+      line-height: 25px;
+    }
+    .post_title {
+    }
+    .fa-edit {
+      margin-right: 10px;
+    }
+  }
+  // 投稿詳細(共通)
+  .post_show_area {
+    width: 100%;
+  }
+  .post_show_box {
+    width: 100%;
+    padding: 15px;
+    .post_team_name {
+      font-size: 20px;
+    }
+    .fa-edit, .team_post_index {
+    }
+    .post_title_area {
+      width: 100%;
+      .post_title {
+        font-size: 20px;
+      }
+      .post_date {
+      }
+    }
+    .post_img {
+    }
+    .post_body {
+      font-size: 18px;
+    }
+  }
 }

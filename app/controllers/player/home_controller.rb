@@ -1,4 +1,4 @@
 class Player::HomeController < ApplicationController
-	def about
-	end
+  def about
+  end
 end
