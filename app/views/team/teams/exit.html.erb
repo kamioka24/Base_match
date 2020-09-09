@@ -1,10 +1,10 @@
 <div class="exit_page">
-	<h1><strong>本当に退会しますか？</strong></h1>
-	<h2>
-		退会すると、会員登録情報を削除し、<br>
-		投稿や閲覧ができなくなります。<br>
-		退会する場合は、「退会する」をクリックしてください。
-	</h2>
-	<%= link_to "退会しない", team_team_path, class: "btn no_exit_btn" %>
-	<%= link_to "退会する", team_team_path, class: "btn exit_btn", method: :delete, "data-confirm" => "退会してよろしいですか？" %>
+  <h1><strong>本当に退会しますか？</strong></h1>
+  <h2>
+    退会すると、会員登録情報を削除し、<br>
+    投稿や閲覧ができなくなります。<br>
+    退会する場合は、「退会する」をクリックしてください。
+  </h2>
+  <%= link_to "退会しない", team_team_path, class: "btn no_exit_btn" %>
+  <%= link_to "退会する", team_team_path, class: "btn exit_btn", method: :delete, "data-confirm" => "退会してよろしいですか？" %>
 </div>

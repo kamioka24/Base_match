@@ -1,65 +1,65 @@
 <div class="container">
-	<div class="row">
-		<h1 class="page_title">チーム情報編集画面</h1>
-		<%= form_for(@team, url: team_team_path) do |f| %>
-            <div class="col-xs-6">
-                <div class="team_image_edit_area">
-                    <%= attachment_image_tag @team, :team_image, :fill, 500, 250 %>
-                    <%= f.attachment_field :team_image, class: "img_attachment" %>
-                    <%= f.label :introduction, "チーム紹介文", class: "team_info" %>
-                    <%= f.text_area :introduction, class: "introduction_area" %>
-                </div>
-            </div>
+  <div class="row">
+    <h1 class="page_title">チーム情報編集画面</h1>
+    <%= form_for(@team, url: team_team_path) do |f| %>
+      <div class="col-xs-6">
+        <div class="team_image_edit_area">
+          <%= attachment_image_tag @team, :team_image, :fill, 500, 250 %>
+          <%= f.attachment_field :team_image, class: "img_attachment" %>
+          <%= f.label :introduction, "チーム紹介文", class: "team_info" %>
+          <%= f.text_area :introduction, class: "introduction_area" %>
+        </div>
+      </div>
 
-            <div class="col-xs-6">
-                <table class="team_edit_table" width="500">
-                	<tr>
-                        <th></th>
-                        <td class="edit_password">
-                            <%= link_to "パスワードの変更はこちら", edit_team_registration_path, class: "change_pass_btn" %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><%= f.label :name, "チーム名" %></th>
-                        <td><%= f.text_field :name %></td>
-                    </tr>
-                    <tr>
-                        <th><%= f.label :member, "人数(数字のみ)" %></th>
-                        <td><%= f.text_field :member %>人</td>
-                    </tr>
-                    <tr>
-                        <th><%= f.label :category, "カテゴリー" %></th>
-                        <td>
-                            <%= f.radio_button :category, :硬式 %><%= f.label :category, :硬式 %>
-                            <%= f.radio_button :category, :軟式 %><%= f.label :category, :軟式 %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><%= f.label :prefecture_code, "都道府県" %></th>
-                        <td><%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %></td>
-                    </tr>
-                    <tr>
-                        <th><%= f.label :city, "市区町村" %></th>
-                        <td><%= f.text_field :city %></td>
-                    </tr>
-                    <tr>
-                        <th><%= f.label :street, "番号・番地" %></th>
-                        <td><%= f.text_field :street %></td>
-                    </tr>
-                    <tr>
-                        <th><%= f.label :phone_number, "電話番号(ハイフンなし)" %></th>
-                        <td><%= f.text_field :phone_number %></td>
-                    </tr>
-                    <tr>
-                        <th><%= f.label :email, "メールアドレス" %></th>
-                        <td><%= f.email_field :email, autocomplete: "email" %></td>
-                    </tr>
-                    <tr>
-                        <td><%= link_to "退会する", exit_team_team_path, class: "btn exit_btn" %></td>
-                        <td><%= f.submit "変更内容を保存する", class: "btn update_btn" %></td>
-                    </tr>
-                </table>
-            </div>
-        <% end %>
-    </div>
+      <div class="col-xs-6">
+        <table class="team_edit_table" width="500">
+          <tr>
+            <th></th>
+            <td class="edit_password">
+              <%= link_to "パスワードの変更はこちら", edit_team_registration_path, class: "change_pass_btn" %>
+            </td>
+          </tr>
+          <tr>
+            <th><%= f.label :name, "チーム名" %></th>
+            <td><%= f.text_field :name %></td>
+          </tr>
+          <tr>
+            <th><%= f.label :member, "人数(数字のみ)" %></th>
+            <td><%= f.text_field :member %>人</td>
+          </tr>
+          <tr>
+            <th><%= f.label :category, "カテゴリー" %></th>
+            <td>
+              <%= f.radio_button :category, :硬式 %><%= f.label :category, :硬式 %>
+              <%= f.radio_button :category, :軟式 %><%= f.label :category, :軟式 %>
+            </td>
+          </tr>
+          <tr>
+            <th><%= f.label :prefecture_code, "都道府県" %></th>
+            <td><%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %></td>
+          </tr>
+          <tr>
+            <th><%= f.label :city, "市区町村" %></th>
+            <td><%= f.text_field :city %></td>
+          </tr>
+          <tr>
+            <th><%= f.label :street, "番号・番地" %></th>
+            <td><%= f.text_field :street %></td>
+          </tr>
+          <tr>
+            <th><%= f.label :phone_number, "電話番号(ハイフンなし)" %></th>
+            <td><%= f.text_field :phone_number %></td>
+          </tr>
+          <tr>
+            <th><%= f.label :email, "メールアドレス" %></th>
+            <td><%= f.email_field :email, autocomplete: "email" %></td>
+          </tr>
+          <tr>
+            <td><%= link_to "退会する", exit_team_team_path, class: "btn exit_btn" %></td>
+            <td><%= f.submit "変更内容を保存する", class: "btn update_btn" %></td>
+          </tr>
+        </table>
+      </div>
+    <% end %>
+  </div>
 </div>

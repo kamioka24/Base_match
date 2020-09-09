@@ -1,129 +1,129 @@
 <div class="container">
-	<div class="row">
-		<% if @team == current_team %>
-			<h1 class="page_title">マイチーム
-				<%= link_to edit_team_team_path(@team) do %>
-					<i class="fa fa-cog"> 編集する</i>
-				<% end %>
-			</h1>
-		<% end %>
-		<p class="flash_message"><%= flash[:notice] %></p>
-		<div class="col-xs-3 side_posts">
-			<table width="350" class="side_table">
-				<thead>
-					<% if @team == current_team %>
-						<tr>
-							<th colspan="3">新着情報</th> <!-- 3つ分のスペースを結合 -->
-						</tr>
-					<% else %>
-						<tr>
-							<th colspan="2"><%= @team.name %>　新着情報</th>
-						</tr>
-					<% end %>
-				</thead>
-				<% @posts.each do |post| %>
-					<% if @team == current_team %>
-						<% if @team.prefecture_name == post.team.prefecture_name %>
-						<!-- prefecture_codeをprefecture_nameに変換しているため -->
-							<tbody>
-								<tr>
-									<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-									<td ><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
-									<td><%= post.team.name %></td>
-								</tr>
-							</tbody>
-						<% end %>
-					<% else %>
-						<% if @team == post.team %>
-							<tbody>
-								<tr>
-									<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-									<td><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
-								</tr>
-							</tbody>
-						<% end %>
-					<% end %>
-				<% end %>
-			</table>
-			<%= link_to "#{@team.name}の投稿一覧へ", team_posts_path(team: @team.id), class: "post_index_path" %> <!-- teamのidを含む -->
-		</div>
-		<div class="col-xs-9">
-			<div class="team_information">
-				<div class="information_top">
-					<h3><%= @team.category %></h3>
-					<h2><%= @team.name %></h2>
-					<h3><%= @team.member %>人</h3>
-				</div>
-				<div class="team_image">
-					<%= attachment_image_tag @team, :team_image, :fill, 900, 600 %>
-				</div>
-				<p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
-				<!-- safe_joinによって改行が反映される -->
-				<table width="350" class="address_table">
-					<tr>
-						<th><i class="fas fa-mobile-alt fa-fw"></i> 連絡先</th>
-						<!-- クラスにfa-fwを追加するとアイコンの横幅が統一される -->
-						<td><%= @team.phone_number %></td>
-					</tr>
-					<tr>
-						<th><i class="fas fa-baseball-ball fa-fw"></i> 住所</th>
-						<!-- クラスにfa-fwを追加するとアイコンの横幅が統一される -->
-						<td><%= @team.prefecture_name %><%= @team.city %><%= @team.street %></td>
-						<!-- prefecture_codeをprefecture_nameに変換しているため -->
-					</tr>
-				</table>
-				<div id="map"></div>
-			</div>
-			<% if @team.id != current_team.id %>
-				<% if @isRoom == true %>
-					<%= link_to team_room_path(@roomId) do %>
-						<i class="fas fa-paper-plane"> チャットへ...</i>
-					<% end %>
-				<% else %>
-					<%= form_for(@room, url: team_rooms_path) do |f| %>
-						<%= fields_for @entry do |e| %>
-							<%= e.hidden_field :team_id, :value=> @team.id %>
-						<% end %>
-						<%= f.submit "チャットを始める", class: "chats_btn" %>
-					<% end %>
-				<% end %>
-			<% end %>
-			<% if @team != current_team %>
-				<%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
-			<% end %>
-		</div>
-	</div>
+  <div class="row">
+    <% if @team == current_team %>
+      <h1 class="page_title">マイチーム
+        <%= link_to edit_team_team_path(@team) do %>
+          <i class="fa fa-cog"> 編集する</i>
+        <% end %>
+      </h1>
+    <% end %>
+    <p class="flash_message"><%= flash[:notice] %></p>
+    <div class="col-xs-3 side_posts">
+      <table width="350" class="side_table">
+        <thead>
+          <% if @team == current_team %>
+            <tr>
+              <th colspan="3">新着情報</th> <!-- 3つ分のスペースを結合 -->
+            </tr>
+          <% else %>
+            <tr>
+              <th colspan="2"><%= @team.name %>　新着情報</th>
+            </tr>
+          <% end %>
+        </thead>
+        <% @posts.each do |post| %>
+          <% if @team == current_team %>
+            <% if @team.prefecture_name == post.team.prefecture_name %>
+            <!-- prefecture_codeをprefecture_nameに変換しているため -->
+              <tbody>
+                <tr>
+                  <td><%= post.created_at.strftime("%Y/%m/%d") %></td>
+                  <td ><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
+                  <td><%= post.team.name %></td>
+                </tr>
+              </tbody>
+            <% end %>
+          <% else %>
+            <% if @team == post.team %>
+              <tbody>
+                <tr>
+                  <td><%= post.created_at.strftime("%Y/%m/%d") %></td>
+                  <td><%= link_to post.title, team_post_path(post), class: "post_title" %></td>
+                </tr>
+              </tbody>
+            <% end %>
+          <% end %>
+        <% end %>
+      </table>
+      <%= link_to "#{@team.name}の投稿一覧へ", team_posts_path(team: @team.id), class: "post_index_path" %> <!-- teamのidを含む -->
+    </div>
+    <div class="col-xs-9">
+      <div class="team_information">
+        <div class="information_top">
+          <h3><%= @team.category %></h3>
+          <h2><%= @team.name %></h2>
+          <h3><%= @team.member %>人</h3>
+        </div>
+        <div class="team_image">
+          <%= attachment_image_tag @team, :team_image, :fill, 900, 600 %>
+        </div>
+        <p class="team_introduction"><%= safe_join(@team.introduction.split("\n"), tag(:br)) %></p>
+        <!-- safe_joinによって改行が反映される -->
+        <table width="350" class="address_table">
+          <tr>
+            <th><i class="fas fa-mobile-alt fa-fw"></i> 連絡先</th>
+            <!-- クラスにfa-fwを追加するとアイコンの横幅が統一される -->
+            <td><%= @team.phone_number %></td>
+          </tr>
+          <tr>
+            <th><i class="fas fa-baseball-ball fa-fw"></i> 住所</th>
+            <!-- クラスにfa-fwを追加するとアイコンの横幅が統一される -->
+            <td><%= @team.prefecture_name %><%= @team.city %><%= @team.street %></td>
+            <!-- prefecture_codeをprefecture_nameに変換しているため -->
+          </tr>
+        </table>
+        <div id="map"></div>
+      </div>
+      <% if @team.id != current_team.id %>
+        <% if @isRoom == true %>
+          <%= link_to team_room_path(@roomId) do %>
+            <i class="fas fa-paper-plane"> チャットへ...</i>
+          <% end %>
+        <% else %>
+          <%= form_for(@room, url: team_rooms_path) do |f| %>
+            <%= fields_for @entry do |e| %>
+              <%= e.hidden_field :team_id, :value=> @team.id %>
+            <% end %>
+            <%= f.submit "チャットを始める", class: "chats_btn" %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <% if @team != current_team %>
+        <%= link_to "前の画面へ戻る", :back, class: "back_btn" %> <!-- 前の状態の画面に戻る -->
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript">
-	let map
-	let geocoder
-	function initMap() {
-	// latitude,longitudeから位置を特定
-	    var test ={lat: <%= @team.latitude %>, lng: <%= @team.longitude %>};
-	    var map = new google.maps.Map(document.getElementById('map'), {
-	              zoom: 15,
-	              center: test
-	    });
-	    var transitLayer = new google.maps.TransitLayer();
-		    transitLayer.setMap(map);
-	    var contentString = '住所：<%= @team.prefecture_name %><%= @team.city %><%= @team.street %>';
-	    // prefecture_codeをprefecture_nameに変換しているため
-	    var infowindow = new google.maps.InfoWindow({
-		    content: contentString
-	    });
+  let map
+  let geocoder
+  function initMap() {
+  // latitude,longitudeから位置を特定
+      var test ={lat: <%= @team.latitude %>, lng: <%= @team.longitude %>};
+      var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: test
+      });
+      var transitLayer = new google.maps.TransitLayer();
+        transitLayer.setMap(map);
+      var contentString = '住所：<%= @team.prefecture_name %><%= @team.city %><%= @team.street %>';
+      // prefecture_codeをprefecture_nameに変換しているため
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
 
-	 // Map上の指定した位置にピンを挿して表示する
-	    var marker = new google.maps.Marker({
-			position:test,
-			map: map,
-			title: contentString
-	    });
+   // Map上の指定した位置にピンを挿して表示する
+      var marker = new google.maps.Marker({
+      position:test,
+      map: map,
+      title: contentString
+      });
 
-	    marker.addListener('click', function() {
-	    	infowindow.open(map, marker);
-	    });
-	}
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+  }
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['API_KEY'] %>&callback=initMap" async defer>

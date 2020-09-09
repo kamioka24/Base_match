@@ -1,30 +1,30 @@
 <div class="container">
-    <h3 class="page_title">チームログイン</h3>
+  <h3 class="page_title">チームログイン</h3>
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <table class="login_table" width="500">
-            <tr>
-                <th><%= f.label :email, "メールアドレス" %></th>
-                <td><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %></td>
-                <!-- autofocus: trueによりページ表示後に自動でカーソルがemailに合っているようになる -->
-            </tr>
-            <tr>
-                <th><%= f.label :password, "パスワード" %></th>
-                <td><%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワード" %></td>
-            </tr>
-            <tr>
-                <th></th>
-                <td>
-                    <% if devise_mapping.rememberable? %>
-                        <%= f.check_box :remember_me %>
-                        <%= f.label :remember_me %>
-                    <% end %>
-                </td>
-            </tr>
-            <tr>
-                <td><%= link_to "新規チーム登録はこちら", new_team_registration_path, class: "signup_link btn" %></td>
-                <td><%= f.submit "ログイン", class: "btn update_btn" %></td>
-            </tr>
-        </table>
-    <% end %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <table class="login_table" width="500">
+      <tr>
+        <th><%= f.label :email, "メールアドレス" %></th>
+        <td><%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %></td>
+        <!-- autofocus: trueによりページ表示後に自動でカーソルがemailに合っているようになる -->
+      </tr>
+      <tr>
+        <th><%= f.label :password, "パスワード" %></th>
+        <td><%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワード" %></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>
+          <% if devise_mapping.rememberable? %>
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td><%= link_to "新規チーム登録はこちら", new_team_registration_path, class: "signup_link btn" %></td>
+        <td><%= f.submit "ログイン", class: "btn update_btn" %></td>
+      </tr>
+    </table>
+  <% end %>
 </div>

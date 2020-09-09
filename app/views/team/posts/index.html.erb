@@ -1,44 +1,44 @@
 <div class="container">
-	<div class="row">
-		<div class="col-xs-9">
-			<% if params[:team].nil? %> <!-- 投稿一覧出力時にチームidが含まれているかの分岐 -->
-				<h1 class="page_title">投稿一覧</h1>
-			<% else %>
-				<h1 class="page_title"><%= Team.find(params[:team]).name %>　投稿一覧</h1>
-			<% end %>
-			<p class="flash_message"><%= flash[:notice] %></p>
-		</div>
-		<div class="col-xs-3">
-			<%= search_form_for @q, url: team_posts_path, class: "seach" do |f| %>
-				<%= f.search_field :title_cont, class: "seach_form", placeholder: "検索" %>
-				<%= button_tag type: "submit" do %>
-		            <i class="fas fa-search"></i>
-		        <% end %>
-			<% end %>
-		</div>
-	</div>
-	<div class="post_balloons">
-		<% @posts.each do |post| %>
-			<div class="post_balloon">
-				<div class="balloon_text">
-					<%= post.created_at.strftime("%Y/%m/%d") %><br>
-					<%= link_to post.title, team_post_path(post), class: "post_title" %><br>
-					<% if params[:team].nil? %>
-						<%= post.team.name %> (<%= post.team.prefecture_name %>)<br>
-					<% end %>
-					<% if post.team_id == current_team.id %>
-						<td>
-							<%= link_to edit_team_post_path(post) do %>
-								<i class="fa fa-edit"></i>
-							<% end %>
-							<%= link_to team_post_path(post), method: :delete, "data-confirm" => "投稿を削除してよろしいですか？" do %>
-								<i class="fa fa-trash"></i>
-							<% end %>
-						</td>
-					<% end %>
-				</div>
-			</div>
-		<% end %>
-	</div>
-	<%= paginate @posts %> <!-- ページ遷移ボタン -->
+  <div class="row">
+    <div class="col-xs-9">
+      <% if params[:team].nil? %> <!-- 投稿一覧出力時にチームidが含まれているかの分岐 -->
+        <h1 class="page_title">投稿一覧</h1>
+      <% else %>
+        <h1 class="page_title"><%= Team.find(params[:team]).name %>　投稿一覧</h1>
+      <% end %>
+      <p class="flash_message"><%= flash[:notice] %></p>
+    </div>
+    <div class="col-xs-3">
+      <%= search_form_for @q, url: team_posts_path, class: "seach" do |f| %>
+        <%= f.search_field :title_cont, class: "seach_form", placeholder: "検索" %>
+        <%= button_tag type: "submit" do %>
+          <i class="fas fa-search"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="post_balloons">
+    <% @posts.each do |post| %>
+      <div class="post_balloon">
+        <div class="balloon_text">
+          <%= post.created_at.strftime("%Y/%m/%d") %><br>
+          <%= link_to post.title, team_post_path(post), class: "post_title" %><br>
+          <% if params[:team].nil? %>
+            <%= post.team.name %> (<%= post.team.prefecture_name %>)<br>
+          <% end %>
+          <% if post.team_id == current_team.id %>
+            <td>
+              <%= link_to edit_team_post_path(post) do %>
+                <i class="fa fa-edit"></i>
+              <% end %>
+              <%= link_to team_post_path(post), method: :delete, "data-confirm" => "投稿を削除してよろしいですか？" do %>
+                <i class="fa fa-trash"></i>
+              <% end %>
+            </td>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= paginate @posts %> <!-- ページ遷移ボタン -->
 </div>

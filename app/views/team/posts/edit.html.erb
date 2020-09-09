@@ -1,16 +1,16 @@
 <div class="container">
-	<h1 class="page_title">投稿編集</h1>
-	<%= form_for(@post, url: team_post_path) do |f| %>
-		<div class="col-xs-6">
-			<%= attachment_image_tag @post, :post_image, :fill, 500, 300 %>
-			<%= f.attachment_field :post_image %>
-		</div>
-		<div class="col-xs-6">
-			<%= f.label :title, "タイトル" %><br>
-			<%= f.text_field :title, class: "post_title_form" %><br>
-			<%= f.label :body, "本文" %><br>
-			<%= f.text_area :body, class: "post_body_form" %><br>
-			<%= f.submit "変更を保存する", class: "btn update_btn" %>
-		</div>
-	<% end %>
+  <h1 class="page_title">投稿編集</h1>
+  <%= form_for(@post, url: team_post_path) do |f| %>
+    <div class="col-xs-6">
+      <%= attachment_image_tag @post, :post_image, :fill, 500, 300 %>
+      <%= f.attachment_field :post_image %>
+    </div>
+    <div class="col-xs-6">
+      <%= f.label :title, "タイトル" %><br>
+      <%= f.text_field :title, class: "post_title_form" %><br>
+      <%= f.label :body, "本文" %><br>
+      <%= f.text_area :body, class: "post_body_form" %><br>
+      <%= f.submit "変更を保存する", class: "btn update_btn" %>
+    </div>
+  <% end %>
 </div>
