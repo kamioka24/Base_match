@@ -1,33 +1,33 @@
 <div class="container">
-	<div class="row">
-		<div class="col-xs-9">
-			<% if params[:team].nil? %>
-				<h1 class="page_title">投稿一覧</h1>
-			<% else %>
-				<h1 class="page_title"><%= Team.find(params[:team]).name %>　投稿一覧</h1>
-			<% end %>
-		</div>
-		<div class="col-xs-3">
-			<%= search_form_for @q, url: player_posts_path, class: "seach" do |f| %>
-				<%= f.search_field :title_cont, class: "seach_form", placeholder: "検索" %>
-				<%= button_tag type: "submit" do %>
-		            <i class="fas fa-search"></i>
-		        <% end %>
-			<% end %>
-		</div>
-	</div>
-	<div class="post_balloons">
-		<% @posts.each do |post| %>
-			<div class="post_balloon">
-				<div class="balloon_text">
-					<%= post.created_at.strftime("%Y/%m/%d") %><br>
-					<%= link_to post.title, player_post_path(post), class: "post_title" %><br>
-					<% if params[:team].nil? %>
-						<%= post.team.name %> (<%= post.team.prefecture_name %>)
-					<% end %>
-				</div>
-			</div>
-		<% end %>
-	</div>
-	<%= paginate @posts %> <!-- ページ遷移ボタン -->
+  <div class="row">
+    <div class="col-xs-9">
+      <% if params[:team].nil? %>
+        <h1 class="page_title">投稿一覧</h1>
+      <% else %>
+        <h1 class="page_title"><%= Team.find(params[:team]).name %>　投稿一覧</h1>
+      <% end %>
+    </div>
+    <div class="col-xs-3">
+      <%= search_form_for @q, url: player_posts_path, class: "seach" do |f| %>
+        <%= f.search_field :title_cont, class: "seach_form", placeholder: "検索" %>
+        <%= button_tag type: "submit" do %>
+                <i class="fas fa-search"></i>
+            <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="post_balloons">
+    <% @posts.each do |post| %>
+      <div class="post_balloon">
+        <div class="balloon_text">
+          <%= post.created_at.strftime("%Y/%m/%d") %><br>
+          <%= link_to post.title, player_post_path(post), class: "post_title" %><br>
+          <% if params[:team].nil? %>
+            <%= post.team.name %> (<%= post.team.prefecture_name %>)
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= paginate @posts %> <!-- ページ遷移ボタン -->
 </div>

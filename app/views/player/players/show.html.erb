@@ -1,58 +1,58 @@
 <div class="container">
-	<div class="row">
-		<div class="col-xs-12">
-			<p class="flash_message"><%= flash[:notice] %></p>
-			<h1 class="page_title">マイページ
-				<% if @player == current_player %>
-					<%= link_to edit_player_player_path do %>
-						<i class="fa fa-cog"> 編集する</i>
-					<% end %>
-				<% end %>
-			</h1>
-		</div>
-		<div class="col-xs-3 side_posts">
-			<table width="300" class="mypage_table">
-				<thead>
-					<tr>
-						<th colspan="3">新着情報</th>
-					</tr>
-				</thead>
-				<% @posts.each do |post| %>
-					<% if post.team.prefecture_name == current_player.prefecture_name %>
-					<!-- prefecture_codeをprefecture_nameに変換しているため -->
-						<tbody>
-							<tr>
-								<td><%= post.created_at.strftime("%Y/%m/%d") %></td>
-								<td><%= link_to post.title, player_post_path(post), class: "post_title" %></td>
-								<td><%= post.team.name %></td>
-							</tr>
-						</tbody>
-					<% end %>
-				<% end %>
-			</table>
-		</div>
-		<div class="col-xs-9">
-			<h2 class="mypage_top">お近くのチーム(<%= current_player.prefecture_name %>)</h2>
-			<!-- prefecture_codeをprefecture_nameに変換しているため -->
-			<div class="near_team">
-				<% @teams.each do |team| %>
-					<% if team.prefecture_name == current_player.prefecture_name %>
-					<!-- prefecture_codeをprefecture_nameに変換しているため -->
-						<div class="team_box">
-							<%= link_to player_team_path(team) do %>
-								<%= attachment_image_tag team, :team_image, :fill, 200, 130 %><br>
-								<p class="team_box_name"><%= team.name %></p>
-							<% end %>
-							<div class="team_box_bottom">
-								・<%= team.city %><br>
-								・<%= team.category %><br>
-								・<%= team.member %>人
-							</div>
-						</div>
-					<% end %>
-				<% end %>
-				<%= paginate @teams %> <!-- ページ遷移ボタン -->
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="flash_message"><%= flash[:notice] %></p>
+      <h1 class="page_title">マイページ
+        <% if @player == current_player %>
+          <%= link_to edit_player_player_path do %>
+            <i class="fa fa-cog"> 編集する</i>
+          <% end %>
+        <% end %>
+      </h1>
+    </div>
+    <div class="col-xs-3 side_posts">
+      <table width="300" class="mypage_table">
+        <thead>
+          <tr>
+            <th colspan="3">新着情報</th>
+          </tr>
+        </thead>
+        <% @posts.each do |post| %>
+          <% if post.team.prefecture_name == current_player.prefecture_name %>
+          <!-- prefecture_codeをprefecture_nameに変換しているため -->
+            <tbody>
+              <tr>
+                <td><%= post.created_at.strftime("%Y/%m/%d") %></td>
+                <td><%= link_to post.title, player_post_path(post), class: "post_title" %></td>
+                <td><%= post.team.name %></td>
+              </tr>
+            </tbody>
+          <% end %>
+        <% end %>
+      </table>
+    </div>
+    <div class="col-xs-9">
+      <h2 class="mypage_top">お近くのチーム(<%= current_player.prefecture_name %>)</h2>
+      <!-- prefecture_codeをprefecture_nameに変換しているため -->
+      <div class="near_team">
+        <% @teams.each do |team| %>
+          <% if team.prefecture_name == current_player.prefecture_name %>
+          <!-- prefecture_codeをprefecture_nameに変換しているため -->
+            <div class="team_box">
+              <%= link_to player_team_path(team) do %>
+                <%= attachment_image_tag team, :team_image, :fill, 200, 130 %><br>
+                <p class="team_box_name"><%= team.name %></p>
+              <% end %>
+              <div class="team_box_bottom">
+                ・<%= team.city %><br>
+                ・<%= team.category %><br>
+                ・<%= team.member %>人
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        <%= paginate @teams %> <!-- ページ遷移ボタン -->
+      </div>
+    </div>
+  </div>
 </div>

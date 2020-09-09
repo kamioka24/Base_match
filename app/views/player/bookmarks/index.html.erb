@@ -1,22 +1,22 @@
 <div class="container">
-	<h1 class="page_title">お気に入りチーム</h1>
-	<div class="team_boxes">
-		<% @bookmarks.each do |bookmark| %>
-			<div class="team_box">
-				<div id="bookmarks_buttons_<%= bookmark.team.id %>">
-		             <%= render partial: 'player/bookmarks/bookmark', locals: { team: bookmark.team } %>
-		        </div>
-				<%= link_to player_team_path(bookmark.team) do %>
-					<%= attachment_image_tag bookmark.team, :team_image, :fill, 200, 130 %><br>
-					<p class="team_box_name"><%= bookmark.team.name %></p>
-				<% end %>
-				<div class="team_box_bottom">
-					・<%= bookmark.team.prefecture_name %><%= bookmark.team.city %><br>
-					<!-- prefecture_codeをprefecture_nameに変換しているため -->
-					・<%= bookmark.team.category %><br>
-					・<%= bookmark.team.member %>人
-				</div>
-			</div>
-		<% end %>
-	</div>
+  <h1 class="page_title">お気に入りチーム</h1>
+  <div class="team_boxes">
+    <% @bookmarks.each do |bookmark| %>
+      <div class="team_box">
+        <div id="bookmarks_buttons_<%= bookmark.team.id %>">
+                 <%= render partial: 'player/bookmarks/bookmark', locals: { team: bookmark.team } %>
+            </div>
+        <%= link_to player_team_path(bookmark.team) do %>
+          <%= attachment_image_tag bookmark.team, :team_image, :fill, 200, 130 %><br>
+          <p class="team_box_name"><%= bookmark.team.name %></p>
+        <% end %>
+        <div class="team_box_bottom">
+          ・<%= bookmark.team.prefecture_name %><%= bookmark.team.city %><br>
+          <!-- prefecture_codeをprefecture_nameに変換しているため -->
+          ・<%= bookmark.team.category %><br>
+          ・<%= bookmark.team.member %>人
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

@@ -1,32 +1,32 @@
 <div class="container">
-    <h3 class="page_title">登録情報編集</h3>
+  <h3 class="page_title">登録情報編集</h3>
 
-    <%= form_for(@player, url: player_player_path) do |f| %>
+  <%= form_for(@player, url: player_player_path) do |f| %>
 
-        <table class="signup_table" width="500"> <!-- table名共同使用 -->
-        	<tr>
-                <th></th>
-                <td class="edit_password">
-                    <%= link_to "パスワードの変更はこちら", edit_player_registration_path, class: "change_pass_btn" %>
-                </td>
-	        </tr>
-            <tr>
-                <th><%= f.label :name, "アカウント名" %></th>
-                <td><%= f.text_field :name, autofocus: true, placeholder: "(例)野球太郎" %></td>
-                <!-- autofocus: trueによりページ表示後に自動でカーソルがnameに合っているようになる -->
-            </tr>
-            <tr>
-                <th><%= f.label :prefecture_code, "都道府県" %></th>
-                <td><%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %></td>
-            </tr>
-            <tr>
-                <th><%= f.label :email, "メールアドレス" %></th>
-                <td><%= f.email_field :email, autocomplete: "email", placeholder: "(例)base_match@gmail.com" %></td>
-            </tr>
-            <tr>
-                <td><%= link_to "退会する", exit_player_player_path, class: "btn exit_btn" %></td>
-                <td><%= f.submit "変更内容を保存する", class: "btn update_btn" %></td>
-            </tr>
-        </table>
-    <% end %>
+    <table class="signup_table" width="500"> <!-- table名共同使用 -->
+      <tr>
+        <th></th>
+        <td class="edit_password">
+            <%= link_to "パスワードの変更はこちら", edit_player_registration_path, class: "change_pass_btn" %>
+        </td>
+      </tr>
+      <tr>
+        <th><%= f.label :name, "アカウント名" %></th>
+        <td><%= f.text_field :name, autofocus: true, placeholder: "(例)野球太郎" %></td>
+        <!-- autofocus: trueによりページ表示後に自動でカーソルがnameに合っているようになる -->
+      </tr>
+      <tr>
+        <th><%= f.label :prefecture_code, "都道府県" %></th>
+        <td><%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :email, "メールアドレス" %></th>
+        <td><%= f.email_field :email, autocomplete: "email", placeholder: "(例)base_match@gmail.com" %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "退会する", exit_player_player_path, class: "btn exit_btn" %></td>
+        <td><%= f.submit "変更内容を保存する", class: "btn update_btn" %></td>
+      </tr>
+    </table>
+  <% end %>
 </div>
