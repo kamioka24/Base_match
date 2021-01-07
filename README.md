@@ -3,9 +3,9 @@
 
 ご覧いただきありがとうございます。<br>
 4月より3ヶ月間の学習期間を経て、ポートフォリオを作成しました。<br>
-サイトはこちら >>> [BaseMatch](http://basematch.work/)
+サイトはこちら >>> [BaseMatch](http://basematch.work/)(只今、公開しておりません。2021年1月現在)
 
-作品名は双方の考え方のBase(基盤・土台)とBaseBallを掛け合わせて、それらがMatchする(合う)よう、『BaseMatch』と名付けました。
+作品名は双方の考え方のBase(基盤・土台)とBaseBallを掛け合わせ、それらがMatchする(合う)よう、『BaseMatch』と名付けました。
 
 ## 技術面
 
